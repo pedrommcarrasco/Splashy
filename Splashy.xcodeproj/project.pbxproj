@@ -50,12 +50,68 @@
 		DF8C5918201684990022F2CF /* Splashy */ = {
 			isa = PBXGroup;
 			children = (
-				DF8C5919201684990022F2CF /* AppDelegate.swift */,
-				DF8C5926201684990022F2CF /* Assets.xcassets */,
-				DF8C5928201684990022F2CF /* LaunchScreen.storyboard */,
-				DF8C592B201684990022F2CF /* Info.plist */,
+				DF8C59372016A75C0022F2CF /* App */,
+				DF8C59312016A7080022F2CF /* Contexts */,
+				DF8C59322016A71F0022F2CF /* Enumerations */,
+				DF8C59342016A7340022F2CF /* Protocols */,
+				DF8C59332016A7290022F2CF /* Extensions */,
+				DF8C59352016A7400022F2CF /* Resources */,
+				DF8C59362016A7510022F2CF /* Configurations */,
 			);
 			path = Splashy;
+			sourceTree = "<group>";
+		};
+		DF8C59312016A7080022F2CF /* Contexts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Contexts;
+			sourceTree = "<group>";
+		};
+		DF8C59322016A71F0022F2CF /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		DF8C59332016A7290022F2CF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DF8C59342016A7340022F2CF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DF8C59352016A7400022F2CF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF8C5928201684990022F2CF /* LaunchScreen.storyboard */,
+				DF8C5926201684990022F2CF /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DF8C59362016A7510022F2CF /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				DF8C592B201684990022F2CF /* Info.plist */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		DF8C59372016A75C0022F2CF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DF8C5919201684990022F2CF /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
