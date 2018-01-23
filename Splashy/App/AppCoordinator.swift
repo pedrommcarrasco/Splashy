@@ -23,6 +23,7 @@ class AppCoordinator: Coordinator {
         self.coordinators = []
 
         self.window.rootViewController = self.navigationController
+        navigationController.setNavigationBarHidden(true, animated: false)
     }
 
     // MARK: - FUNCTIONS

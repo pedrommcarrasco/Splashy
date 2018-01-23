@@ -1,5 +1,5 @@
 //
-//  HomeViewModel.swift
+//  DesignConstants.swift
 //  Splashy
 //
 //  Created by Pedro Carrasco on 23/01/18.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct HomeViewModel {
-    let playButtonText = "home.play".localizedUppercaseString
+struct Sizes {
+    static let cornerRadius = 15
 }

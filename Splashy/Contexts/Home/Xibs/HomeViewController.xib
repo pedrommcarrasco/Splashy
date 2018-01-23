@@ -1,13 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Splashy" customModuleProvider="target">
             <connections>
+                <outlet property="playButton" destination="xhG-FP-ur3" id="QRr-tL-q3B"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +20,50 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="zrW-Jh-RR2">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VL5-65-9jb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vJM-I3-gnX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhG-FP-ur3">
+                    <rect key="frame" x="32" y="585" width="311" height="50"/>
+                    <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="mbV-rh-KSO"/>
+                    </constraints>
+                    <state key="normal" title="PLAY">
+                        <color key="titleColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </state>
+                    <connections>
+                        <action selector="playButtonAction:" destination="-1" eventType="touchUpInside" id="JBt-mw-KAh"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="zrW-Jh-RR2" secondAttribute="bottom" id="0ZP-aF-K31"/>
+                <constraint firstItem="xhG-FP-ur3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="62w-EY-fgM"/>
+                <constraint firstItem="VL5-65-9jb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Hqk-Wg-CoO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xhG-FP-ur3" secondAttribute="trailing" constant="32" id="LQO-sK-AgO"/>
+                <constraint firstItem="VL5-65-9jb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OhW-9Y-rnR"/>
+                <constraint firstAttribute="trailing" secondItem="zrW-Jh-RR2" secondAttribute="trailing" id="S6l-Dg-MlT"/>
+                <constraint firstItem="zrW-Jh-RR2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dxE-fv-RQV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xhG-FP-ur3" secondAttribute="bottom" constant="32" id="g05-jh-Vm9"/>
+                <constraint firstAttribute="bottom" secondItem="VL5-65-9jb" secondAttribute="bottom" id="gdd-EP-SbN"/>
+                <constraint firstItem="VL5-65-9jb" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="rUF-BL-5W9"/>
+                <constraint firstItem="zrW-Jh-RR2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yS9-zH-VkQ"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="background" width="1024" height="768"/>
+    </resources>
 </document>

@@ -6,10 +6,10 @@
 //  Copyright © 2018 Pedro Carrasco. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol Identifiable {}
 
-extension Identifiable {
+extension Identifiable where Self: UIViewController {
     static var name: String { return String(describing: self) }
 }

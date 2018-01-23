@@ -30,10 +30,17 @@ class HomeCoordinator: Coordinator {
 
       let viewModel = HomeViewModel()
       viewController.viewModel = viewModel
-
+      viewController.navigationDelegate = self
+      
       navigationController.pushViewController(
          viewController, animated: true
       )
+   }
+}
+
+extension HomeCoordinator: HomeViewNavigationDelegate {
+   func homeViewControllerDidPressPlay(_ homeViewController: HomeViewController) {
+
    }
 }
 
