@@ -22,6 +22,8 @@
 		DF0FC4872017EEB800165600 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4862017EEB800165600 /* GameViewModel.swift */; };
 		DF0FC48C2017EEDC00165600 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC48A2017EEDC00165600 /* GameViewController.swift */; };
 		DF0FC48D2017EEDC00165600 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0FC48B2017EEDC00165600 /* GameViewController.xib */; };
+		DF0FC48F2017F38400165600 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC48E2017F38400165600 /* GameScene.swift */; };
+		DF0FC4912017F40000165600 /* SpriteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4902017F40000165600 /* SpriteType.swift */; };
 		DF45A6552016A91200C46D8E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45A6542016A91200C46D8E /* AppCoordinator.swift */; };
 		DF45A6572016B16900C46D8E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45A6562016B16900C46D8E /* Coordinator.swift */; };
 		DF8C591A201684990022F2CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C5919201684990022F2CF /* AppDelegate.swift */; };
@@ -45,6 +47,8 @@
 		DF0FC4862017EEB800165600 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		DF0FC48A2017EEDC00165600 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		DF0FC48B2017EEDC00165600 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		DF0FC48E2017F38400165600 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		DF0FC4902017F40000165600 /* SpriteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteType.swift; sourceTree = "<group>"; };
 		DF45A6542016A91200C46D8E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DF45A6562016B16900C46D8E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DF8C5916201684990022F2CF /* Splashy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Splashy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +132,7 @@
 		DF0FC4832017EE8E00165600 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DF0FC48E2017F38400165600 /* GameScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 		DF8C59322016A71F0022F2CF /* Enumerations */ = {
 			isa = PBXGroup;
 			children = (
+				DF0FC4902017F40000165600 /* SpriteType.swift */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -337,6 +343,8 @@
 			files = (
 				DF0FC4652017E26800165600 /* HomeViewController.swift in Sources */,
 				DF0FC4682017E29600165600 /* HomeViewModel.swift in Sources */,
+				DF0FC4912017F40000165600 /* SpriteType.swift in Sources */,
+				DF0FC48F2017F38400165600 /* GameScene.swift in Sources */,
 				DF45A6552016A91200C46D8E /* AppCoordinator.swift in Sources */,
 				DF0FC4712017E8A900165600 /* DesignConstants.swift in Sources */,
 				DF0FC4732017E91200165600 /* UIViewController.swift in Sources */,
@@ -423,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -474,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -493,7 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pedrommcarrasco.Splashy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -508,7 +516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pedrommcarrasco.Splashy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
