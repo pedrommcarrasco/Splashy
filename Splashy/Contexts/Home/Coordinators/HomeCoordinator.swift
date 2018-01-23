@@ -15,14 +15,22 @@ class HomeCoordinator: Coordinator {
    private let navigationController: UINavigationController
    internal var coordinators: [Coordinator]
 
-   // MARK: - INITIALIZATION
+   // MARK: - INIT
    init(navigationController: UINavigationController) {
       self.navigationController = navigationController
       self.coordinators = []
    }
 
-   // MARK: - FUNCTIONS
+   // MARK: - START
    func start() {
+      coordinatorDelegate?.coordinatorDidStart(self)
+      navigationController.pushViewController(
+         viewController(), animated: true
+      )
+   }
+
+   // MARK: - FUNCTIONS
+   private func viewController() -> HomeViewController {
       let viewController = HomeViewController(
          nibName: HomeViewController.name,
          bundle: nil
@@ -31,16 +39,16 @@ class HomeCoordinator: Coordinator {
       let viewModel = HomeViewModel()
       viewController.viewModel = viewModel
       viewController.navigationDelegate = self
-      
-      navigationController.pushViewController(
-         viewController, animated: true
-      )
+
+      return viewController
    }
 }
 
 extension HomeCoordinator: HomeViewNavigationDelegate {
    func homeViewControllerDidPressPlay(_ homeViewController: HomeViewController) {
-
+      let gameCoordinator = GameCoordinator(navigationController: navigationController)
+      gameCoordinator.coordinatorDelegate = self
+      gameCoordinator.start()
    }
 }
 

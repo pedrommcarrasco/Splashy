@@ -10,15 +10,15 @@ import Foundation
 
 extension String {
 
-    public var localizedString: String {
+    var localizedString: String {
         return NSLocalizedString(self, comment: "")
     }
 
-    public var localizedFirstLetterUppercaseString: String {
+    var localizedFirstLetterUppercaseString: String {
         return localizedString.capitalized
     }
 
-    public var localizedUppercaseString: String {
+    var localizedUppercaseString: String {
         return localizedString.uppercased()
     }
 

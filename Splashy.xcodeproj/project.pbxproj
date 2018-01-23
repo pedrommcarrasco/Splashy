@@ -18,6 +18,10 @@
 		DF0FC4752017E93D00165600 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4742017E93D00165600 /* UIButton.swift */; };
 		DF0FC4782017ECCF00165600 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF0FC47A2017ECCF00165600 /* Localizable.strings */; };
 		DF0FC47C2017ED0600165600 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC47B2017ED0600165600 /* String.swift */; };
+		DF0FC4852017EEAB00165600 /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4842017EEAB00165600 /* GameCoordinator.swift */; };
+		DF0FC4872017EEB800165600 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4862017EEB800165600 /* GameViewModel.swift */; };
+		DF0FC48C2017EEDC00165600 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC48A2017EEDC00165600 /* GameViewController.swift */; };
+		DF0FC48D2017EEDC00165600 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0FC48B2017EEDC00165600 /* GameViewController.xib */; };
 		DF45A6552016A91200C46D8E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45A6542016A91200C46D8E /* AppCoordinator.swift */; };
 		DF45A6572016B16900C46D8E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45A6562016B16900C46D8E /* Coordinator.swift */; };
 		DF8C591A201684990022F2CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C5919201684990022F2CF /* AppDelegate.swift */; };
@@ -37,6 +41,10 @@
 		DF0FC4742017E93D00165600 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		DF0FC4792017ECCF00165600 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DF0FC47B2017ED0600165600 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		DF0FC4842017EEAB00165600 /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
+		DF0FC4862017EEB800165600 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		DF0FC48A2017EEDC00165600 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		DF0FC48B2017EEDC00165600 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		DF45A6542016A91200C46D8E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DF45A6562016B16900C46D8E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DF8C5916201684990022F2CF /* Splashy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Splashy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,13 +81,64 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		DF0FC47D2017EE4400165600 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				DF0FC47E2017EE6400165600 /* Coordinators */,
+				DF0FC47F2017EE6900165600 /* ViewModels */,
+				DF0FC4822017EE8400165600 /* ViewControllers */,
+				DF0FC4832017EE8E00165600 /* Scenes */,
+				DF0FC4802017EE7300165600 /* XIbs */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		DF0FC47E2017EE6400165600 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				DF0FC4842017EEAB00165600 /* GameCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		DF0FC47F2017EE6900165600 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DF0FC4862017EEB800165600 /* GameViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DF0FC4802017EE7300165600 /* XIbs */ = {
+			isa = PBXGroup;
+			children = (
+				DF0FC48B2017EEDC00165600 /* GameViewController.xib */,
+			);
+			path = XIbs;
+			sourceTree = "<group>";
+		};
+		DF0FC4822017EE8400165600 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DF0FC48A2017EEDC00165600 /* GameViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DF0FC4832017EE8E00165600 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		DF45A6582016B2D900C46D8E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DF0FC4622017E24D00165600 /* Xibs */,
+				DF45A6592016B2E300C46D8E /* Coordinators */,
 				DF45A65B2016B2EF00C46D8E /* ViewModels */,
 				DF45A65A2016B2E800C46D8E /* ViewControllers */,
-				DF45A6592016B2E300C46D8E /* Coordinators */,
+				DF0FC4622017E24D00165600 /* Xibs */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -143,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				DF45A6582016B2D900C46D8E /* Home */,
+				DF0FC47D2017EE4400165600 /* Game */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
@@ -264,6 +324,7 @@
 				DF0FC4782017ECCF00165600 /* Localizable.strings in Resources */,
 				DF8C592A201684990022F2CF /* LaunchScreen.storyboard in Resources */,
 				DF0FC4662017E26800165600 /* HomeViewController.xib in Resources */,
+				DF0FC48D2017EEDC00165600 /* GameViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,12 +341,15 @@
 				DF0FC4712017E8A900165600 /* DesignConstants.swift in Sources */,
 				DF0FC4732017E91200165600 /* UIViewController.swift in Sources */,
 				DF0FC46E2017E81200165600 /* Roundable.swift in Sources */,
+				DF0FC4872017EEB800165600 /* GameViewModel.swift in Sources */,
 				DF0FC47C2017ED0600165600 /* String.swift in Sources */,
 				DF0FC4612017E07E00165600 /* HomeCoordinator.swift in Sources */,
 				DF0FC46A2017E3E700165600 /* Identifiable.swift in Sources */,
+				DF0FC48C2017EEDC00165600 /* GameViewController.swift in Sources */,
 				DF0FC4752017E93D00165600 /* UIButton.swift in Sources */,
 				DF8C591A201684990022F2CF /* AppDelegate.swift in Sources */,
 				DF45A6572016B16900C46D8E /* Coordinator.swift in Sources */,
+				DF0FC4852017EEAB00165600 /* GameCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
