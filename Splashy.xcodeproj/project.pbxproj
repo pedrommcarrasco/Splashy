@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF45A6552016A91200C46D8E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45A6542016A91200C46D8E /* AppCoordinator.swift */; };
+		DF45A6572016B16900C46D8E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45A6562016B16900C46D8E /* Coordinator.swift */; };
 		DF8C591A201684990022F2CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C5919201684990022F2CF /* AppDelegate.swift */; };
 		DF8C5927201684990022F2CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8C5926201684990022F2CF /* Assets.xcassets */; };
 		DF8C592A201684990022F2CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8C5928201684990022F2CF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF45A6542016A91200C46D8E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DF45A6562016B16900C46D8E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DF8C5916201684990022F2CF /* Splashy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Splashy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF8C5919201684990022F2CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF8C5926201684990022F2CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,6 +35,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF45A6582016B2D900C46D8E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DF45A65B2016B2EF00C46D8E /* ViewModels */,
+				DF45A65A2016B2E800C46D8E /* ViewControllers */,
+				DF45A6592016B2E300C46D8E /* Coordinators */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DF45A6592016B2E300C46D8E /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		DF45A65A2016B2E800C46D8E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DF45A65B2016B2EF00C46D8E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		DF8C590D201684990022F2CF = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +99,7 @@
 		DF8C59312016A7080022F2CF /* Contexts */ = {
 			isa = PBXGroup;
 			children = (
+				DF45A6582016B2D900C46D8E /* Home */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
@@ -85,6 +121,7 @@
 		DF8C59342016A7340022F2CF /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				DF45A6562016B16900C46D8E /* Coordinator.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -110,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				DF8C5919201684990022F2CF /* AppDelegate.swift */,
+				DF45A6542016A91200C46D8E /* AppCoordinator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -185,7 +223,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF45A6552016A91200C46D8E /* AppCoordinator.swift in Sources */,
 				DF8C591A201684990022F2CF /* AppDelegate.swift in Sources */,
+				DF45A6572016B16900C46D8E /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GE4Q65N57;
-				INFOPLIST_FILE = Splashy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Splashy/Configurations/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pedrommcarrasco.Splashy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -331,7 +371,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GE4Q65N57;
-				INFOPLIST_FILE = Splashy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Splashy/Configurations/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pedrommcarrasco.Splashy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
