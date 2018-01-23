@@ -21,15 +21,19 @@ extension SpriteType {
 
     func scale() -> CGFloat {
         switch self {
+        case .splashy:
+            return 0.4
         case .ground:
             return 1.1
         default:
-            return 0
+            return 1
         }
     }
 
     func position(in frame: CGRect, with sprite: SKSpriteNode) -> CGPoint {
         switch self {
+        case .splashy:
+            return CGPoint(x: frame.width/2 - sprite.frame.width, y: frame.height/2)
         case .ground:
             return CGPoint(x: frame.width/2, y: 0 + sprite.frame.height/2)
         default:
