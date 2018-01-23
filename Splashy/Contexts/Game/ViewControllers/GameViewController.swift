@@ -30,6 +30,9 @@ class GameViewController: UIViewController {
         scene.scaleMode = .aspectFill
         scene.anchorPoint = CGPoint(x: 0, y: 0)
 
+        let sceneViewModel = GameSceneViewModel()
+        scene.viewModel = sceneViewModel
+
         spriteKitView.presentScene(scene)
     }
 }

@@ -13,6 +13,9 @@ class GameScene: SKScene {
     // MARK : - SPRITES
     var ground = SpriteType.ground.asNode()
 
+    // MARK : - PROPERTIES
+    var viewModel: GameSceneViewModel!
+
     // MARK : - LIFECYCLE
     override func didMove(to view: SKView) {
         setupGround()
@@ -24,8 +27,8 @@ class GameScene: SKScene {
 
     // MARK : - SETUP
     private func setupGround() {
-        ground.setScale(1.1)
-        ground.position = CGPoint(x: frame.width/2, y: 0 + ground.frame.height/2)
+        ground.setScale(SpriteType.ground.scale())
+        ground.position = SpriteType.ground.position(in: frame, with: ground)
         addChild(ground)
     }
 
@@ -34,10 +37,4 @@ class GameScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
     }
-
-    // MARK : - FUNCTIONS
-
-
-
-
 }
