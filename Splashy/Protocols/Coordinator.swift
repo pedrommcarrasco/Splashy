@@ -19,6 +19,6 @@ protocol Coordinator: class {
 }
 
 protocol CoordinatorDelegate: class {
-    func didStartExecution(onCoordinator: Coordinator)
-    func didFinishExecution(onCoordinator: Coordinator)
+    func coordinatorDidStart(_ coordinator: Coordinator)
+    func coordinatorDidEnd(_ coordinator: Coordinator)
 }

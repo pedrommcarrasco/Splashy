@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0FC4612017E07E00165600 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4602017E07E00165600 /* HomeCoordinator.swift */; };
+		DF0FC4652017E26800165600 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4632017E26800165600 /* HomeViewController.swift */; };
+		DF0FC4662017E26800165600 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0FC4642017E26800165600 /* HomeViewController.xib */; };
+		DF0FC4682017E29600165600 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4672017E29600165600 /* HomeViewModel.swift */; };
+		DF0FC46A2017E3E700165600 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4692017E3E700165600 /* Identifiable.swift */; };
+		DF0FC46C2017E43F00165600 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC46B2017E43F00165600 /* UIViewController.swift */; };
 		DF45A6552016A91200C46D8E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45A6542016A91200C46D8E /* AppCoordinator.swift */; };
 		DF45A6572016B16900C46D8E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45A6562016B16900C46D8E /* Coordinator.swift */; };
 		DF8C591A201684990022F2CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C5919201684990022F2CF /* AppDelegate.swift */; };
@@ -15,6 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF0FC4602017E07E00165600 /* HomeCoordinator.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; tabWidth = 3; };
+		DF0FC4632017E26800165600 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DF0FC4642017E26800165600 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		DF0FC4672017E29600165600 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DF0FC4692017E3E700165600 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		DF0FC46B2017E43F00165600 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		DF45A6542016A91200C46D8E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DF45A6562016B16900C46D8E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DF8C5916201684990022F2CF /* Splashy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Splashy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,9 +47,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF0FC4622017E24D00165600 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				DF0FC4642017E26800165600 /* HomeViewController.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 		DF45A6582016B2D900C46D8E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DF0FC4622017E24D00165600 /* Xibs */,
 				DF45A65B2016B2EF00C46D8E /* ViewModels */,
 				DF45A65A2016B2E800C46D8E /* ViewControllers */,
 				DF45A6592016B2E300C46D8E /* Coordinators */,
@@ -48,6 +69,7 @@
 		DF45A6592016B2E300C46D8E /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				DF0FC4602017E07E00165600 /* HomeCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -55,6 +77,7 @@
 		DF45A65A2016B2E800C46D8E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DF0FC4632017E26800165600 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -62,6 +85,7 @@
 		DF45A65B2016B2EF00C46D8E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DF0FC4672017E29600165600 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -114,6 +138,7 @@
 		DF8C59332016A7290022F2CF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DF0FC46B2017E43F00165600 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -122,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				DF45A6562016B16900C46D8E /* Coordinator.swift */,
+				DF0FC4692017E3E700165600 /* Identifiable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -213,6 +239,7 @@
 			files = (
 				DF8C5927201684990022F2CF /* Assets.xcassets in Resources */,
 				DF8C592A201684990022F2CF /* LaunchScreen.storyboard in Resources */,
+				DF0FC4662017E26800165600 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,8 +250,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0FC4652017E26800165600 /* HomeViewController.swift in Sources */,
+				DF0FC4682017E29600165600 /* HomeViewModel.swift in Sources */,
 				DF45A6552016A91200C46D8E /* AppCoordinator.swift in Sources */,
+				DF0FC4612017E07E00165600 /* HomeCoordinator.swift in Sources */,
+				DF0FC46A2017E3E700165600 /* Identifiable.swift in Sources */,
 				DF8C591A201684990022F2CF /* AppDelegate.swift in Sources */,
+				DF0FC46C2017E43F00165600 /* UIViewController.swift in Sources */,
 				DF45A6572016B16900C46D8E /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,16 +27,19 @@ class AppCoordinator: Coordinator {
 
     // MARK: - FUNCTIONS
     func start() {
+        let homeCoordinator = HomeCoordinator(navigationController: navigationController)
+        homeCoordinator.coordinatorDelegate = self
+        homeCoordinator.start()
 
     }
 }
 
 extension AppCoordinator: CoordinatorDelegate {
-    func didStartExecution(onCoordinator: Coordinator) {
-        coordinators.append(onCoordinator)
+    func coordinatorDidStart(_ coordinator: Coordinator) {
+         coordinators.append(coordinator)
     }
 
-    func didFinishExecution(onCoordinator: Coordinator) {
-        coordinators = coordinators.filter { $0 !== onCoordinator }
+    func coordinatorDidEnd(_ coordinator: Coordinator) {
+        coordinators = coordinators.filter { $0 !== coordinator }
     }
 }
