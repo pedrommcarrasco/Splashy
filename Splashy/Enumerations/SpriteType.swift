@@ -12,6 +12,7 @@ enum SpriteType: String {
     case splashy = "character-main"
     case enemy = "character-enemy"
     case ground = "ground"
+    case background = "background"
 }
 
 extension SpriteType {

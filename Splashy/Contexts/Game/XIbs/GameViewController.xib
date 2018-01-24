@@ -21,18 +21,28 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="VJT-ib-YCL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
                 <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RT5-Uz-Ght">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </skView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="VJT-ib-YCL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9SL-7w-79r"/>
+                <constraint firstItem="VJT-ib-YCL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9ee-Sd-g4S"/>
+                <constraint firstAttribute="bottom" secondItem="VJT-ib-YCL" secondAttribute="bottom" id="QDM-V4-GrD"/>
                 <constraint firstItem="RT5-Uz-Ght" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bFN-Ww-7Iq"/>
                 <constraint firstAttribute="bottom" secondItem="RT5-Uz-Ght" secondAttribute="bottom" id="pAx-ZZ-XTT"/>
+                <constraint firstAttribute="trailing" secondItem="VJT-ib-YCL" secondAttribute="trailing" id="rBY-aj-kHP"/>
                 <constraint firstAttribute="trailing" secondItem="RT5-Uz-Ght" secondAttribute="trailing" id="vdE-e1-jtV"/>
                 <constraint firstItem="RT5-Uz-Ght" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yur-Bb-5sY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
+    <resources>
+        <image name="background" width="1024" height="768"/>
+    </resources>
 </document>
