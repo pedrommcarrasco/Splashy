@@ -38,7 +38,7 @@ extension SpriteType {
         case .splashy:
             return CGPoint(x: frame.width/2 - sprite.frame.width, y: frame.height/2)
         case .enemy:
-            return CGPoint(x: frame.width/2, y: frame.width/2)
+            return CGPoint(x: frame.width/2, y: frame.height/2)
         case .ground:
             return CGPoint(x: frame.width/2, y: 0 + sprite.frame.height/2)
         case .background:
