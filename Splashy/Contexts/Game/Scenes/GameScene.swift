@@ -11,9 +11,9 @@ import SpriteKit
 class GameScene: SKScene {
 
     // MARK : - SPRITES
-    var ground = SpriteType.ground.asNode()
-    var splashy = SpriteType.splashy.asNode()
-    var background = SpriteType.background.asNode()
+    var ground = SpriteType.ground.node
+    var splashy = SpriteType.splashy.node
+    var background = SpriteType.background.node
 
     // MARK : - PROPERTIES
     var viewModel: GameSceneViewModel!
@@ -23,7 +23,7 @@ class GameScene: SKScene {
         setupBackground()
         setupGround()
         setupSplashy()
-        createEnemies()
+        setupEnemies()
     }
 
     override func update(_ currentTime: TimeInterval) {
@@ -31,43 +31,42 @@ class GameScene: SKScene {
     }
 
     // MARK : - SETUP
-    private func setupBackground() {
-        background.setScale(1.3)
-        background.position = CGPoint(x: frame.width/2, y: frame.height/2)
-        addChild(background)
-    }
-
-    private func setupGround() {
-        ground.setScale(SpriteType.ground.scale())
-        ground.position = SpriteType.ground.position(in: frame, with: ground)
-        addChild(ground)
-    }
-
     private func setupSplashy() {
-        splashy.setScale(SpriteType.splashy.scale())
+        splashy.setScale(SpriteType.splashy.scale)
         splashy.position = SpriteType.splashy.position(in: frame, with: splashy)
         addChild(splashy)
     }
 
-
-    private func createEnemies() {
+    private func setupEnemies() {
         let enemiesNodes = SKNode()
 
-        let topEnemy = SpriteType.enemy.asNode()
-        topEnemy.position = CGPoint(x: frame.width/2, y: frame.height/2 + 100)
-        topEnemy.setScale(0.6)
-
-        let bottomEnemy = SpriteType.enemy.asNode()
-        bottomEnemy.position = CGPoint(x: frame.width/2, y: frame.height/2 - 150)
-        bottomEnemy.setScale(0.6)
-
-        enemiesNodes.addChild(topEnemy)
-        enemiesNodes.addChild(bottomEnemy)
+        enemiesNodes.addChild(createEnemy(with: -100))
+        enemiesNodes.addChild(createEnemy(with: 100))
 
         addChild(enemiesNodes)
     }
 
-    private func setupEnemy() {}
+    private func setupBackground() {
+        background.setScale(SpriteType.background.scale)
+        background.position = SpriteType.background.position(in: frame, with: background)
+        addChild(background)
+    }
+
+    private func setupGround() {
+        ground.setScale(SpriteType.ground.scale)
+        ground.position = SpriteType.ground.position(in: frame, with: ground)
+        addChild(ground)
+    }
+
+    // MARK : - FUNCTIONS
+    private func createEnemy(with variation: CGFloat) -> SKSpriteNode {
+        let enemy = SpriteType.enemy.node
+        enemy.setScale(SpriteType.enemy.scale)
+        enemy.position = SpriteType.enemy.position(in: frame, with: enemy)
+        enemy.position.y = enemy.position.y + variation
+
+        return enemy
+    }
 
     // MARK : - INTERACTION
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -16,18 +16,20 @@ enum SpriteType: String {
 }
 
 extension SpriteType {
-    func asNode() -> SKSpriteNode {
+    var node: SKSpriteNode {
         return SKSpriteNode(imageNamed: self.rawValue)
     }
 
-    func scale() -> CGFloat {
+    var scale: CGFloat {
         switch self {
         case .splashy:
             return 0.4
+        case .enemy:
+            return 0.6
         case .ground:
             return 1.1
-        default:
-            return 1
+        case .background:
+            return 1.3
         }
     }
 
@@ -35,10 +37,12 @@ extension SpriteType {
         switch self {
         case .splashy:
             return CGPoint(x: frame.width/2 - sprite.frame.width, y: frame.height/2)
+        case .enemy:
+            return CGPoint(x: frame.width/2, y: frame.width/2)
         case .ground:
             return CGPoint(x: frame.width/2, y: 0 + sprite.frame.height/2)
-        default:
-            return .zero
+        case .background:
+            return CGPoint(x: frame.width/2, y: frame.height/2)
         }
     }
 }
