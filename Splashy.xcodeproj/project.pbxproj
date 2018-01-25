@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF045FC1201A9CA200349006 /* SpriteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF045FC0201A9CA200349006 /* SpriteFactory.swift */; };
 		DF0FC4612017E07E00165600 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4602017E07E00165600 /* HomeCoordinator.swift */; };
 		DF0FC4652017E26800165600 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4632017E26800165600 /* HomeViewController.swift */; };
 		DF0FC4662017E26800165600 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0FC4642017E26800165600 /* HomeViewController.xib */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF045FC0201A9CA200349006 /* SpriteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteFactory.swift; sourceTree = "<group>"; };
 		DF0FC4602017E07E00165600 /* HomeCoordinator.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; tabWidth = 3; };
 		DF0FC4632017E26800165600 /* HomeViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		DF0FC4642017E26800165600 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF045FC2201A9E6000349006 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DF045FC0201A9CA200349006 /* SpriteFactory.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		DF0FC4622017E24D00165600 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +212,7 @@
 				DF8C59322016A71F0022F2CF /* Enumerations */,
 				DF8C59342016A7340022F2CF /* Protocols */,
 				DF8C59332016A7290022F2CF /* Extensions */,
+				DF045FC2201A9E6000349006 /* Classes */,
 				DF0FC46F2017E88E00165600 /* Utils */,
 				DF8C59352016A7400022F2CF /* Resources */,
 				DF8C59362016A7510022F2CF /* Configurations */,
@@ -348,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF0FC4652017E26800165600 /* HomeViewController.swift in Sources */,
+				DF045FC1201A9CA200349006 /* SpriteFactory.swift in Sources */,
 				DFA675A7201957AA00543CEE /* GameConstants.swift in Sources */,
 				DF0FC4682017E29600165600 /* HomeViewModel.swift in Sources */,
 				DF0FC4912017F40000165600 /* SpriteType.swift in Sources */,

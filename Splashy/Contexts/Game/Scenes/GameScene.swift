@@ -11,10 +11,10 @@ import SpriteKit
 class GameScene: SKScene {
 
     // MARK : - SPRITES
-    var ground = SpriteType.ground.node
-    var splashy = SpriteType.splashy.node
+    var ground = SKSpriteNode()
+    var splashy = SKSpriteNode()
     var enemiesNodes = SKNode()
-    var background = SpriteType.background.node
+    var background = SKSpriteNode()
 
     // MARK : - PROPERTIES
     var moveRemoveAction = SKAction()
@@ -36,23 +36,7 @@ class GameScene: SKScene {
     }
 
     private func setupSplashy() {
-        splashy.setScale(SpriteType.splashy.scale)
-        splashy.position = SpriteType.splashy.position(in: frame, with: splashy)
-        splashy.zPosition = SpriteType.splashy.zPosition
-
-        let texture = SKTexture(imageNamed: SpriteType.splashy.rawValue)
-        let size = CGSize(
-            width: splashy.size.width * SplashyConstants.physicsBodyRatio,
-            height: splashy.size.height * SplashyConstants.physicsBodyRatio
-        )
-        splashy.physicsBody = SKPhysicsBody(texture: texture, size: size)
-
-        splashy.physicsBody?.categoryBitMask = SpriteType.splashy.physicsId
-        splashy.physicsBody?.collisionBitMask = SpriteType.ground.physicsId | SpriteType.enemy.physicsId
-        splashy.physicsBody?.contactTestBitMask =  SpriteType.ground.physicsId | SpriteType.enemy.physicsId
-        splashy.physicsBody?.affectedByGravity = true
-        splashy.physicsBody?.isDynamic = true
-
+        splashy = SpriteFactory.sprite(of: SpriteType.splashy, in: frame)
         addChild(splashy)
     }
 
@@ -66,42 +50,19 @@ class GameScene: SKScene {
     }
 
     private func setupEnemy(with variation: CGFloat) -> SKSpriteNode {
-        let enemy = SpriteType.enemy.node
-        enemy.setScale(SpriteType.enemy.scale)
-        enemy.position = SpriteType.enemy.position(in: frame, with: enemy)
+        let enemy = SpriteFactory.sprite(of: SpriteType.enemy, in: frame)
         enemy.position.y = enemy.position.y + variation
-
-        let texture = SKTexture(imageNamed: SpriteType.enemy.rawValue)
-        enemy.physicsBody = SKPhysicsBody(texture: texture, size: enemy.size)
-
-        enemy.physicsBody?.categoryBitMask = SpriteType.enemy.physicsId
-        enemy.physicsBody?.collisionBitMask = SpriteType.splashy.physicsId
-        enemy.physicsBody?.contactTestBitMask = SpriteType.splashy.physicsId
-        enemy.physicsBody?.affectedByGravity = false
-        enemy.physicsBody?.isDynamic = false
 
         return enemy
     }
 
     private func setupBackground() {
-        background.setScale(SpriteType.background.scale)
-        background.position = SpriteType.background.position(in: frame, with: background)
-        background.zPosition = SpriteType.background.zPosition
+        background = SpriteFactory.sprite(of: SpriteType.background, in: frame)
         addChild(background)
     }
 
     private func setupGround() {
-        ground.setScale(SpriteType.ground.scale)
-        ground.position = SpriteType.ground.position(in: frame, with: ground)
-        ground.zPosition = SpriteType.ground.zPosition
-
-        ground.physicsBody = SKPhysicsBody(rectangleOf: ground.size)
-        ground.physicsBody?.categoryBitMask = SpriteType.ground.physicsId
-        ground.physicsBody?.collisionBitMask = SpriteType.splashy.physicsId
-        ground.physicsBody?.contactTestBitMask = SpriteType.splashy.physicsId
-        ground.physicsBody?.affectedByGravity = false
-        ground.physicsBody?.isDynamic = false
-
+        ground = SpriteFactory.sprite(of: SpriteType.ground, in: frame)
         addChild(ground)
     }
 

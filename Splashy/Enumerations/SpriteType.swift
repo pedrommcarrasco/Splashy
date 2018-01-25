@@ -17,7 +17,7 @@ enum SpriteType: String {
 
 extension SpriteType {
     var node: SKSpriteNode {
-        return SKSpriteNode(imageNamed: self.rawValue)
+        return SKSpriteNode(imageNamed: rawValue)
     }
 
     var zPosition: CGFloat {
@@ -59,6 +59,36 @@ extension SpriteType {
         }
     }
 
+    var colisionBitmask: UInt32 {
+        switch self {
+        case .splashy:
+            return SpriteType.ground.physicsId | SpriteType.enemy.physicsId
+        case .background:
+            return 0
+        default:
+            return SpriteType.splashy.physicsId
+
+        }
+    }
+
+    var isDynamic: Bool {
+        switch self {
+        case .splashy:
+            return true
+        default:
+            return false
+        }
+    }
+
+    var isAffectedByGravity: Bool {
+        switch self {
+        case .splashy:
+            return true
+        default:
+            return false
+        }
+    }
+
     func position(in frame: CGRect, with sprite: SKSpriteNode) -> CGPoint {
         switch self {
         case .splashy:
@@ -69,6 +99,25 @@ extension SpriteType {
             return CGPoint(x: frame.width/2, y: 0 + sprite.frame.height/2)
         case .background:
             return CGPoint(x: frame.width/2, y: frame.height/2)
+        }
+    }
+
+    func physicsBody(with size: CGSize) -> SKPhysicsBody{
+        switch self {
+        case .splashy:
+            let texture = SKTexture(imageNamed: rawValue)
+            let size = CGSize(
+                width: size.width * SplashyConstants.physicsBodyRatio,
+                height: size.height * SplashyConstants.physicsBodyRatio
+            )
+            return SKPhysicsBody(texture: texture, size: size)
+        case .enemy:
+            let texture = SKTexture(imageNamed: rawValue)
+            return SKPhysicsBody(texture: texture, size: size)
+        case .ground:
+            return SKPhysicsBody(rectangleOf: size)
+        case .background:
+            return SKPhysicsBody()
         }
     }
 }
