@@ -13,9 +13,11 @@ class GameScene: SKScene {
     // MARK : - SPRITES
     var ground = SpriteType.ground.node
     var splashy = SpriteType.splashy.node
+    var enemiesNodes = SKNode()
     var background = SpriteType.background.node
 
     // MARK : - PROPERTIES
+    var moveRemoveAction = SKAction()
     var viewModel: GameSceneViewModel!
 
     // MARK : - LIFECYCLE
@@ -30,7 +32,7 @@ class GameScene: SKScene {
         setupBackground()
         setupGround()
         setupSplashy()
-        setupEnemies()
+        createEnemies()
     }
 
     private func setupSplashy() {
@@ -55,12 +57,30 @@ class GameScene: SKScene {
     }
 
     private func setupEnemies() {
-        let enemiesNodes = SKNode()
-
-        enemiesNodes.addChild(createEnemy(with: EnemyConstants.lowerY))
-        enemiesNodes.addChild(createEnemy(with: EnemyConstants.upperY))
+        enemiesNodes = SKNode()
+        enemiesNodes.addChild(setupEnemy(with: EnemyConstants.lowerY))
+        enemiesNodes.addChild(setupEnemy(with: EnemyConstants.upperY))
         enemiesNodes.zPosition = SpriteType.enemy.zPosition
+        enemiesNodes.run(moveRemoveAction)
         addChild(enemiesNodes)
+    }
+
+    private func setupEnemy(with variation: CGFloat) -> SKSpriteNode {
+        let enemy = SpriteType.enemy.node
+        enemy.setScale(SpriteType.enemy.scale)
+        enemy.position = SpriteType.enemy.position(in: frame, with: enemy)
+        enemy.position.y = enemy.position.y + variation
+
+        let texture = SKTexture(imageNamed: SpriteType.enemy.rawValue)
+        enemy.physicsBody = SKPhysicsBody(texture: texture, size: enemy.size)
+
+        enemy.physicsBody?.categoryBitMask = SpriteType.enemy.physicsId
+        enemy.physicsBody?.collisionBitMask = SpriteType.splashy.physicsId
+        enemy.physicsBody?.contactTestBitMask = SpriteType.splashy.physicsId
+        enemy.physicsBody?.affectedByGravity = false
+        enemy.physicsBody?.isDynamic = false
+
+        return enemy
     }
 
     private func setupBackground() {
@@ -86,23 +106,27 @@ class GameScene: SKScene {
     }
 
     // MARK : - FUNCTIONS
-    private func createEnemy(with variation: CGFloat) -> SKSpriteNode {
-        let enemy = SpriteType.enemy.node
-        enemy.setScale(SpriteType.enemy.scale)
-        enemy.position = SpriteType.enemy.position(in: frame, with: enemy)
-        enemy.position.y = enemy.position.y + variation
+    private func createEnemies() {
+        let spawnAction = SKAction.run { [weak self] in
+            self?.setupEnemies()
+        }
 
-        let texture = SKTexture(imageNamed: SpriteType.enemy.rawValue)
-        enemy.physicsBody = SKPhysicsBody(texture: texture, size: enemy.size)
+        let spawnRateAction = SKAction.wait(forDuration: EnemyConstants.spawnRate)
+        let spawnWithRateAction = SKAction.sequence([spawnAction, spawnRateAction])
+        run(SKAction.repeatForever(spawnWithRateAction))
 
-        enemy.physicsBody?.categoryBitMask = SpriteType.enemy.physicsId
-        enemy.physicsBody?.collisionBitMask = SpriteType.splashy.physicsId
-        enemy.physicsBody?.contactTestBitMask = SpriteType.splashy.physicsId
-        enemy.physicsBody?.affectedByGravity = false
-        enemy.physicsBody?.isDynamic = false
+        let distance = CGFloat(frame.width + enemiesNodes.frame.width)
+        let moveEnemies = SKAction.moveBy(
+            x: -distance,
+            y: 0,
+            duration: TimeInterval(EnemyConstants.movementRate * distance)
+        )
+        let removeEnemies = SKAction.removeFromParent()
 
-        return enemy
+        moveRemoveAction = SKAction.sequence([moveEnemies, removeEnemies])
     }
+
+
 
     private func jump() {
         splashy.physicsBody?.velocity = CGVector(dx: 0, dy: 0)

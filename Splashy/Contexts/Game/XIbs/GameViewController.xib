@@ -24,7 +24,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="VJT-ib-YCL">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RT5-Uz-Ght">
+                <skView contentMode="scaleToFill" preferredFramesPerSecond="60" translatesAutoresizingMaskIntoConstraints="NO" id="RT5-Uz-Ght">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </skView>
             </subviews>
