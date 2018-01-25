@@ -33,6 +33,8 @@ class GameViewController: UIViewController {
         let sceneViewModel = GameSceneViewModel()
         scene.viewModel = sceneViewModel
 
+        spriteKitView.showsFPS = true
+
         spriteKitView.presentScene(scene)
     }
 }

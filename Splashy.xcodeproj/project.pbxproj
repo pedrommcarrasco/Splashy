@@ -30,6 +30,7 @@
 		DF8C591A201684990022F2CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C5919201684990022F2CF /* AppDelegate.swift */; };
 		DF8C5927201684990022F2CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8C5926201684990022F2CF /* Assets.xcassets */; };
 		DF8C592A201684990022F2CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8C5928201684990022F2CF /* LaunchScreen.storyboard */; };
+		DFA675A7201957AA00543CEE /* GameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA675A6201957AA00543CEE /* GameConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		DF8C5926201684990022F2CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF8C5929201684990022F2CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF8C592B201684990022F2CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFA675A6201957AA00543CEE /* GameConstants.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = GameConstants.swift; sourceTree = "<group>"; tabWidth = 3; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				DF0FC4702017E8A900165600 /* DesignConstants.swift */,
+				DFA675A6201957AA00543CEE /* GameConstants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF0FC4652017E26800165600 /* HomeViewController.swift in Sources */,
+				DFA675A7201957AA00543CEE /* GameConstants.swift in Sources */,
 				DF0FC4682017E29600165600 /* HomeViewModel.swift in Sources */,
 				DF0FC4912017F40000165600 /* SpriteType.swift in Sources */,
 				DF0FC48F2017F38400165600 /* GameScene.swift in Sources */,
