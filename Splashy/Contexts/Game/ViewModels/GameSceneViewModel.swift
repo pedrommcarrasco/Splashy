@@ -8,4 +8,6 @@
 
 import Foundation
 
-struct GameSceneViewModel {}
+struct GameSceneViewModel {
+    var hasStarted = false
+}

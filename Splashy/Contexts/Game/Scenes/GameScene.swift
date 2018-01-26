@@ -10,94 +10,107 @@ import SpriteKit
 
 class GameScene: SKScene {
 
-    // MARK : - SPRITES
-    var ground = SKSpriteNode()
-    var splashy = SKSpriteNode()
-    var enemiesNodes = SKNode()
-    var background = SKSpriteNode()
+	// MARK : - SPRITES
+	var ground = SKSpriteNode()
+	var splashy = SKSpriteNode()
+	var enemiesNodes = SKNode()
+	var background = SKSpriteNode()
 
-    // MARK : - PROPERTIES
-    var moveRemoveAction = SKAction()
-    var viewModel: GameSceneViewModel!
+	// MARK : - PROPERTIES
+	var moveRemoveAction = SKAction()
+	var viewModel: GameSceneViewModel!
 
-    // MARK : - LIFECYCLE
-    override func didMove(to view: SKView) {
-        setup()
-    }
+	// MARK : - LIFECYCLE
+	override func didMove(to view: SKView) {
+		setup()
+	}
 
-    override func update(_ currentTime: TimeInterval) {}
+	override func update(_ currentTime: TimeInterval) {}
 
-    // MARK : - SETUP
-    private func setup() {
-        setupBackground()
-        setupGround()
-        setupSplashy()
-        createEnemies()
-    }
+	// MARK : - SETUP
+	private func setup() {
+		setupBackground()
+		setupGround()
+		setupSplashy()
+	}
 
-    private func setupSplashy() {
-        splashy = SpriteFactory.sprite(of: SpriteType.splashy, in: frame)
-        addChild(splashy)
-    }
+	private func setupSplashy() {
+		splashy = SpriteFactory.sprite(of: SpriteType.splashy, in: frame)
+		addChild(splashy)
+	}
 
-    private func setupEnemies() {
-        enemiesNodes = SKNode()
-        enemiesNodes.addChild(setupEnemy(with: EnemyConstants.lowerY))
-        enemiesNodes.addChild(setupEnemy(with: EnemyConstants.upperY))
-        enemiesNodes.zPosition = SpriteType.enemy.zPosition
-        enemiesNodes.run(moveRemoveAction)
-        addChild(enemiesNodes)
-    }
+	private func setupEnemies() {
+		enemiesNodes = SKNode()
+		enemiesNodes.addChild(setupEnemy(with: EnemyConstants.lowerY))
+		enemiesNodes.addChild(setupEnemy(with: EnemyConstants.upperY))
+		enemiesNodes.zPosition = SpriteType.enemy.zPosition
 
-    private func setupEnemy(with variation: CGFloat) -> SKSpriteNode {
-        let enemy = SpriteFactory.sprite(of: SpriteType.enemy, in: frame)
-        enemy.position.y = enemy.position.y + variation
+		let randomVariation = CGFloat.randomBetween(
+			min: EnemyConstants.bottomVariation,
+			and: EnemyConstants.topVariation
+		)
+		enemiesNodes.position.y = enemiesNodes.position.y + randomVariation
 
-        return enemy
-    }
+		enemiesNodes.run(moveRemoveAction)
+		addChild(enemiesNodes)
+	}
 
-    private func setupBackground() {
-        background = SpriteFactory.sprite(of: SpriteType.background, in: frame)
-        addChild(background)
-    }
+	private func setupEnemy(with variation: CGFloat) -> SKSpriteNode {
+		let enemy = SpriteFactory.sprite(of: SpriteType.enemy, in: frame)
+		enemy.position.y = enemy.position.y + variation
 
-    private func setupGround() {
-        ground = SpriteFactory.sprite(of: SpriteType.ground, in: frame)
-        addChild(ground)
-    }
+		return enemy
+	}
 
-    // MARK : - FUNCTIONS
-    private func createEnemies() {
-        let spawnAction = SKAction.run { [weak self] in
-            self?.setupEnemies()
-        }
+	private func setupBackground() {
+		background = SpriteFactory.sprite(of: SpriteType.background, in: frame)
+		addChild(background)
+	}
 
-        let spawnRateAction = SKAction.wait(forDuration: EnemyConstants.spawnRate)
-        let spawnWithRateAction = SKAction.sequence([spawnAction, spawnRateAction])
-        run(SKAction.repeatForever(spawnWithRateAction))
+	private func setupGround() {
+		ground = SpriteFactory.sprite(of: SpriteType.ground, in: frame)
+		addChild(ground)
+	}
 
-        let distance = CGFloat(frame.width + enemiesNodes.frame.width)
-        let moveEnemies = SKAction.moveBy(
-            x: -distance,
-            y: 0,
-            duration: TimeInterval(EnemyConstants.movementRate * distance)
-        )
-        let removeEnemies = SKAction.removeFromParent()
+	// MARK : - FUNCTIONS
+	private func createEnemies() {
+		let spawnAction = SKAction.run { [weak self] in
+			self?.setupEnemies()
+		}
 
-        moveRemoveAction = SKAction.sequence([moveEnemies, removeEnemies])
-    }
+		let spawnRateAction = SKAction.wait(forDuration: EnemyConstants.spawnRate)
+		let spawnWithRateAction = SKAction.sequence([spawnAction, spawnRateAction])
+		run(SKAction.repeatForever(spawnWithRateAction))
+
+		let distance = CGFloat(frame.width + enemiesNodes.frame.width + EnemyConstants.widthExtra)
+		let moveEnemies = SKAction.moveBy(
+			x: -distance,
+			y: 0,
+			duration: TimeInterval(EnemyConstants.movementRate * distance)
+		)
+		let removeEnemies = SKAction.removeFromParent()
+
+		moveRemoveAction = SKAction.sequence([moveEnemies, removeEnemies])
+	}
 
 
 
-    private func jump() {
-        splashy.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
-        splashy.physicsBody?.applyImpulse(
-            CGVector(dx: SplashyConstants.dxVelocity, dy: SplashyConstants.dyVelocity)
-        )
-    }
+	private func jump() {
+		splashy.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+		splashy.physicsBody?.applyImpulse(
+			CGVector(dx: SplashyConstants.dxVelocity, dy: SplashyConstants.dyVelocity)
+		)
+	}
 
-    // MARK : - INTERACTION
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        jump()
-    }
+	// MARK : - INTERACTION
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		if !viewModel.hasStarted {
+			splashy.physicsBody?.affectedByGravity = true
+			viewModel.hasStarted = true
+			createEnemies()
+			jump()
+		} else {
+			jump()
+		}
+	}
 }

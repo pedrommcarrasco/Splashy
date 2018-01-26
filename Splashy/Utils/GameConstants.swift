@@ -15,8 +15,11 @@ struct SplashyConstants {
 }
 
 struct EnemyConstants {
-   static let upperY: CGFloat = 100
-   static let lowerY: CGFloat = -100
+   static let upperY: CGFloat = 105
+   static let lowerY: CGFloat = -105
+   static let topVariation: CGFloat = 150
+   static let bottomVariation: CGFloat = -120
+   static let widthExtra: CGFloat = 250
    static let spawnRate = 1.5
    static let movementRate: CGFloat = 0.0075
 }

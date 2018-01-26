@@ -36,13 +36,11 @@ extension SpriteType {
     var scale: CGFloat {
         switch self {
         case .splashy:
-            return 0.4
+            return 0.5
         case .enemy:
-            return 0.6
-        case .ground:
-            return 1.1
-        case .background:
-            return 1.3
+            return 0.9
+        default:
+            return 1
         }
     }
 
@@ -82,8 +80,6 @@ extension SpriteType {
 
     var isAffectedByGravity: Bool {
         switch self {
-        case .splashy:
-            return true
         default:
             return false
         }
@@ -94,7 +90,7 @@ extension SpriteType {
         case .splashy:
             return CGPoint(x: frame.width/2 - sprite.frame.width, y: frame.height/2)
         case .enemy:
-            return CGPoint(x: frame.width, y: frame.height/2)
+            return CGPoint(x: frame.width * 1.5, y: frame.height/2)
         case .ground:
             return CGPoint(x: frame.width/2, y: 0 + sprite.frame.height/2)
         case .background:
