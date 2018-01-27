@@ -11,6 +11,7 @@ import SpriteKit
 enum SpriteType: String {
     case splashy = "character-main"
     case enemy = "character-enemy"
+    case ruby = "score-ruby"
     case ground = "ground"
     case background = "background"
 }
@@ -23,9 +24,11 @@ extension SpriteType {
     var zPosition: CGFloat {
         switch self {
         case .splashy:
-            return 3
+            return 5
         case .enemy:
             return 2
+        case .ruby:
+            return 3
         case .ground:
             return 4
         case .background:
@@ -39,6 +42,8 @@ extension SpriteType {
             return 0.5
         case .enemy:
             return 0.9
+        case .ruby:
+            return 0.5
         default:
             return 1
         }
@@ -50,10 +55,12 @@ extension SpriteType {
             return 0x1 << 1
         case .enemy:
             return 0x1 << 2
-        case .ground:
+        case .ruby:
             return 0x1 << 3
+        case .ground:
+            return 0x1 << 4
         case .background:
-            return 0x1 << 4 
+            return 0x1 << 5
         }
     }
 
@@ -89,8 +96,8 @@ extension SpriteType {
         switch self {
         case .splashy:
             return CGPoint(x: frame.width/2 - sprite.frame.width, y: frame.height/2)
-        case .enemy:
-            return CGPoint(x: frame.width * 1.5, y: frame.height/2)
+        case .enemy, .ruby:
+                return CGPoint(x: frame.width * 1.25, y: frame.height/2)
         case .ground:
             return CGPoint(x: frame.width/2, y: 0 + sprite.frame.height/2)
         case .background:
@@ -107,7 +114,7 @@ extension SpriteType {
                 height: size.height * SplashyConstants.physicsBodyRatio
             )
             return SKPhysicsBody(texture: texture, size: size)
-        case .enemy:
+        case .enemy, .ruby:
             let texture = SKTexture(imageNamed: rawValue)
             return SKPhysicsBody(texture: texture, size: size)
         case .ground:

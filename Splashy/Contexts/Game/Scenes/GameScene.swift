@@ -41,8 +41,11 @@ class GameScene: SKScene {
 
 	private func setupEnemies() {
 		enemiesNodes = SKNode()
+
+		enemiesNodes.addChild(SpriteFactory.sprite(of: .ruby, in: frame))
 		enemiesNodes.addChild(setupEnemy(with: EnemyConstants.lowerY))
 		enemiesNodes.addChild(setupEnemy(with: EnemyConstants.upperY))
+		
 		enemiesNodes.zPosition = SpriteType.enemy.zPosition
 
 		let randomVariation = CGFloat.randomBetween(
@@ -93,6 +96,9 @@ class GameScene: SKScene {
 		moveRemoveAction = SKAction.sequence([moveEnemies, removeEnemies])
 	}
 
+	private func collisionNodeSize() -> CGFloat {
+		return (EnemyConstants.upperY*2) - 107.1
+	}
 
 
 	private func jump() {
