@@ -14,9 +14,16 @@ class GameViewController: UIViewController {
 
     // MARK: - OUTLETS
     @IBOutlet weak var spriteKitView: SKView!
-
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     // MARK : - PROPERTIES
-    var viewModel: GameViewModel!
+    var viewModel: GameViewModel! {
+        didSet {
+            viewModel.score.bind(observer: { [unowned self] in
+                self.scoreLabel.text = "\($0)"
+            })
+        }
+    }
 
     // MARK : - LIFECYCLE
     override func viewDidLoad() {
@@ -30,8 +37,7 @@ class GameViewController: UIViewController {
         scene.scaleMode = .aspectFill
         scene.anchorPoint = CGPoint(x: 0, y: 0)
 
-        let sceneViewModel = GameSceneViewModel()
-        scene.viewModel = sceneViewModel
+        scene.viewModel = viewModel
 
         spriteKitView.showsFPS = true
 

@@ -8,4 +8,11 @@
 
 import Foundation
 
-struct GameViewModel {}
+class GameViewModel {
+    var hasStarted = false
+    let score: Bindable<Int> = Bindable(0)
+    
+    func incrementScore() {
+        score.value += 1
+    }
+}

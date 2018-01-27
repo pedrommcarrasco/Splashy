@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameViewController" customModule="Splashy" customModuleProvider="target">
             <connections>
+                <outlet property="scoreLabel" destination="KpF-Dn-vWY" id="c7r-sr-0Tb"/>
                 <outlet property="spriteKitView" destination="RT5-Uz-Ght" id="Rlo-f7-vGl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,13 +28,22 @@
                 <skView contentMode="scaleToFill" preferredFramesPerSecond="60" translatesAutoresizingMaskIntoConstraints="NO" id="RT5-Uz-Ght">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </skView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpF-Dn-vWY">
+                    <rect key="frame" x="16" y="36" width="343" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="VJT-ib-YCL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9SL-7w-79r"/>
                 <constraint firstItem="VJT-ib-YCL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9ee-Sd-g4S"/>
                 <constraint firstAttribute="bottom" secondItem="VJT-ib-YCL" secondAttribute="bottom" id="QDM-V4-GrD"/>
+                <constraint firstItem="KpF-Dn-vWY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="TBg-Lm-bKt"/>
+                <constraint firstItem="KpF-Dn-vWY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="aZ8-71-ef3"/>
                 <constraint firstItem="RT5-Uz-Ght" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bFN-Ww-7Iq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KpF-Dn-vWY" secondAttribute="trailing" constant="16" id="e9C-z9-5WG"/>
                 <constraint firstAttribute="bottom" secondItem="RT5-Uz-Ght" secondAttribute="bottom" id="pAx-ZZ-XTT"/>
                 <constraint firstAttribute="trailing" secondItem="VJT-ib-YCL" secondAttribute="trailing" id="rBY-aj-kHP"/>
                 <constraint firstAttribute="trailing" secondItem="RT5-Uz-Ght" secondAttribute="trailing" id="vdE-e1-jtV"/>
@@ -43,6 +53,6 @@
         </view>
     </objects>
     <resources>
-        <image name="background" width="1024" height="768"/>
+        <image name="background" width="1000" height="750"/>
     </resources>
 </document>

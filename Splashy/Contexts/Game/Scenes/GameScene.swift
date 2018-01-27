@@ -18,7 +18,7 @@ class GameScene: SKScene {
 
 	// MARK : - PROPERTIES
 	var moveRemoveAction = SKAction()
-	var viewModel: GameSceneViewModel!
+	var viewModel: GameViewModel!
 
 	// MARK : - LIFECYCLE
 	override func didMove(to view: SKView) {
@@ -79,6 +79,7 @@ class GameScene: SKScene {
 	private func createEnemies() {
 		let spawnAction = SKAction.run { [weak self] in
 			self?.setupEnemies()
+			self?.viewModel.incrementScore()
 		}
 
 		let spawnRateAction = SKAction.wait(forDuration: EnemyConstants.spawnRate)
