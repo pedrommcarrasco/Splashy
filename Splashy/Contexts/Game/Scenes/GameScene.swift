@@ -29,6 +29,7 @@ class GameScene: SKScene {
 
 	// MARK : - SETUP
 	private func setup() {
+		physicsWorld.contactDelegate = self
 		setupBackground()
 		setupGround()
 		setupSplashy()
@@ -79,7 +80,6 @@ class GameScene: SKScene {
 	private func createEnemies() {
 		let spawnAction = SKAction.run { [weak self] in
 			self?.setupEnemies()
-			self?.viewModel.incrementScore()
 		}
 
 		let spawnRateAction = SKAction.wait(forDuration: EnemyConstants.spawnRate)
@@ -120,4 +120,16 @@ class GameScene: SKScene {
 			jump()
 		}
 	}
+}
+
+extension GameScene: SKPhysicsContactDelegate {
+	func didBegin(_ contact: SKPhysicsContact) {
+		switch ContactHelper.body(contact.bodyA, didCollideWith: contact.bodyB) {
+		case .splashyAndRuby:
+			viewModel.incrementScore()
+		default:
+			break
+		}
+	}
+
 }
