@@ -97,11 +97,6 @@ class GameScene: SKScene {
 		moveRemoveAction = SKAction.sequence([moveEnemies, removeEnemies])
 	}
 
-	private func collisionNodeSize() -> CGFloat {
-		return (EnemyConstants.upperY*2) - 107.1
-	}
-
-
 	private func jump() {
 		splashy.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
 		splashy.physicsBody?.applyImpulse(
