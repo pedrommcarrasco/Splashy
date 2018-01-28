@@ -133,7 +133,8 @@ extension GameScene: SKPhysicsContactDelegate {
 			}
 		}
 
-		if CollisionHelper.collisionOf(a, and: b, isBetween: .splashy, and: .enemy) {
+		if CollisionHelper.collisionOf(a, and: b, isBetween: .splashy, and: .enemy) ||
+			CollisionHelper.collisionOf(a, and: b, isBetween: .splashy, and: .ground) {
 			viewModel.splashyCollided()
 			scene?.speed = 0
 			removeAllActions()
