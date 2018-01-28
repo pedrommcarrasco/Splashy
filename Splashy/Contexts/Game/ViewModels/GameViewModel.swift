@@ -10,9 +10,14 @@ import Foundation
 
 class GameViewModel {
     var hasStarted = false
+    var isDead = false
     let score: Bindable<Int> = Bindable(0)
     
-    func incrementScore() {
+    func didPickRuby() {
         score.value += 1
+    }
+
+    func splashyCollided() {
+        isDead = true 
     }
 }

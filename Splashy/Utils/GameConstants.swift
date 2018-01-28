@@ -10,8 +10,8 @@ import UIKit
 
 struct SplashyConstants {
    static let physicsBodyRatio: CGFloat = 0.9
-   static let dxVelocity = 0
-   static let dyVelocity = 15
+   static let dxVelocity: CGFloat = 0
+   static let dyVelocity: CGFloat = 14.5
 }
 
 struct EnemyConstants {

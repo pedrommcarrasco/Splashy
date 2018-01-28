@@ -36,7 +36,7 @@ class GameScene: SKScene {
 	}
 
 	private func setupSplashy() {
-		splashy = SpriteFactory.sprite(of: SpriteType.splashy, in: frame)
+		splashy = SpriteFactory.sprite(of: .splashy, in: frame)
 		addChild(splashy)
 	}
 
@@ -60,19 +60,19 @@ class GameScene: SKScene {
 	}
 
 	private func setupEnemy(with variation: CGFloat) -> SKSpriteNode {
-		let enemy = SpriteFactory.sprite(of: SpriteType.enemy, in: frame)
+		let enemy = SpriteFactory.sprite(of: .enemy, in: frame)
 		enemy.position.y = enemy.position.y + variation
 
 		return enemy
 	}
 
 	private func setupBackground() {
-		background = SpriteFactory.sprite(of: SpriteType.background, in: frame)
+		background = SpriteFactory.sprite(of: .background, in: frame)
 		addChild(background)
 	}
 
 	private func setupGround() {
-		ground = SpriteFactory.sprite(of: SpriteType.ground, in: frame)
+		ground = SpriteFactory.sprite(of: .ground, in: frame)
 		addChild(ground)
 	}
 
@@ -111,7 +111,7 @@ class GameScene: SKScene {
 			viewModel.hasStarted = true
 			createEnemies()
 			jump()
-		} else {
+		} else if !viewModel.isDead {
 			jump()
 		}
 	}
@@ -119,12 +119,22 @@ class GameScene: SKScene {
 
 extension GameScene: SKPhysicsContactDelegate {
 	func didBegin(_ contact: SKPhysicsContact) {
-		switch ContactHelper.body(contact.bodyA, didCollideWith: contact.bodyB) {
-		case .splashyAndRuby:
-			viewModel.incrementScore()
-		default:
-			break
-		}
+		body(contact.bodyA, didCollideWith: contact.bodyB)
 	}
 
+	private func body(_ a: SKPhysicsBody, didCollideWith b : SKPhysicsBody) {
+		if CollisionHelper.collisionOf(a, and: b, isBetween: .splashy, and: .ruby) {
+			viewModel.didPickRuby()
+
+			if a.isKind(of: .ruby) {
+				a.node?.removeFromParent()
+			} else {
+				b.node?.removeFromParent()
+			}
+		}
+
+		if CollisionHelper.collisionOf(a, and: b, isBetween: .splashy, and: .enemy) {
+			viewModel.splashyCollided()
+		}
+	}
 }

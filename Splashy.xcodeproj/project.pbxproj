@@ -33,8 +33,8 @@
 		DF8C5927201684990022F2CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8C5926201684990022F2CF /* Assets.xcassets */; };
 		DF8C592A201684990022F2CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8C5928201684990022F2CF /* LaunchScreen.storyboard */; };
 		DFA675A7201957AA00543CEE /* GameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA675A6201957AA00543CEE /* GameConstants.swift */; };
-		DFB96268201E7B8100AF7EBE /* ContactHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB96267201E7B8100AF7EBE /* ContactHelper.swift */; };
-		DFB9626A201E7FD900AF7EBE /* ColisionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB96269201E7FD900AF7EBE /* ColisionType.swift */; };
+		DFB96268201E7B8100AF7EBE /* CollisionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB96267201E7B8100AF7EBE /* CollisionHelper.swift */; };
+		DFB9626C201E898B00AF7EBE /* SKPhysicsBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB9626B201E898B00AF7EBE /* SKPhysicsBody.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,8 +66,8 @@
 		DF8C5929201684990022F2CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF8C592B201684990022F2CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFA675A6201957AA00543CEE /* GameConstants.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = GameConstants.swift; sourceTree = "<group>"; tabWidth = 3; };
-		DFB96267201E7B8100AF7EBE /* ContactHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactHelper.swift; sourceTree = "<group>"; };
-		DFB96269201E7FD900AF7EBE /* ColisionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColisionType.swift; sourceTree = "<group>"; };
+		DFB96267201E7B8100AF7EBE /* CollisionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionHelper.swift; sourceTree = "<group>"; };
+		DFB9626B201E898B00AF7EBE /* SKPhysicsBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPhysicsBody.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,7 @@
 			children = (
 				DF0FC4702017E8A900165600 /* DesignConstants.swift */,
 				DFA675A6201957AA00543CEE /* GameConstants.swift */,
-				DFB96267201E7B8100AF7EBE /* ContactHelper.swift */,
+				DFB96267201E7B8100AF7EBE /* CollisionHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -256,7 +256,6 @@
 			isa = PBXGroup;
 			children = (
 				DF0FC4902017F40000165600 /* SpriteType.swift */,
-				DFB96269201E7FD900AF7EBE /* ColisionType.swift */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -268,6 +267,7 @@
 				DF0FC4742017E93D00165600 /* UIButton.swift */,
 				DF0FC47B2017ED0600165600 /* String.swift */,
 				DF724AFE201BDDA900E4576B /* CGFloat.swift */,
+				DFB9626B201E898B00AF7EBE /* SKPhysicsBody.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -387,20 +387,20 @@
 				DF045FC1201A9CA200349006 /* SpriteFactory.swift in Sources */,
 				DFA675A7201957AA00543CEE /* GameConstants.swift in Sources */,
 				DF0FC4682017E29600165600 /* HomeViewModel.swift in Sources */,
+				DFB9626C201E898B00AF7EBE /* SKPhysicsBody.swift in Sources */,
 				0F38C7C7201D332F00AC9902 /* Bindable.swift in Sources */,
 				DF0FC4912017F40000165600 /* SpriteType.swift in Sources */,
 				DF0FC48F2017F38400165600 /* GameScene.swift in Sources */,
 				DF45A6552016A91200C46D8E /* AppCoordinator.swift in Sources */,
 				DF0FC4712017E8A900165600 /* DesignConstants.swift in Sources */,
 				DF0FC4732017E91200165600 /* UIViewController.swift in Sources */,
-				DFB9626A201E7FD900AF7EBE /* ColisionType.swift in Sources */,
 				DF724AFF201BDDA900E4576B /* CGFloat.swift in Sources */,
 				DF0FC46E2017E81200165600 /* Roundable.swift in Sources */,
 				DF0FC4872017EEB800165600 /* GameViewModel.swift in Sources */,
 				DF0FC47C2017ED0600165600 /* String.swift in Sources */,
 				DF0FC4612017E07E00165600 /* HomeCoordinator.swift in Sources */,
 				DF0FC46A2017E3E700165600 /* Identifiable.swift in Sources */,
-				DFB96268201E7B8100AF7EBE /* ContactHelper.swift in Sources */,
+				DFB96268201E7B8100AF7EBE /* CollisionHelper.swift in Sources */,
 				DF0FC48C2017EEDC00165600 /* GameViewController.swift in Sources */,
 				DF0FC4752017E93D00165600 /* UIButton.swift in Sources */,
 				DF8C591A201684990022F2CF /* AppDelegate.swift in Sources */,
