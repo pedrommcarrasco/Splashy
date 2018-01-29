@@ -16,17 +16,17 @@ struct SpriteFactory {
         sprite.setScale(type.scale)
         sprite.position = type.position(in: frame, with: sprite)
         sprite.zPosition = type.zPosition
+        sprite.name = type.rawValue
 
-        guard case .background = type else {
-
+        if case .background = type {
+            sprite.anchorPoint = CGPoint(x: 0, y: 0)
+        } else {
             sprite.physicsBody = type.physicsBody(with: sprite.size)
             sprite.physicsBody?.categoryBitMask = type.physicsId
             sprite.physicsBody?.collisionBitMask = type.colisionBitmask
             sprite.physicsBody?.contactTestBitMask = type.colisionBitmask
             sprite.physicsBody?.affectedByGravity = type.isAffectedByGravity
             sprite.physicsBody?.isDynamic = type.isDynamic
-
-            return sprite
         }
 
         return sprite

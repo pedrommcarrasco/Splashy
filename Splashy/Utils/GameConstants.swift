@@ -23,3 +23,7 @@ struct EnemyConstants {
    static let spawnRate = 1.5
    static let movementRate: CGFloat = 0.0075
 }
+
+struct BackgroundConstants {
+   static let velocity: CGFloat = 0.25
+}

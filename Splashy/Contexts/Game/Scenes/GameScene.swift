@@ -25,7 +25,9 @@ class GameScene: SKScene {
 		setup()
 	}
 
-	override func update(_ currentTime: TimeInterval) {}
+	override func update(_ currentTime: TimeInterval) {
+		animateBackground()
+	}
 
 	// MARK : - SETUP
 	private func setup() {
@@ -67,8 +69,11 @@ class GameScene: SKScene {
 	}
 
 	private func setupBackground() {
-		background = SpriteFactory.sprite(of: .background, in: frame)
-		addChild(background)
+		for i in 0...1 {
+			let background = SpriteFactory.sprite(of: .background, in: frame)
+			background.position = CGPoint(x: CGFloat(i) *  background.size.width, y: 0)
+			addChild(background)
+		}
 	}
 
 	private func setupGround() {
@@ -95,6 +100,32 @@ class GameScene: SKScene {
 		let removeEnemies = SKAction.removeFromParent()
 
 		moveRemoveAction = SKAction.sequence([moveEnemies, removeEnemies])
+	}
+
+	private func animateBackground() {
+		if viewModel.shouldAnimate() {
+			enumerateChildNodes(
+				withName: SpriteType.background.rawValue,
+				using: { [weak self ] node, _ in
+					guard let background = node as? SKSpriteNode else { return }
+					background.position = CGPoint(
+						x: background.position.x - BackgroundConstants.velocity,
+						y: background.position.y
+					)
+
+					self?.attemptToReset(background)
+				}
+			)
+		}
+	}
+
+	private func attemptToReset(_ background: SKSpriteNode) {
+		if background.position.x <= -background.size.width {
+			background.position = CGPoint(
+				x: background.position.x + (background.size.width * 2),
+				y: background.position.y
+			)
+		}
 	}
 
 	private func jump() {

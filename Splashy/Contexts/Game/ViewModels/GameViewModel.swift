@@ -20,4 +20,8 @@ class GameViewModel {
     func splashyCollided() {
         isDead = true 
     }
+
+    func shouldAnimate() -> Bool {
+        return hasStarted && !isDead
+    }
 }
