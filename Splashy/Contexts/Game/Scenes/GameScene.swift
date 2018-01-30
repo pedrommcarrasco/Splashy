@@ -28,7 +28,6 @@ class GameScene: SKScene {
 
 	// MARK: - LIFECYCLE
 	override func didMove(to view: SKView) {
-		physicsWorld.contactDelegate = self
 		setup()
 	}
 
@@ -40,15 +39,14 @@ class GameScene: SKScene {
 	func restart() {
 		removeAllChildren()
 		removeAllActions()
-
-		viewModel.isDead = false
-		viewModel.hasStarted = false
-		viewModel.score.value = 0
+		scene?.speed = 1
+		viewModel.restart()
 
 		setup()
 	}
 
 	private func setup() {
+		physicsWorld.contactDelegate = self
 		setupBackground()
 		setupGround()
 		setupSplashy()

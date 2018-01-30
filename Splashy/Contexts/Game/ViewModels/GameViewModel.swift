@@ -24,4 +24,10 @@ class GameViewModel {
     func shouldAnimate() -> Bool {
         return hasStarted && !isDead
     }
+
+    func restart() {
+        isDead = false
+        hasStarted = false
+        score.value = 0
+    }
 }
