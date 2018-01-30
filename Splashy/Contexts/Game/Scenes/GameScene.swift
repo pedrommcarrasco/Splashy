@@ -8,20 +8,27 @@
 
 import SpriteKit
 
+protocol GameSceneDelegate: class {
+	func gameSceneDidEnd(_ gameScene: GameScene)
+}
+
 class GameScene: SKScene {
 
-	// MARK : - SPRITES
+	// MARK: - SPRITES
 	var ground = SKSpriteNode()
 	var splashy = SKSpriteNode()
 	var enemiesNodes = SKNode()
 	var background = SKSpriteNode()
 
-	// MARK : - PROPERTIES
+	// MARK: - PROPERTIES
 	var moveRemoveAction = SKAction()
 	var viewModel: GameViewModel!
 
-	// MARK : - LIFECYCLE
+	weak var sceneDelegate: GameSceneDelegate?
+
+	// MARK: - LIFECYCLE
 	override func didMove(to view: SKView) {
+		physicsWorld.contactDelegate = self
 		setup()
 	}
 
@@ -29,9 +36,19 @@ class GameScene: SKScene {
 		animateBackground()
 	}
 
-	// MARK : - SETUP
+	// MARK: - SETUP
+	func restart() {
+		removeAllChildren()
+		removeAllActions()
+
+		viewModel.isDead = false
+		viewModel.hasStarted = false
+		viewModel.score.value = 0
+
+		setup()
+	}
+
 	private func setup() {
-		physicsWorld.contactDelegate = self
 		setupBackground()
 		setupGround()
 		setupSplashy()
@@ -81,7 +98,7 @@ class GameScene: SKScene {
 		addChild(ground)
 	}
 
-	// MARK : - FUNCTIONS
+	// MARK: - FUNCTIONS
 	private func createEnemies() {
 		let spawnAction = SKAction.run { [weak self] in
 			self?.setupEnemies()
@@ -135,7 +152,7 @@ class GameScene: SKScene {
 		)
 	}
 
-	// MARK : - INTERACTION
+	// MARK: - INTERACTION
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		if !viewModel.hasStarted {
 			splashy.physicsBody?.affectedByGravity = true
@@ -169,6 +186,7 @@ extension GameScene: SKPhysicsContactDelegate {
 			viewModel.splashyCollided()
 			scene?.speed = 0
 			removeAllActions()
+			sceneDelegate?.gameSceneDidEnd(self)
 		}
 	}
 }

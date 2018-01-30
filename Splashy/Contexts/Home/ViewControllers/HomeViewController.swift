@@ -14,26 +14,26 @@ protocol HomeViewNavigationDelegate: class {
 
 class HomeViewController: UIViewController {
 
-   // MARK : - OUTLETS
+   // MARK: - OUTLETS
    @IBOutlet weak var playButton: UIButton!
 
-   // MARK : - PROPERTIES
+   // MARK: - PROPERTIES
    var viewModel: HomeViewModel!
    weak var navigationDelegate: HomeViewNavigationDelegate?
 
-   // MARK : - LIFECYCLE
+   // MARK: - LIFECYCLE
    override func viewDidLoad() {
       super.viewDidLoad()
       setupButtons()
    }
 
-   // MARK : - SETUP
+   // MARK: - SETUP
    private func setupButtons() {
       playButton.roundedCorners()
       playButton.setTitle(viewModel.playButtonText, for: .normal)
    }
 
-   // MARK : - ACTIONS
+   // MARK: - ACTIONS
    @IBAction func playButtonAction(_ sender: UIButton) {
       self.navigationDelegate?.homeViewControllerDidPressPlay(self)
    }

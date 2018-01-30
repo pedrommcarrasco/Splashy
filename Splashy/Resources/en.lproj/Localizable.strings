@@ -6,4 +6,8 @@
   Copyright © 2018 Pedro Carrasco. All rights reserved.
 */
 
-"home.play" = "play";
+"home-play" = "play";
+
+"gameover-score-intro" = "You've picked";
+"gameover-score-object" = "rubies!";
+

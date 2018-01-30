@@ -15,8 +15,8 @@ class GameViewController: UIViewController {
     // MARK: - OUTLETS
     @IBOutlet weak var spriteKitView: SKView!
     @IBOutlet weak var scoreLabel: UILabel!
-    
-    // MARK : - PROPERTIES
+
+    // MARK: - PROPERTIES
     var viewModel: GameViewModel! {
         didSet {
             viewModel.score.bind(observer: { [unowned self] in
@@ -24,23 +24,28 @@ class GameViewController: UIViewController {
             })
         }
     }
+    var scene: GameScene!
 
-    // MARK : - LIFECYCLE
+    // MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSpriteKitView()
     }
 
-    // MARK : - SETUP
+    // MARK: - SETUP
     private func setupSpriteKitView() {
-        let scene = GameScene(size: spriteKitView.bounds.size)
+        scene = GameScene(size: spriteKitView.bounds.size)
         scene.scaleMode = .aspectFill
         scene.anchorPoint = CGPoint(x: 0, y: 0)
 
         scene.viewModel = viewModel
-
         spriteKitView.showsFPS = true
 
         spriteKitView.presentScene(scene)
+    }
+
+    // MARK: - TEST
+    @IBAction func restartButtonAction(_ sender: UIButton) {
+        scene.restart()
     }
 }

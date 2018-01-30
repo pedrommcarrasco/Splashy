@@ -9,5 +9,5 @@
 import Foundation
 
 struct HomeViewModel {
-    let playButtonText = "home.play".localizedUppercaseString
+    let playButtonText = "home-play".localizedUppercaseString
 }
