@@ -148,6 +148,16 @@ class GameScene: SKScene {
 		splashy.physicsBody?.applyImpulse(
 			CGVector(dx: SplashyConstants.dxVelocity, dy: SplashyConstants.dyVelocity)
 		)
+
+		// TO DO: Move out of here because of performance issues
+		var textureArray = [SKTexture]()
+		for index in 1 ... 9 {
+			let textureName = "jump\(index)"
+			let texture = SKTexture(imageNamed: textureName)
+			textureArray.append(texture)
+		}
+		let animate = SKAction.animate(with: textureArray, timePerFrame: 0.05)
+		splashy.run(animate)
 	}
 
 	// MARK: - INTERACTION
@@ -160,6 +170,8 @@ class GameScene: SKScene {
 		} else if !viewModel.isDead {
 			jump()
 		}
+
+
 	}
 }
 
