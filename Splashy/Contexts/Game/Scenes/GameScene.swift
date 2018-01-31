@@ -86,7 +86,7 @@ class GameScene: SKScene {
 		let spawnWithRateAction = SKAction.sequence([spawnAction, spawnRateAction])
 		run(SKAction.repeatForever(spawnWithRateAction))
 
-		let distance = CGFloat(frame.width + enemiesAndRuby.node.frame.width + EnemyConstants.widthExtra)
+		let distance = CGFloat(frame.width + EnemyConstants.widthExtra)
 		let moveEnemies = SKAction.moveBy(
 			x: -distance,
 			y: 0,

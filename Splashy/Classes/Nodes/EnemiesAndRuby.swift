@@ -27,27 +27,7 @@ class EnemiesAndRuby {
         node.addChild(topEnemy.node)
         node.addChild(bottomEnemy.node)
 
-        let randomVariation = CGFloat.randomBetween(min: EnemyConstants.bottomVariation, and: EnemyConstants.bottomVariation)
+        let randomVariation = CGFloat.randomBetween(min: EnemyConstants.bottomVariation, and: EnemyConstants.topVariation)
         node.position.y = node.position.y + randomVariation
     }
 }
-
-
-
-//enemiesNodes = SKNode()
-//
-//enemiesNodes.addChild(Ruby(in: frame).node)
-//enemiesNodes.addChild(setupEnemy(with: EnemyConstants.lowerY).node)
-//enemiesNodes.addChild(setupEnemy(with: EnemyConstants.upperY).node)
-//
-//enemiesNodes.zPosition = SpriteType.enemy.zPosition
-//
-//let randomVariation = CGFloat.randomBetween(
-//    min: EnemyConstants.bottomVariation,
-//    and: EnemyConstants.topVariation
-//)
-//enemiesNodes.position.y = enemiesNodes.position.y + randomVariation
-//
-//enemiesNodes.run(moveRemoveAction)
-//addChild(enemiesNodes)
-
