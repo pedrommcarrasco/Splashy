@@ -37,6 +37,8 @@
 		DFA675A7201957AA00543CEE /* GameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA675A6201957AA00543CEE /* GameConstants.swift */; };
 		DFB96268201E7B8100AF7EBE /* CollisionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB96267201E7B8100AF7EBE /* CollisionHelper.swift */; };
 		DFB9626C201E898B00AF7EBE /* SKPhysicsBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB9626B201E898B00AF7EBE /* SKPhysicsBody.swift */; };
+		DFBA9AA72022556900021F19 /* Splashy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBA9AA62022556900021F19 /* Splashy.swift */; };
+		DFBA9AAB202259F200021F19 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBA9AAA202259F200021F19 /* Loader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		DFA675A6201957AA00543CEE /* GameConstants.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = GameConstants.swift; sourceTree = "<group>"; tabWidth = 3; };
 		DFB96267201E7B8100AF7EBE /* CollisionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionHelper.swift; sourceTree = "<group>"; };
 		DFB9626B201E898B00AF7EBE /* SKPhysicsBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPhysicsBody.swift; sourceTree = "<group>"; };
+		DFBA9AA62022556900021F19 /* Splashy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splashy.swift; sourceTree = "<group>"; };
+		DFBA9AAA202259F200021F19 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 		DF045FC2201A9E6000349006 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DFBA9AA52022555C00021F19 /* Model */,
 				DF8C59332016A7290022F2CF /* Extensions */,
 				DF8C59342016A7340022F2CF /* Protocols */,
 				DF8C59322016A71F0022F2CF /* Enumerations */,
@@ -127,6 +132,7 @@
 				DF0FC4702017E8A900165600 /* DesignConstants.swift */,
 				DFA675A6201957AA00543CEE /* GameConstants.swift */,
 				DFB96267201E7B8100AF7EBE /* CollisionHelper.swift */,
+				DFBA9AAA202259F200021F19 /* Loader.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -331,6 +337,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		DFBA9AA52022555C00021F19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DFBA9AA62022556900021F19 /* Splashy.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -409,6 +423,7 @@
 				DF0FC4652017E26800165600 /* HomeViewController.swift in Sources */,
 				DF045FC1201A9CA200349006 /* SpriteFactory.swift in Sources */,
 				DFA675A7201957AA00543CEE /* GameConstants.swift in Sources */,
+				DFBA9AA72022556900021F19 /* Splashy.swift in Sources */,
 				DF0FC4682017E29600165600 /* HomeViewModel.swift in Sources */,
 				DFB9626C201E898B00AF7EBE /* SKPhysicsBody.swift in Sources */,
 				0F38C7C7201D332F00AC9902 /* Bindable.swift in Sources */,
@@ -427,6 +442,7 @@
 				DF0FC48C2017EEDC00165600 /* GameViewController.swift in Sources */,
 				DF0FC4752017E93D00165600 /* UIButton.swift in Sources */,
 				DF2D4687201FCC6400F87D49 /* UIView.swift in Sources */,
+				DFBA9AAB202259F200021F19 /* Loader.swift in Sources */,
 				DF8C591A201684990022F2CF /* AppDelegate.swift in Sources */,
 				DF45A6572016B16900C46D8E /* Coordinator.swift in Sources */,
 				DF0FC4852017EEAB00165600 /* GameCoordinator.swift in Sources */,

@@ -16,7 +16,7 @@ class GameScene: SKScene {
 
 	// MARK: - SPRITES
 	var ground = SKSpriteNode()
-	var splashy = SKSpriteNode()
+	var splashy: Splashy!
 	var enemiesNodes = SKNode()
 	var background = SKSpriteNode()
 
@@ -53,8 +53,8 @@ class GameScene: SKScene {
 	}
 
 	private func setupSplashy() {
-		splashy = SpriteFactory.sprite(of: .splashy, in: frame)
-		addChild(splashy)
+		splashy = Splashy(in: frame)
+		addChild(splashy.node)
 	}
 
 	private func setupEnemies() {
@@ -143,35 +143,16 @@ class GameScene: SKScene {
 		}
 	}
 
-	private func jump() {
-		splashy.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
-		splashy.physicsBody?.applyImpulse(
-			CGVector(dx: SplashyConstants.dxVelocity, dy: SplashyConstants.dyVelocity)
-		)
-
-		// TO DO: Move out of here because of performance issues
-		var textureArray = [SKTexture]()
-		for index in 1 ... 9 {
-			let textureName = "jump\(index)"
-			let texture = SKTexture(imageNamed: textureName)
-			textureArray.append(texture)
-		}
-		let animate = SKAction.animate(with: textureArray, timePerFrame: 0.05)
-		splashy.run(animate)
-	}
-
 	// MARK: - INTERACTION
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		if !viewModel.hasStarted {
-			splashy.physicsBody?.affectedByGravity = true
+			splashy.node.physicsBody?.affectedByGravity = true
 			viewModel.hasStarted = true
 			createEnemies()
-			jump()
+			splashy.jumpAction()
 		} else if !viewModel.isDead {
-			jump()
+			splashy.jumpAction()
 		}
-
-
 	}
 }
 
