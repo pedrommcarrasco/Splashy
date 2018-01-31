@@ -39,6 +39,9 @@
 		DFB9626C201E898B00AF7EBE /* SKPhysicsBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB9626B201E898B00AF7EBE /* SKPhysicsBody.swift */; };
 		DFBA9AA72022556900021F19 /* Splashy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBA9AA62022556900021F19 /* Splashy.swift */; };
 		DFBA9AAB202259F200021F19 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBA9AAA202259F200021F19 /* Loader.swift */; };
+		DFBA9AAD20225D0B00021F19 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBA9AAC20225D0B00021F19 /* Enemy.swift */; };
+		DFBA9AAF20225DA300021F19 /* EnemiesAndRuby.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBA9AAE20225DA300021F19 /* EnemiesAndRuby.swift */; };
+		DFBA9AB120225DBB00021F19 /* Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBA9AB020225DBB00021F19 /* Ruby.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,9 @@
 		DFB9626B201E898B00AF7EBE /* SKPhysicsBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPhysicsBody.swift; sourceTree = "<group>"; };
 		DFBA9AA62022556900021F19 /* Splashy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splashy.swift; sourceTree = "<group>"; };
 		DFBA9AAA202259F200021F19 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		DFBA9AAC20225D0B00021F19 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		DFBA9AAE20225DA300021F19 /* EnemiesAndRuby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemiesAndRuby.swift; sourceTree = "<group>"; };
+		DFBA9AB020225DBB00021F19 /* Ruby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ruby.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +114,7 @@
 		DF045FC2201A9E6000349006 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				DFBA9AA52022555C00021F19 /* Model */,
+				DFBA9AA52022555C00021F19 /* Nodes */,
 				DF8C59332016A7290022F2CF /* Extensions */,
 				DF8C59342016A7340022F2CF /* Protocols */,
 				DF8C59322016A71F0022F2CF /* Enumerations */,
@@ -337,12 +343,15 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		DFBA9AA52022555C00021F19 /* Model */ = {
+		DFBA9AA52022555C00021F19 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
 				DFBA9AA62022556900021F19 /* Splashy.swift */,
+				DFBA9AAC20225D0B00021F19 /* Enemy.swift */,
+				DFBA9AB020225DBB00021F19 /* Ruby.swift */,
+				DFBA9AAE20225DA300021F19 /* EnemiesAndRuby.swift */,
 			);
-			path = Model;
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,7 +433,9 @@
 				DF045FC1201A9CA200349006 /* SpriteFactory.swift in Sources */,
 				DFA675A7201957AA00543CEE /* GameConstants.swift in Sources */,
 				DFBA9AA72022556900021F19 /* Splashy.swift in Sources */,
+				DFBA9AB120225DBB00021F19 /* Ruby.swift in Sources */,
 				DF0FC4682017E29600165600 /* HomeViewModel.swift in Sources */,
+				DFBA9AAD20225D0B00021F19 /* Enemy.swift in Sources */,
 				DFB9626C201E898B00AF7EBE /* SKPhysicsBody.swift in Sources */,
 				0F38C7C7201D332F00AC9902 /* Bindable.swift in Sources */,
 				DF0FC4912017F40000165600 /* SpriteType.swift in Sources */,
@@ -433,6 +444,7 @@
 				DF0FC4712017E8A900165600 /* DesignConstants.swift in Sources */,
 				DF0FC4732017E91200165600 /* UIViewController.swift in Sources */,
 				DF724AFF201BDDA900E4576B /* CGFloat.swift in Sources */,
+				DFBA9AAF20225DA300021F19 /* EnemiesAndRuby.swift in Sources */,
 				DF0FC46E2017E81200165600 /* Roundable.swift in Sources */,
 				DF0FC4872017EEB800165600 /* GameViewModel.swift in Sources */,
 				DF0FC47C2017ED0600165600 /* String.swift in Sources */,

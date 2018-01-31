@@ -15,9 +15,9 @@ protocol GameSceneDelegate: class {
 class GameScene: SKScene {
 
 	// MARK: - SPRITES
-	var ground = SKSpriteNode()
 	var splashy: Splashy!
-	var enemiesNodes = SKNode()
+	var enemiesAndRuby: EnemiesAndRuby!
+	var ground = SKSpriteNode()
 	var background = SKSpriteNode()
 
 	// MARK: - PROPERTIES
@@ -57,30 +57,10 @@ class GameScene: SKScene {
 		addChild(splashy.node)
 	}
 
-	private func setupEnemies() {
-		enemiesNodes = SKNode()
-
-		enemiesNodes.addChild(SpriteFactory.sprite(of: .ruby, in: frame))
-		enemiesNodes.addChild(setupEnemy(with: EnemyConstants.lowerY))
-		enemiesNodes.addChild(setupEnemy(with: EnemyConstants.upperY))
-		
-		enemiesNodes.zPosition = SpriteType.enemy.zPosition
-
-		let randomVariation = CGFloat.randomBetween(
-			min: EnemyConstants.bottomVariation,
-			and: EnemyConstants.topVariation
-		)
-		enemiesNodes.position.y = enemiesNodes.position.y + randomVariation
-
-		enemiesNodes.run(moveRemoveAction)
-		addChild(enemiesNodes)
-	}
-
-	private func setupEnemy(with variation: CGFloat) -> SKSpriteNode {
-		let enemy = SpriteFactory.sprite(of: .enemy, in: frame)
-		enemy.position.y = enemy.position.y + variation
-
-		return enemy
+	private func setupEnemiesAndRuby() {
+		enemiesAndRuby = EnemiesAndRuby(in: frame)
+		enemiesAndRuby.node.run(moveRemoveAction)
+		addChild(enemiesAndRuby.node)
 	}
 
 	private func setupBackground() {
@@ -97,16 +77,16 @@ class GameScene: SKScene {
 	}
 
 	// MARK: - FUNCTIONS
-	private func createEnemies() {
+	private func createEnemiesAndRuby() {
 		let spawnAction = SKAction.run { [weak self] in
-			self?.setupEnemies()
+			self?.setupEnemiesAndRuby()
 		}
 
 		let spawnRateAction = SKAction.wait(forDuration: EnemyConstants.spawnRate)
 		let spawnWithRateAction = SKAction.sequence([spawnAction, spawnRateAction])
 		run(SKAction.repeatForever(spawnWithRateAction))
 
-		let distance = CGFloat(frame.width + enemiesNodes.frame.width + EnemyConstants.widthExtra)
+		let distance = CGFloat(frame.width + enemiesAndRuby.node.frame.width + EnemyConstants.widthExtra)
 		let moveEnemies = SKAction.moveBy(
 			x: -distance,
 			y: 0,
@@ -148,7 +128,7 @@ class GameScene: SKScene {
 		if !viewModel.hasStarted {
 			splashy.node.physicsBody?.affectedByGravity = true
 			viewModel.hasStarted = true
-			createEnemies()
+			createEnemiesAndRuby()
 			splashy.jumpAction()
 		} else if !viewModel.isDead {
 			splashy.jumpAction()
