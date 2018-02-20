@@ -13,18 +13,19 @@ import SceneKit
 class GameViewController: UIViewController {
 
     // MARK: - OUTLETS
-    @IBOutlet weak var spriteKitView: SKView!
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet private weak var spriteKitView: SKView!
+    @IBOutlet private weak var scoreLabel: UILabel!
 
     // MARK: - PROPERTIES
     var viewModel: GameViewModel! {
         didSet {
-            viewModel.score.bind(observer: { [unowned self] in
-                self.scoreLabel.text = "\($0)"
+            viewModel.score.bind(observer: { [weak self] in
+                guard let scoreLabel = self?.scoreLabel else { return }
+                scoreLabel.text = "\($0)"
             })
         }
     }
-    var scene: GameScene!
+    private var scene = GameScene()
 
     // MARK: - LIFECYCLE
     override func viewDidLoad() {

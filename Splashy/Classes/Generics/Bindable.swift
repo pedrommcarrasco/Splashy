@@ -10,20 +10,24 @@ import Foundation
 
 class Bindable<T> {
     typealias Observer = (T) -> ()
-    
+
+    // MARK: - Public Properties
     var observer: Observer?
-    
-    func bind(observer: Observer?) {
-        self.observer = observer
-    }
-    
     var value: T {
         didSet {
             observer?(value)
         }
     }
-    
-    init(_ v: T) {
-        value = v
+
+    // MARK: - Inits
+    init(_ value: T) {
+        self.value = value
+    }
+
+    // MARK: - Public Functions
+    func bind(observer: Observer?) {
+        self.observer = observer
+        observer?(value)
     }
 }
+
