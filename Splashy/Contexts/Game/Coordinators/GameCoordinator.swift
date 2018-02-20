@@ -31,10 +31,7 @@ class GameCoordinator: Coordinator {
 
     // MARK: - FUNCTIONS
     private func viewController() -> GameViewController {
-        let viewController = GameViewController(
-            nibName: GameViewController.name,
-            bundle: nil
-        )
+        let viewController = GameViewController()
 
         let viewModel = GameViewModel()
         viewController.viewModel = viewModel

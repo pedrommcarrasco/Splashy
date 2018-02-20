@@ -31,10 +31,7 @@ class HomeCoordinator: Coordinator {
 
    // MARK: - FUNCTIONS
    private func viewController() -> HomeViewController {
-      let viewController = HomeViewController(
-         nibName: HomeViewController.name,
-         bundle: nil
-      )
+      let viewController = HomeViewController()
 
       let viewModel = HomeViewModel()
       viewController.viewModel = viewModel
