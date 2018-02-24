@@ -9,59 +9,75 @@
 import UIKit
 
 protocol HomeViewNavigationDelegate: class {
-    func homeViewControllerDidPressPlay(_ homeViewController: HomeViewController)
+   func homeViewControllerDidPressPlay(_ homeViewController: HomeViewController)
 }
 
 class HomeViewController: UIViewController {
 
-    // MARK: - OUTLETS
-    @IBOutlet var actionButtons: [UIButton]!
-    @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet weak var logoImageView: UIImageView!
-    @IBOutlet weak var buttonsStackView: UIStackView!
+   // MARK: - OUTLETS
+   @IBOutlet private var actionButtons: [UIButton]!
+   @IBOutlet private weak var backgroundImageView: UIImageView!
+   @IBOutlet private weak var logoImageView: UIImageView!
+   @IBOutlet private weak var buttonsStackView: UIStackView!
 
+   // MARK: - PROPERTIES
+   var viewModel: HomeViewModel!
+   weak var navigationDelegate: HomeViewNavigationDelegate?
 
+   // MARK: - LIFECYCLE
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      setup()
+   }
 
-    // MARK: - PROPERTIES
-    var viewModel: HomeViewModel!
-    weak var navigationDelegate: HomeViewNavigationDelegate?
+   // MARK: - SETUP
+   private func setup() {
+      setupActionsStackView()
+      setupButtons()
+      setupBackground()
+   }
 
-    // MARK: - LIFECYCLE
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupButtons()
-        setupBackground()
-    }
+   private func setupActionsStackView() {
+      let offset = buttonsStackView.bounds.size.height
+      buttonsStackView.bounds.origin.y -= offset
+      UIView.animate(withDuration: AnimationDurations.normal.rawValue) { [weak self] in
+         self?.buttonsStackView.bounds.origin.y += offset
+      }
+   }
 
-    // MARK: - SETUP
-    private func setupButtons() {
-        let offset = buttonsStackView.bounds.size.height
-        buttonsStackView.bounds.origin.y -= offset
-        UIView.animate(withDuration: 0.66) { [weak self] in
-            self?.buttonsStackView.bounds.origin.y += offset
-        }
+   private func setupButtons() {
+      actionButtons.forEach { [weak self] button in
+         self?.setup(button: button)
+      }
+   }
 
-        actionButtons.forEach { button in
-            button.roundedCorners()
-            guard let index = actionButtons.index(of: button)?.hashValue else { return }
-            button.isHidden = true
-            UIView.animate(withDuration: 0.33, delay: 0.25*Double(index),
-                           options: .curveEaseOut, animations: {
-                button.isHidden = false
-                button.layoutIfNeeded()
-            }, completion: nil)
-        }
-    }
+   private func setup(button: UIButton) {
+      button.roundedCorners()
+      guard let index = actionButtons.index(of: button)?.hashValue else { return }
 
-    private func setupBackground() {
-        backgroundImageView.alpha = 0
-        UIView.animate(withDuration: 1) { [weak self] in
-            self?.backgroundImageView.alpha = 1
-        }
-    }
+      button.isHidden = true
+      UIView.animate(withDuration: AnimationDurations.short.rawValue,
+                     delay: delayForButton(at: index),
+                     options: .curveEaseOut, animations: {
+                        button.isHidden = false
+                        button.layoutIfNeeded()
+      }, completion: nil)
+   }
 
-    // MARK: - ACTIONS
-    @IBAction func playButtonAction(_ sender: UIButton) {
-        self.navigationDelegate?.homeViewControllerDidPressPlay(self)
-    }
+   private func setupBackground() {
+      backgroundImageView.alpha = 0
+      UIView.animate(withDuration: AnimationDurations.long.rawValue) { [weak self] in
+         self?.backgroundImageView.alpha = 1
+      }
+   }
+
+   // MARK: - HELPER FUNCTIONS
+   private func delayForButton(at index: Int) -> Double {
+      return AnimationsDelay.short.rawValue*Double(index)
+   }
+
+   // MARK: - ACTIONS
+   @IBAction func playButtonAction(_ sender: UIButton) {
+      self.navigationDelegate?.homeViewControllerDidPressPlay(self)
+   }
 }

@@ -26,6 +26,7 @@
 		DF0FC48D2017EEDC00165600 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0FC48B2017EEDC00165600 /* GameViewController.xib */; };
 		DF0FC48F2017F38400165600 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC48E2017F38400165600 /* GameScene.swift */; };
 		DF0FC4912017F40000165600 /* SpriteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4902017F40000165600 /* SpriteType.swift */; };
+		DF1CB3E82042282700164F8E /* AnimationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CB3E72042282700164F8E /* AnimationEnums.swift */; };
 		DF2D4685201FCA0F00F87D49 /* YIKES!__.TTF in Resources */ = {isa = PBXBuildFile; fileRef = DF2D4684201FCA0F00F87D49 /* YIKES!__.TTF */; };
 		DF2D4687201FCC6400F87D49 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2D4686201FCC6400F87D49 /* UIView.swift */; };
 		DF45A6552016A91200C46D8E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45A6542016A91200C46D8E /* AppCoordinator.swift */; };
@@ -64,6 +65,7 @@
 		DF0FC48B2017EEDC00165600 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		DF0FC48E2017F38400165600 /* GameScene.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; };
 		DF0FC4902017F40000165600 /* SpriteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteType.swift; sourceTree = "<group>"; };
+		DF1CB3E72042282700164F8E /* AnimationEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationEnums.swift; sourceTree = "<group>"; };
 		DF2D4684201FCA0F00F87D49 /* YIKES!__.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YIKES!__.TTF"; sourceTree = "<group>"; };
 		DF2D4686201FCC6400F87D49 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		DF45A6542016A91200C46D8E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				DF0FC4902017F40000165600 /* SpriteType.swift */,
+				DF1CB3E72042282700164F8E /* AnimationEnums.swift */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				DFBA9AAD20225D0B00021F19 /* Enemy.swift in Sources */,
 				DFB9626C201E898B00AF7EBE /* SKPhysicsBody.swift in Sources */,
 				0F38C7C7201D332F00AC9902 /* Bindable.swift in Sources */,
+				DF1CB3E82042282700164F8E /* AnimationEnums.swift in Sources */,
 				DF0FC4912017F40000165600 /* SpriteType.swift in Sources */,
 				DF0FC48F2017F38400165600 /* GameScene.swift in Sources */,
 				DF45A6552016A91200C46D8E /* AppCoordinator.swift in Sources */,
