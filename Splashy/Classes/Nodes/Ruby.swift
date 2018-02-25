@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class Ruby {
+struct Ruby {
 
     // MARK: - PROPERTIES
     let node: SKSpriteNode
@@ -17,7 +17,5 @@ class Ruby {
     init(in frame: CGRect) {
         self.node = SpriteFactory.sprite(of: .ruby, in: frame)
     }
-
-    // MARK: - FUNCTIONS
 }
 

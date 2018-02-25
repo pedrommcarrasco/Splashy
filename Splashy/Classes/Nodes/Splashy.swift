@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class Splashy {
+struct Splashy {
 
     // MARK: - PROPERTIES
     let node: SKSpriteNode

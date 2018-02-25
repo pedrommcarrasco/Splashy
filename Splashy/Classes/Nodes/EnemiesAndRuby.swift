@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class EnemiesAndRuby {
+struct EnemiesAndRuby {
 
     // MARK: - PROPERTIES
     let node: SKNode

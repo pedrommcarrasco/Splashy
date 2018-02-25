@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class Enemy {
+struct Enemy {
 
     // MARK: - PROPERTIES
     let node: SKSpriteNode

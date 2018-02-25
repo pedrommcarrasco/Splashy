@@ -126,14 +126,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		DF0FC4622017E24D00165600 /* Xibs */ = {
-			isa = PBXGroup;
-			children = (
-				DF0FC4642017E26800165600 /* HomeViewController.xib */,
-			);
-			path = Xibs;
-			sourceTree = "<group>";
-		};
 		DF0FC46F2017E88E00165600 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +145,6 @@
 				DF0FC4822017EE8400165600 /* ViewControllers */,
 				DF2D467E201FC3C500F87D49 /* Views */,
 				DF0FC4832017EE8E00165600 /* Scenes */,
-				DF0FC4802017EE7300165600 /* XIbs */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -174,17 +165,10 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		DF0FC4802017EE7300165600 /* XIbs */ = {
-			isa = PBXGroup;
-			children = (
-				DF0FC48B2017EEDC00165600 /* GameViewController.xib */,
-			);
-			path = XIbs;
-			sourceTree = "<group>";
-		};
 		DF0FC4822017EE8400165600 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DF0FC48B2017EEDC00165600 /* GameViewController.xib */,
 				DF0FC48A2017EEDC00165600 /* GameViewController.swift */,
 			);
 			path = ViewControllers;
@@ -219,7 +203,6 @@
 				DF45A6592016B2E300C46D8E /* Coordinators */,
 				DF45A65B2016B2EF00C46D8E /* ViewModels */,
 				DF45A65A2016B2E800C46D8E /* ViewControllers */,
-				DF0FC4622017E24D00165600 /* Xibs */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -235,6 +218,7 @@
 		DF45A65A2016B2E800C46D8E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DF0FC4642017E26800165600 /* HomeViewController.xib */,
 				DF0FC4632017E26800165600 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
@@ -246,6 +230,13 @@
 				DF0FC4672017E29600165600 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DF4F7FF920436AE2008B2B2C /* Game Over */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Game Over";
 			sourceTree = "<group>";
 		};
 		DF8C590D201684990022F2CF = {
@@ -282,6 +273,7 @@
 			children = (
 				DF45A6582016B2D900C46D8E /* Home */,
 				DF0FC47D2017EE4400165600 /* Game */,
+				DF4F7FF920436AE2008B2B2C /* Game Over */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
