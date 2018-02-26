@@ -17,7 +17,7 @@ class GameViewController: UIViewController {
     @IBOutlet private weak var scoreLabel: UILabel!
 
     // MARK: - PROPERTIES
-    var viewModel: GameViewModel! {
+    private var viewModel: GameViewModel {
         didSet {
             viewModel.score.bind(observer: { [weak self] in
                 guard let scoreLabel = self?.scoreLabel else { return }
@@ -26,6 +26,16 @@ class GameViewController: UIViewController {
         }
     }
     private var scene = GameScene()
+
+    // MARK: - INIT
+    init(with viewModel: GameViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: GameViewController.name, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - LIFECYCLE
     override func viewDidLoad() {

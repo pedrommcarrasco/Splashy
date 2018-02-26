@@ -31,10 +31,8 @@ class HomeCoordinator: Coordinator {
 
    // MARK: - FUNCTIONS
    private func viewController() -> HomeViewController {
-      let viewController = HomeViewController()
-
       let viewModel = HomeViewModel()
-      viewController.viewModel = viewModel
+      let viewController = HomeViewController(with: viewModel)
       viewController.navigationDelegate = self
 
       return viewController

@@ -21,8 +21,18 @@ class HomeViewController: UIViewController {
    @IBOutlet private weak var buttonsStackView: UIStackView!
 
    // MARK: - PROPERTIES
-   var viewModel: HomeViewModel!
+   private var viewModel: HomeViewModel
    weak var navigationDelegate: HomeViewNavigationDelegate?
+
+   // MARK: - INIT
+   init(with viewModel: HomeViewModel) {
+      self.viewModel = viewModel
+      super.init(nibName: HomeViewController.name, bundle: nil)
+   }
+
+   required init?(coder aDecoder: NSCoder) {
+      fatalError("init(coder:) has not been implemented")
+   }
 
    // MARK: - LIFECYCLE
    override func viewDidLoad() {

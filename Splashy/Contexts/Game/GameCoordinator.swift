@@ -31,9 +31,8 @@ class GameCoordinator: Coordinator {
 
     // MARK: - FUNCTIONS
     private func viewController() -> GameViewController {
-        let viewController = GameViewController()
-
         let viewModel = GameViewModel()
+        let viewController = GameViewController(with: viewModel)
         viewController.viewModel = viewModel
 
         return viewController
