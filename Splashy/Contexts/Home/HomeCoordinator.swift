@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeCoordinator: Coordinator {
+class HomeCoordinator: Coordinator, CoordinatorDelegate {
 
    // MARK: - PROPERTIES
    weak var coordinatorDelegate: CoordinatorDelegate?
@@ -44,15 +44,5 @@ extension HomeCoordinator: HomeViewNavigationDelegate {
       let gameCoordinator = GameCoordinator(navigationController: navigationController)
       gameCoordinator.coordinatorDelegate = self
       gameCoordinator.start()
-   }
-}
-
-extension HomeCoordinator: CoordinatorDelegate {
-   func coordinatorDidStart(_ coordinator: Coordinator) {
-      coordinators.append(coordinator)
-   }
-
-   func coordinatorDidEnd(_ coordinator: Coordinator) {
-      coordinators = coordinators.filter { $0 !== coordinator }
    }
 }

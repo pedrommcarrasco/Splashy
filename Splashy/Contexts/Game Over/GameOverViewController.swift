@@ -10,26 +10,44 @@ import UIKit
 
 class GameOverViewController: UIViewController {
 
+    // MARK: - OUTLETS
+    @IBOutlet weak var gameOverView: GameOverView!
+
+    // MARK: - PROPERTIES
+    private var isFirstAppearance = true
+
+    private var viewModel: GameOverViewModel
+
+    // MARK: - INIT
+    init(with viewModel: GameOverViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: GameOverViewController.name, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
-    
 
-    /*
-    // MARK: - Navigation
+    // MARK: - ENTRANCE
+    private func animateEntrance() {
+        if isFirstAppearance {
+            gameOverView.bounds.origin.y -= 200
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+            UIView.animate(withDuration: AnimationDurations.normal.rawValue) { [weak self] in
+                guard let `self` = self else { return }
+                self.gameOverView.bounds.origin.y += 200
+            }
+
+            isFirstAppearance = false
+        }
     }
-    */
-
 }

@@ -47,6 +47,8 @@
 		DFBA9AAD20225D0B00021F19 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBA9AAC20225D0B00021F19 /* Enemy.swift */; };
 		DFBA9AAF20225DA300021F19 /* EnemiesAndRuby.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBA9AAE20225DA300021F19 /* EnemiesAndRuby.swift */; };
 		DFBA9AB120225DBB00021F19 /* Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBA9AB020225DBB00021F19 /* Ruby.swift */; };
+		DFC6C44A2045EB3600BAD25D /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6C4492045EB3600BAD25D /* GameOverView.swift */; };
+		DFC6C44C2045EB5300BAD25D /* GameOverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC6C44B2045EB5300BAD25D /* GameOverView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,8 @@
 		DFBA9AAC20225D0B00021F19 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		DFBA9AAE20225DA300021F19 /* EnemiesAndRuby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemiesAndRuby.swift; sourceTree = "<group>"; };
 		DFBA9AB020225DBB00021F19 /* Ruby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ruby.swift; sourceTree = "<group>"; };
+		DFC6C4492045EB3600BAD25D /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
+		DFC6C44B2045EB5300BAD25D /* GameOverView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameOverView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,8 @@
 				DF3DE3BA2044C28B00825680 /* GameOverViewModel.swift */,
 				DF3DE3BC2044C2A600825680 /* GameOverViewController.swift */,
 				DF3DE3BD2044C2A600825680 /* GameOverViewController.xib */,
+				DFC6C4492045EB3600BAD25D /* GameOverView.swift */,
+				DFC6C44B2045EB5300BAD25D /* GameOverView.xib */,
 			);
 			path = "Game Over";
 			sourceTree = "<group>";
@@ -358,6 +364,7 @@
 			files = (
 				DF8C5927201684990022F2CF /* Assets.xcassets in Resources */,
 				DF2D4685201FCA0F00F87D49 /* YIKES!__.TTF in Resources */,
+				DFC6C44C2045EB5300BAD25D /* GameOverView.xib in Resources */,
 				DF0FC4782017ECCF00165600 /* Localizable.strings in Resources */,
 				DF8C592A201684990022F2CF /* LaunchScreen.storyboard in Resources */,
 				DF0FC4662017E26800165600 /* HomeViewController.xib in Resources */,
@@ -395,6 +402,7 @@
 				DF0FC4872017EEB800165600 /* GameViewModel.swift in Sources */,
 				DF3DE3BB2044C28B00825680 /* GameOverViewModel.swift in Sources */,
 				DF0FC47C2017ED0600165600 /* String.swift in Sources */,
+				DFC6C44A2045EB3600BAD25D /* GameOverView.swift in Sources */,
 				DF0FC4612017E07E00165600 /* HomeCoordinator.swift in Sources */,
 				DF0FC46A2017E3E700165600 /* Identifiable.swift in Sources */,
 				DFB96268201E7B8100AF7EBE /* CollisionHelper.swift in Sources */,

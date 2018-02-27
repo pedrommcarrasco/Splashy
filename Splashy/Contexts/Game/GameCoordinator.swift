@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameCoordinator: Coordinator {
+class GameCoordinator: Coordinator, CoordinatorDelegate {
 
     // MARK: - PROPERTIES
     weak var coordinatorDelegate: CoordinatorDelegate?
@@ -33,8 +33,14 @@ class GameCoordinator: Coordinator {
     private func viewController() -> GameViewController {
         let viewModel = GameViewModel()
         let viewController = GameViewController(with: viewModel)
-        viewController.viewModel = viewModel
+        viewController.navigationDelegate = self
 
         return viewController
+    }
+}
+
+extension GameCoordinator: GameViewControllerNavigation {
+    func gameViewController(_ gameViewController: GameViewController, didEndGameWith points: Int) {
+        // TO DO
     }
 }

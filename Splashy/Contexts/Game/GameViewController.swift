@@ -10,6 +10,10 @@ import SpriteKit
 import UIKit
 import SceneKit
 
+protocol GameViewControllerNavigation: class {
+    func gameViewController(_ gameViewController: GameViewController, didEndGameWith points: Int)
+}
+
 class GameViewController: UIViewController {
 
     // MARK: - OUTLETS
@@ -17,6 +21,8 @@ class GameViewController: UIViewController {
     @IBOutlet private weak var scoreLabel: UILabel!
 
     // MARK: - PROPERTIES
+    weak var navigationDelegate: GameViewControllerNavigation?
+
     private var viewModel: GameViewModel {
         didSet {
             viewModel.score.bind(observer: { [weak self] in

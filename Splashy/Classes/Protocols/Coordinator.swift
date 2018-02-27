@@ -22,3 +22,13 @@ protocol CoordinatorDelegate: class {
     func coordinatorDidStart(_ coordinator: Coordinator)
     func coordinatorDidEnd(_ coordinator: Coordinator)
 }
+
+extension Coordinator {
+    func coordinatorDidStart(_ coordinator: Coordinator) {
+        coordinators.append(coordinator)
+    }
+
+    func coordinatorDidEnd(_ coordinator: Coordinator) {
+        coordinators = coordinators.filter { $0 !== coordinator }
+    }
+}
