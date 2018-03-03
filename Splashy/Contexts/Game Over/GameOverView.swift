@@ -10,16 +10,23 @@ import UIKit
 
 class GameOverView: UIView {
 
+    // MARK: - OUTLETS
+    @IBOutlet weak var containerView: UIView!
+
     // MARK: - INIT
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadNib()
+        initContent()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadNib()
+        initContent()
     }
 
-    // MARK: - SETUP
+    private func initContent() {
+        containerView.roundedCorners()
+    }
 }

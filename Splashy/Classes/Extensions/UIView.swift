@@ -8,13 +8,5 @@
 
 import UIKit
 
-extension UIView {
-
-    func loadNib() {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName:  String(describing: type(of: self)), bundle: bundle)
-
-        guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else { return }
-        addSubview(view)
-    }
-}
+extension UIView: Roundable {}
+extension UIView: NibLoadable {}

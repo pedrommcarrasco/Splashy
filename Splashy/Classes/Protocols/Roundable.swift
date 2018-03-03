@@ -10,7 +10,7 @@ import UIKit
 
 protocol Roundable {}
 
-extension Roundable where Self: UIButton {
+extension Roundable where Self: UIView {
     
     func roundedCorners() {
         self.clipsToBounds = true

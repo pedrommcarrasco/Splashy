@@ -8,8 +8,7 @@
 
 import UIKit
 
-extension CGFloat {
-    
+extension CGFloat: Randomizable {
     static func random() -> CGFloat {
         return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
     }

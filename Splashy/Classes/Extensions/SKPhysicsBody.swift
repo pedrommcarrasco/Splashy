@@ -8,10 +8,4 @@
 
 import SpriteKit
 
-extension SKPhysicsBody {
-
-    func isKind(of type: SpriteType) -> Bool {
-        return self.categoryBitMask == type.physicsId
-    }
-
-}
+extension SKPhysicsBody: PhysicsComparable {}

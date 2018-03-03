@@ -8,8 +8,7 @@
 
 import Foundation
 
-extension String {
-
+extension String: Localizable {
     var localizedString: String {
         return NSLocalizedString(self, comment: "")
     }
@@ -21,5 +20,4 @@ extension String {
     var localizedUppercaseString: String {
         return localizedString.uppercased()
     }
-
 }
