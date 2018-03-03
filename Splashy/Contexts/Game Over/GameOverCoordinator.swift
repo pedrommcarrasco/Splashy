@@ -24,15 +24,16 @@ class GameOverCoordinator: Coordinator, CoordinatorDelegate {
     // MARK: - START
     func start() {
         coordinatorDelegate?.coordinatorDidStart(self)
-        navigationController.pushViewController(
-            viewController(), animated: true
-        )
+        navigationController.present(viewController(), animated: true, completion: nil)
     }
 
     // MARK: - FUNCTIONS
     private func viewController() -> GameOverViewController {
         let viewModel = GameOverViewModel()
         let viewController = GameOverViewController(with: viewModel)
+
+        viewController.modalTransitionStyle = .coverVertical
+        viewController.modalPresentationStyle = .overCurrentContext
 
         return viewController
     }

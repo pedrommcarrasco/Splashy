@@ -15,7 +15,6 @@ class GameOverViewController: UIViewController {
 
     // MARK: - PROPERTIES
     private var isFirstAppearance = true
-
     private var viewModel: GameOverViewModel
 
     // MARK: - INIT
@@ -31,23 +30,5 @@ class GameOverViewController: UIViewController {
     // MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-
-    // MARK: - ENTRANCE
-    private func animateEntrance() {
-        if isFirstAppearance {
-            gameOverView.bounds.origin.y -= 200
-
-            UIView.animate(withDuration: AnimationDurations.normal.rawValue) { [weak self] in
-                guard let `self` = self else { return }
-                self.gameOverView.bounds.origin.y += 200
-            }
-
-            isFirstAppearance = false
-        }
     }
 }

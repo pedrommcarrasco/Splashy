@@ -154,10 +154,14 @@ extension GameScene: SKPhysicsContactDelegate {
 
 		if CollisionHelper.collisionOf(a, and: b, isBetween: .splashy, and: .enemy) ||
 			CollisionHelper.collisionOf(a, and: b, isBetween: .splashy, and: .ground) {
+
+			if !viewModel.isDead {
+				sceneDelegate?.gameSceneDidEnd(self)
+			}
+
 			viewModel.splashyCollided()
 			scene?.speed = 0
 			removeAllActions()
-			sceneDelegate?.gameSceneDidEnd(self)
 		}
 	}
 }

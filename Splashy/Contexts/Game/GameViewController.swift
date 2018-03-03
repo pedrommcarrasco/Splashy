@@ -56,6 +56,8 @@ class GameViewController: UIViewController {
         scene.anchorPoint = CGPoint(x: 0, y: 0)
 
         scene.viewModel = viewModel
+        scene.sceneDelegate = self
+
         spriteKitView.showsFPS = true
 
         spriteKitView.presentScene(scene)
@@ -64,5 +66,11 @@ class GameViewController: UIViewController {
     // MARK: - TEST
     @IBAction func restartButtonAction(_ sender: UIButton) {
         scene.restart()
+    }
+}
+
+extension GameViewController: GameSceneDelegate {
+    func gameSceneDidEnd(_ gameScene: GameScene) {
+        navigationDelegate?.gameViewController(self, didEndGameWith: 0)
     }
 }
