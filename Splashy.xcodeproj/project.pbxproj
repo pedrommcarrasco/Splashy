@@ -52,6 +52,7 @@
 		DFBA9AB120225DBB00021F19 /* Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBA9AB020225DBB00021F19 /* Ruby.swift */; };
 		DFC6C44A2045EB3600BAD25D /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6C4492045EB3600BAD25D /* GameOverView.swift */; };
 		DFC6C44C2045EB5300BAD25D /* GameOverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC6C44B2045EB5300BAD25D /* GameOverView.xib */; };
+		DFF3202A2061B90C00DCCB49 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF320292061B90C00DCCB49 /* StandardButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		DFBA9AB020225DBB00021F19 /* Ruby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ruby.swift; sourceTree = "<group>"; };
 		DFC6C4492045EB3600BAD25D /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		DFC6C44B2045EB5300BAD25D /* GameOverView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameOverView.xib; sourceTree = "<group>"; };
+		DFF320292061B90C00DCCB49 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 				DF8C59372016A75C0022F2CF /* App */,
 				DF8C59312016A7080022F2CF /* Contexts */,
 				DF045FC2201A9E6000349006 /* Classes */,
+				DFF320282061B8B700DCCB49 /* Reusable User-Interface */,
 				DF0FC46F2017E88E00165600 /* Utils */,
 				DF8C59352016A7400022F2CF /* Resources */,
 				DF8C59362016A7510022F2CF /* Configurations */,
@@ -312,6 +315,14 @@
 			path = Nodes;
 			sourceTree = "<group>";
 		};
+		DFF320282061B8B700DCCB49 /* Reusable User-Interface */ = {
+			isa = PBXGroup;
+			children = (
+				DFF320292061B90C00DCCB49 /* StandardButton.swift */,
+			);
+			path = "Reusable User-Interface";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -399,6 +410,7 @@
 				DFBA9AAD20225D0B00021F19 /* Enemy.swift in Sources */,
 				DFB9626C201E898B00AF7EBE /* SKPhysicsBody.swift in Sources */,
 				0F38C7C7201D332F00AC9902 /* Bindable.swift in Sources */,
+				DFF3202A2061B90C00DCCB49 /* StandardButton.swift in Sources */,
 				DF3DE3B92044C27E00825680 /* GameOverCoordinator.swift in Sources */,
 				DF1CB3E82042282700164F8E /* AnimationEnums.swift in Sources */,
 				DF0FC4912017F40000165600 /* SpriteType.swift in Sources */,

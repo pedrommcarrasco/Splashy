@@ -13,6 +13,10 @@ class GameOverView: UIView {
     // MARK: - OUTLETS
     @IBOutlet weak var containerView: UIView!
 
+    @IBOutlet weak var retryButton: StandardButton!
+    @IBOutlet weak var recordButton: StandardButton!
+    @IBOutlet weak var tutorialButton: StandardButton!
+
     // MARK: - INIT
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,5 +32,8 @@ class GameOverView: UIView {
 
     private func initContent() {
         containerView.roundedCorners()
+        retryButton.image = #imageLiteral(resourceName: "btn-retry")
+        recordButton.image = #imageLiteral(resourceName: "btn-record")
+        tutorialButton.image = #imageLiteral(resourceName: "btn-tutorial")
     }
 }
