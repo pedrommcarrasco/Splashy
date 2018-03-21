@@ -52,6 +52,7 @@
 		DFBA9AB120225DBB00021F19 /* Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBA9AB020225DBB00021F19 /* Ruby.swift */; };
 		DFC6C44A2045EB3600BAD25D /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6C4492045EB3600BAD25D /* GameOverView.swift */; };
 		DFC6C44C2045EB5300BAD25D /* GameOverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC6C44B2045EB5300BAD25D /* GameOverView.xib */; };
+		DFECCC1C20630E02000A6BDD /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFECCC1B20630E02000A6BDD /* Assets.swift */; };
 		DFF3202A2061B90C00DCCB49 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF320292061B90C00DCCB49 /* StandardButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		DFBA9AB020225DBB00021F19 /* Ruby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ruby.swift; sourceTree = "<group>"; };
 		DFC6C4492045EB3600BAD25D /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		DFC6C44B2045EB5300BAD25D /* GameOverView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameOverView.xib; sourceTree = "<group>"; };
+		DFECCC1B20630E02000A6BDD /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		DFF320292061B90C00DCCB49 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +155,7 @@
 				DFA675A6201957AA00543CEE /* GameConstants.swift */,
 				DFB96267201E7B8100AF7EBE /* CollisionHelper.swift */,
 				DFBA9AAA202259F200021F19 /* Loader.swift */,
+				DFECCC1B20630E02000A6BDD /* Assets.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				DFBA9AB120225DBB00021F19 /* Ruby.swift in Sources */,
 				DF0FC4682017E29600165600 /* HomeViewModel.swift in Sources */,
 				DFBA9AAD20225D0B00021F19 /* Enemy.swift in Sources */,
+				DFECCC1C20630E02000A6BDD /* Assets.swift in Sources */,
 				DFB9626C201E898B00AF7EBE /* SKPhysicsBody.swift in Sources */,
 				0F38C7C7201D332F00AC9902 /* Bindable.swift in Sources */,
 				DFF3202A2061B90C00DCCB49 /* StandardButton.swift in Sources */,

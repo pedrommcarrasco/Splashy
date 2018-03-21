@@ -34,22 +34,13 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jd5-oh-DjT">
-                    <rect key="frame" x="16" y="621" width="343" height="30"/>
-                    <state key="normal" title="Restart"/>
-                    <connections>
-                        <action selector="restartButtonAction:" destination="-1" eventType="touchUpInside" id="kDE-tQ-Xju"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="VJT-ib-YCL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9SL-7w-79r"/>
                 <constraint firstItem="VJT-ib-YCL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9ee-Sd-g4S"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jd5-oh-DjT" secondAttribute="trailing" constant="16" id="Fo8-yN-efU"/>
                 <constraint firstAttribute="bottom" secondItem="VJT-ib-YCL" secondAttribute="bottom" id="QDM-V4-GrD"/>
                 <constraint firstItem="KpF-Dn-vWY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="TBg-Lm-bKt"/>
-                <constraint firstItem="Jd5-oh-DjT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="W5T-95-c9d"/>
                 <constraint firstItem="KpF-Dn-vWY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="aZ8-71-ef3"/>
                 <constraint firstItem="RT5-Uz-Ght" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bFN-Ww-7Iq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KpF-Dn-vWY" secondAttribute="trailing" constant="16" id="e9C-z9-5WG"/>
@@ -57,7 +48,6 @@
                 <constraint firstAttribute="trailing" secondItem="VJT-ib-YCL" secondAttribute="trailing" id="rBY-aj-kHP"/>
                 <constraint firstAttribute="trailing" secondItem="RT5-Uz-Ght" secondAttribute="trailing" id="vdE-e1-jtV"/>
                 <constraint firstItem="RT5-Uz-Ght" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yur-Bb-5sY"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Jd5-oh-DjT" secondAttribute="bottom" constant="16" id="zjE-3Q-dnK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

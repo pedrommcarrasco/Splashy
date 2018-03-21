@@ -83,6 +83,9 @@
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="ruT-aq-u89" secondAttribute="height" multiplier="1:1" id="Fcy-by-UEd"/>
                             </constraints>
+                            <connections>
+                                <action selector="retryButtonAction:" destination="-1" eventType="touchUpInside" id="8de-wd-e9e"/>
+                            </connections>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ui-rK-irh" customClass="StandardButton" customModule="Splashy" customModuleProvider="target">
                             <rect key="frame" x="48" y="0.0" width="40" height="40"/>
@@ -90,6 +93,9 @@
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="5ui-rK-irh" secondAttribute="height" multiplier="1:1" id="7bl-m4-du9"/>
                             </constraints>
+                            <connections>
+                                <action selector="recordsButtonAction:" destination="-1" eventType="touchUpInside" id="qOY-bm-YZT"/>
+                            </connections>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wf3-Cl-J3k" customClass="StandardButton" customModule="Splashy" customModuleProvider="target">
                             <rect key="frame" x="96" y="0.0" width="40" height="40"/>
@@ -97,6 +103,9 @@
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Wf3-Cl-J3k" secondAttribute="height" multiplier="1:1" id="G3T-yI-PkD"/>
                             </constraints>
+                            <connections>
+                                <action selector="tutorialButtonAction:" destination="-1" eventType="touchUpInside" id="N44-Wp-7u5"/>
+                            </connections>
                         </view>
                     </subviews>
                     <constraints>

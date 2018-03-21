@@ -13,35 +13,37 @@ class GameCoordinator: Coordinator, CoordinatorDelegate {
     // MARK: - PROPERTIES
     weak var coordinatorDelegate: CoordinatorDelegate?
     private let navigationController: UINavigationController
+    private let viewController: GameViewController
     internal var coordinators: [Coordinator]
 
     // MARK: - INIT
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
         self.coordinators = []
+
+        let viewModel = GameViewModel()
+        self.viewController = GameViewController(with: viewModel)
+        self.viewController.navigationDelegate = self
     }
 
     // MARK: - START
     func start() {
         coordinatorDelegate?.coordinatorDidStart(self)
-        navigationController.pushViewController(
-            viewController(), animated: true
-        )
-    }
-
-    // MARK: - FUNCTIONS
-    private func viewController() -> GameViewController {
-        let viewModel = GameViewModel()
-        let viewController = GameViewController(with: viewModel)
-        viewController.navigationDelegate = self
-
-        return viewController
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
 
 extension GameCoordinator: GameViewControllerNavigation {
     func gameViewController(_ gameViewController: GameViewController, didEndGameWith points: Int) {
         let gameoverCoordinator = GameOverCoordinator(navigationController: navigationController)
+        gameoverCoordinator.coordinatorDelegate = self
+        gameoverCoordinator.delegate = self
         gameoverCoordinator.start()
+    }
+}
+
+extension GameCoordinator: GameOverCoordinatorDelegate {
+    func retry(from gameoverCoordinator: GameOverCoordinator) {
+        viewController.restart()
     }
 }

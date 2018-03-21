@@ -8,4 +8,10 @@
 
 import Foundation
 
-struct GameOverViewModel {}
+struct GameOverViewModel {
+
+    // MARK: - PROPERTIES
+    let iconRetry = Assets.iconRetry
+    let iconRecords = Assets.iconRecords
+    let iconTutorial = Assets.iconTutorial
+}

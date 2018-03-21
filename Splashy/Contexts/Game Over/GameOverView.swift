@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol GameOverViewDelegate: class {
+    func didPressRetry(in gameoverView: GameOverView)
+    func didPressRecords(in gameoverView: GameOverView)
+    func didPressTutorial(in gameoverView: GameOverView)
+}
+
 class GameOverView: UIView {
 
     // MARK: - OUTLETS
@@ -17,23 +23,43 @@ class GameOverView: UIView {
     @IBOutlet weak var recordButton: StandardButton!
     @IBOutlet weak var tutorialButton: StandardButton!
 
+    // MARK: - PROPERTIES
+    let viewModel: GameOverViewModel
+    weak var delegate: GameOverViewDelegate?
+
     // MARK: - INIT
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(with viewModel: GameOverViewModel) {
+        self.viewModel = viewModel
+        super.init(frame: .zero)
+
         loadNib()
         initContent()
     }
 
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        loadNib()
-        initContent()
+        fatalError("init(coder:) has not been implemented")
     }
 
     private func initContent() {
         containerView.roundedCorners()
-        retryButton.image = #imageLiteral(resourceName: "btn-retry")
-        recordButton.image = #imageLiteral(resourceName: "btn-record")
-        tutorialButton.image = #imageLiteral(resourceName: "btn-tutorial")
+        retryButton.image = UIImage(named: viewModel.iconRetry)
+        recordButton.image = UIImage(named: viewModel.iconRecords)
+        tutorialButton.image = UIImage(named: viewModel.iconTutorial)
+    }
+
+    // MARK: - ACTIONS
+
+
+
+    @IBAction func retryButtonAction(_ sender: StandardButton) {
+        delegate?.didPressRetry(in: self)
+    }
+
+    @IBAction func recordsButtonAction(_ sender: StandardButton) {
+        delegate?.didPressRecords(in: self)
+    }
+
+    @IBAction func tutorialButtonAction(_ sender: StandardButton) {
+        delegate?.didPressTutorial(in: self)
     }
 }

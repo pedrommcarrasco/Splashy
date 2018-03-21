@@ -13,7 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameOverViewController" customModule="Splashy" customModuleProvider="target">
             <connections>
-                <outlet property="gameOverView" destination="OXA-mA-J9L" id="NVH-d7-R82"/>
+                <outlet property="gameoverViewContainer" destination="OXA-mA-J9L" id="7TY-bJ-n53"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXA-mA-J9L" customClass="GameOverView" customModule="Splashy" customModuleProvider="target">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXA-mA-J9L">
                     <rect key="frame" x="32" y="113.5" width="256" height="341"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="OXA-mA-J9L" secondAttribute="height" multiplier="3:4" priority="750" id="TGM-Og-FcU"/>

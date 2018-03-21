@@ -63,8 +63,8 @@ class GameViewController: UIViewController {
         spriteKitView.presentScene(scene)
     }
 
-    // MARK: - TEST
-    @IBAction func restartButtonAction(_ sender: UIButton) {
+    // MARK: - GAME LIFECYCLE
+    func restart() {
         scene.restart()
     }
 }
