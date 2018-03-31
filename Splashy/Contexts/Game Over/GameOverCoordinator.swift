@@ -12,7 +12,7 @@ protocol GameOverCoordinatorDelegate: class {
     func retry(from gameoverCoordinator: GameOverCoordinator)
 }
 
-class GameOverCoordinator: Coordinator, CoordinatorDelegate {
+class GameOverCoordinator: Coordinator {
 
     // MARK: - PROPERTIES
     weak var coordinatorDelegate: CoordinatorDelegate?

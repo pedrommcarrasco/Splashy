@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeCoordinator: Coordinator, CoordinatorDelegate {
+class HomeCoordinator: Coordinator {
 
    // MARK: - PROPERTIES
    weak var coordinatorDelegate: CoordinatorDelegate?

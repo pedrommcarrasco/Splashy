@@ -8,10 +8,10 @@
 
 import UIKit
 
-protocol Coordinator: class {
+protocol Coordinator: CoordinatorDelegate {
 
     // MARK: - PROPERTIES
-    weak var coordinatorDelegate: CoordinatorDelegate? { get set }
+    var coordinatorDelegate: CoordinatorDelegate? { get set }
     var coordinators: [Coordinator] { get set }
 
     // MARK: - FUNCTIONS
