@@ -25,12 +25,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxo-iJ-LYq">
-                    <rect key="frame" x="16" y="16" width="343" height="295.5"/>
+                    <rect key="frame" x="16" y="16" width="343" height="279.5"/>
                     <subviews>
                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H7A-2Q-5rn">
-                            <rect key="frame" x="0.0" y="0.0" width="343" height="295.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="279.5"/>
                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LDE-Z4-DuW">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="295.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="279.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </view>
                             <blurEffect style="light"/>
@@ -42,7 +42,7 @@
                             </constraints>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wRv-gD-aQh">
-                            <rect key="frame" x="129.5" y="203.5" width="84" height="60"/>
+                            <rect key="frame" x="129.5" y="187.5" width="84" height="60"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mD3-Lx-goy">
                                     <rect key="frame" x="0.0" y="0.0" width="59" height="60"/>
@@ -65,7 +65,7 @@
                         <constraint firstAttribute="bottom" secondItem="wRv-gD-aQh" secondAttribute="bottom" constant="32" id="0wv-Hc-NeE"/>
                         <constraint firstAttribute="trailing" secondItem="H7A-2Q-5rn" secondAttribute="trailing" id="4SD-3M-i9i"/>
                         <constraint firstItem="H7A-2Q-5rn" firstAttribute="top" secondItem="lxo-iJ-LYq" secondAttribute="top" id="8la-6S-VRy"/>
-                        <constraint firstItem="wRv-gD-aQh" firstAttribute="top" secondItem="IyY-F8-jPJ" secondAttribute="bottom" constant="16" id="FjD-RS-UUE"/>
+                        <constraint firstItem="wRv-gD-aQh" firstAttribute="top" secondItem="IyY-F8-jPJ" secondAttribute="bottom" id="FjD-RS-UUE"/>
                         <constraint firstAttribute="bottom" secondItem="H7A-2Q-5rn" secondAttribute="bottom" id="Lf2-ki-YVF"/>
                         <constraint firstItem="IyY-F8-jPJ" firstAttribute="leading" secondItem="lxo-iJ-LYq" secondAttribute="leading" constant="16" id="Ofa-U8-ZcU"/>
                         <constraint firstItem="wRv-gD-aQh" firstAttribute="centerX" secondItem="IyY-F8-jPJ" secondAttribute="centerX" id="bLx-HP-bRo"/>
@@ -75,7 +75,7 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5IT-H9-hSj">
-                    <rect key="frame" x="119" y="291.5" width="136" height="40"/>
+                    <rect key="frame" x="119" y="275.5" width="136" height="40"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruT-aq-u89" customClass="StandardButton" customModule="Splashy" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>

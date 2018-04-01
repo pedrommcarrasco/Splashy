@@ -15,4 +15,5 @@ struct Assets {
     static let iconTutorial = "btn-tutorial"
     
     static let newRecordImage = "gfx-newRecord"
+    static let gameoverImage = "gfx-gameover"
 }
