@@ -13,4 +13,6 @@ struct Assets {
     static let iconRetry = "btn-retry"
     static let iconRecords = "btn-record"
     static let iconTutorial = "btn-tutorial"
+    
+    static let newRecordImage = "gfx-newRecord"
 }
