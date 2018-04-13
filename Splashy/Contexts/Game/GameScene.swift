@@ -142,15 +142,16 @@ extension GameScene: SKPhysicsContactDelegate {
 	}
 
 	private func body(_ a: SKPhysicsBody, didCollideWith b : SKPhysicsBody) {
-		if CollisionHelper.collisionOf(a, and: b, isBetween: .splashy, and: .ruby) {
+		if a.collision(with: b, isBetween: .splashy, and: .ruby) {
 			viewModel.didPickRuby()
 
 			if a.isKind(of: .ruby) { a.node?.removeFromParent()
 			} else { b.node?.removeFromParent() }
 		}
-
-		if CollisionHelper.collisionOf(a, and: b, isBetween: .splashy, and: .enemy) ||
-			CollisionHelper.collisionOf(a, and: b, isBetween: .splashy, and: .ground) {
+		
+		
+		if a.collision(with: b, isBetween: .splashy, and: .enemy) ||
+			a.collision(with: b, isBetween: .splashy, and: .ground) {
 
 			if !viewModel.isDead { sceneDelegate?.gameSceneDidEnd(self) }
 

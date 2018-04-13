@@ -9,3 +9,4 @@
 import SpriteKit
 
 extension SKPhysicsBody: PhysicsComparable {}
+extension SKPhysicsBody: NodeColliding {}
