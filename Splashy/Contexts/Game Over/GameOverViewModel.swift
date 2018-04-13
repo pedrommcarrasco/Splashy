@@ -11,7 +11,13 @@ import Foundation
 struct GameOverViewModel {
 
     // MARK: - PROPERTIES
+    let score: String
+    
     let iconRetry = Assets.iconRetry
     let iconRecords = Assets.iconRecords
     let iconTutorial = Assets.iconTutorial
+    
+    init(with score: Int) {
+        self.score = "\(score)"
+    }
 }

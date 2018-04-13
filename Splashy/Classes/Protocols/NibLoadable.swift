@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol NibLoadable {}
+protocol NibLoadable {
+    func loadNib()
+}
 
 extension NibLoadable where Self: UIView {
     func loadNib() {

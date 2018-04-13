@@ -19,6 +19,8 @@ class GameOverView: UIView {
     // MARK: - OUTLETS
     @IBOutlet weak var containerView: UIView!
 
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     @IBOutlet weak var retryButton: StandardButton!
     @IBOutlet weak var recordButton: StandardButton!
     @IBOutlet weak var tutorialButton: StandardButton!
@@ -45,12 +47,11 @@ class GameOverView: UIView {
         retryButton.image = UIImage(named: viewModel.iconRetry)
         recordButton.image = UIImage(named: viewModel.iconRecords)
         tutorialButton.image = UIImage(named: viewModel.iconTutorial)
+        
+        scoreLabel.text = viewModel.score
     }
 
     // MARK: - ACTIONS
-
-
-
     @IBAction func retryButtonAction(_ sender: StandardButton) {
         delegate?.didPressRetry(in: self)
     }

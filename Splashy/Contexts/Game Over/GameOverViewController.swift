@@ -44,13 +44,15 @@ class GameOverViewController: UIViewController {
     private func setupGameoverView() {
         let gameoverView = GameOverView(with: viewModel)
         gameoverView.delegate = self
-        gameoverViewContainer.addSubview(gameoverView)
-
         gameoverView.translatesAutoresizingMaskIntoConstraints = false
-        gameoverView.topAnchor.constraint(equalTo: gameoverViewContainer.topAnchor).isActive = true
-        gameoverView.bottomAnchor.constraint(equalTo: gameoverViewContainer.bottomAnchor).isActive = true
-        gameoverView.leadingAnchor.constraint(equalTo: gameoverViewContainer.leadingAnchor).isActive = true
-        gameoverView.trailingAnchor.constraint(equalTo: gameoverViewContainer.trailingAnchor).isActive = true
+        gameoverViewContainer.addSubview(gameoverView)
+        
+        NSLayoutConstraint.activate(
+            [gameoverView.topAnchor.constraint(equalTo: gameoverViewContainer.topAnchor),
+             gameoverView.bottomAnchor.constraint(equalTo: gameoverViewContainer.bottomAnchor),
+             gameoverView.leadingAnchor.constraint(equalTo: gameoverViewContainer.leadingAnchor),
+             gameoverView.trailingAnchor.constraint(equalTo: gameoverViewContainer.trailingAnchor)]
+        )
     }
 }
 

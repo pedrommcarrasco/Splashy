@@ -22,11 +22,11 @@ class GameOverCoordinator: Coordinator {
     internal var coordinators: [Coordinator]
 
     // MARK: - INIT
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, score: Int) {
         self.navigationController = navigationController
         self.coordinators = []
 
-        let viewModel = GameOverViewModel()
+        let viewModel = GameOverViewModel(with: score)
         self.viewController = GameOverViewController(with: viewModel)
 
         self.viewController.navigationDelegate = self

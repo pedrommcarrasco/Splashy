@@ -8,7 +8,10 @@
 
 import UIKit
 
-protocol Roundable {}
+protocol Roundable {
+    func asCircle()
+    func roundedCorners()
+}
 
 extension Roundable where Self: UIView {
 

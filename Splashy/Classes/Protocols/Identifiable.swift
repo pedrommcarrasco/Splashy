@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol Identifiable {}
+protocol Identifiable {
+    static var name: String { get }
+}
 
 extension Identifiable where Self: UIViewController {
     static var name: String { return String(describing: self) }

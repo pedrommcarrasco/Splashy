@@ -8,7 +8,9 @@
 
 import SpriteKit
 
-protocol PhysicsComparable {}
+protocol PhysicsComparable {
+   func isKind(of type: SpriteType) -> Bool
+}
 
 extension PhysicsComparable where Self: SKPhysicsBody {
     func isKind(of type: SpriteType) -> Bool {

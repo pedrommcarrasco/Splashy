@@ -35,7 +35,7 @@ class GameCoordinator: Coordinator {
 
 extension GameCoordinator: GameViewControllerNavigation {
     func gameViewController(_ gameViewController: GameViewController, didEndGameWith points: Int) {
-        let gameoverCoordinator = GameOverCoordinator(navigationController: navigationController)
+        let gameoverCoordinator = GameOverCoordinator(navigationController: navigationController, score: points)
         gameoverCoordinator.coordinatorDelegate = self
         gameoverCoordinator.delegate = self
         gameoverCoordinator.start()

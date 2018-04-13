@@ -17,6 +17,8 @@ class GameScene: SKScene {
 	// MARK: - SPRITES
 	var splashy: Splashy!
 	var enemiesAndRuby: EnemiesAndRuby!
+	
+	var sky = SKSpriteNode()
 	var ground = SKSpriteNode()
 	var background = SKSpriteNode()
 
@@ -74,6 +76,9 @@ class GameScene: SKScene {
 	private func setupGround() {
 		ground = SpriteFactory.sprite(of: .ground, in: frame)
 		addChild(ground)
+		
+		sky = SpriteFactory.sprite(of: .sky, in: frame)
+		addChild(sky)
 	}
 
 	// MARK: - FUNCTIONS
@@ -151,7 +156,8 @@ extension GameScene: SKPhysicsContactDelegate {
 		
 		
 		if a.collision(with: b, isBetween: .splashy, and: .enemy) ||
-			a.collision(with: b, isBetween: .splashy, and: .ground) {
+			a.collision(with: b, isBetween: .splashy, and: .ground) ||
+			a.collision(with: b, isBetween: .splashy, and: .sky) {
 
 			if !viewModel.isDead { sceneDelegate?.gameSceneDidEnd(self) }
 
