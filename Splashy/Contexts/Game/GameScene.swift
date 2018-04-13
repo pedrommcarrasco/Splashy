@@ -50,7 +50,7 @@ class GameScene: SKScene {
 	private func setup() {
 		physicsWorld.contactDelegate = self
 		setupBackground()
-		setupGround()
+		setupLimits()
 		setupSplashy()
 	}
 
@@ -73,7 +73,7 @@ class GameScene: SKScene {
 		}
 	}
 
-	private func setupGround() {
+	private func setupLimits() {
 		ground = SpriteFactory.sprite(of: .ground, in: frame)
 		addChild(ground)
 		

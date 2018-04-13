@@ -44,11 +44,11 @@ class GameOverView: UIView {
 
     private func initContent() {
         containerView.roundedCorners()
+        scoreLabel.text = viewModel.score
+        
         retryButton.image = UIImage(named: viewModel.iconRetry)
         recordButton.image = UIImage(named: viewModel.iconRecords)
         tutorialButton.image = UIImage(named: viewModel.iconTutorial)
-        
-        scoreLabel.text = viewModel.score
     }
 
     // MARK: - ACTIONS
