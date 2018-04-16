@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0F38C7C7201D332F00AC9902 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F38C7C6201D332F00AC9902 /* Bindable.swift */; };
+		535CC2AB2084AA59007D7FD6 /* ScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 535CC2AA2084AA59007D7FD6 /* ScoreView.xib */; };
+		535CC2AD2084AC15007D7FD6 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535CC2AC2084AC15007D7FD6 /* ScoreView.swift */; };
 		5366C3822080B61900299A4C /* NodeColliding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366C3812080B61900299A4C /* NodeColliding.swift */; };
+		539B56912084B9EF00EBFACC /* BoostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B56902084B9EF00EBFACC /* BoostType.swift */; };
 		DF045FC1201A9CA200349006 /* SpriteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF045FC0201A9CA200349006 /* SpriteFactory.swift */; };
 		DF0FC4612017E07E00165600 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4602017E07E00165600 /* HomeCoordinator.swift */; };
 		DF0FC4652017E26800165600 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4632017E26800165600 /* HomeViewController.swift */; };
@@ -58,7 +61,10 @@
 
 /* Begin PBXFileReference section */
 		0F38C7C6201D332F00AC9902 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		535CC2AA2084AA59007D7FD6 /* ScoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreView.xib; sourceTree = "<group>"; };
+		535CC2AC2084AC15007D7FD6 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		5366C3812080B61900299A4C /* NodeColliding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeColliding.swift; sourceTree = "<group>"; };
+		539B56902084B9EF00EBFACC /* BoostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostType.swift; sourceTree = "<group>"; };
 		DF045FC0201A9CA200349006 /* SpriteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteFactory.swift; sourceTree = "<group>"; };
 		DF0FC4602017E07E00165600 /* HomeCoordinator.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; tabWidth = 3; };
 		DF0FC4632017E26800165600 /* HomeViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
@@ -167,6 +173,8 @@
 				DF0FC48B2017EEDC00165600 /* GameViewController.xib */,
 				DF0FC48A2017EEDC00165600 /* GameViewController.swift */,
 				DF0FC48E2017F38400165600 /* GameScene.swift */,
+				535CC2AA2084AA59007D7FD6 /* ScoreView.xib */,
+				535CC2AC2084AC15007D7FD6 /* ScoreView.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -248,6 +256,7 @@
 			children = (
 				DF0FC4902017F40000165600 /* SpriteType.swift */,
 				DF1CB3E72042282700164F8E /* AnimationEnums.swift */,
+				539B56902084B9EF00EBFACC /* BoostType.swift */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -386,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF8C5927201684990022F2CF /* Assets.xcassets in Resources */,
+				535CC2AB2084AA59007D7FD6 /* ScoreView.xib in Resources */,
 				DF2D4685201FCA0F00F87D49 /* YIKES!__.TTF in Resources */,
 				DFC6C44C2045EB5300BAD25D /* GameOverView.xib in Resources */,
 				DF0FC4782017ECCF00165600 /* Localizable.strings in Resources */,
@@ -412,6 +422,7 @@
 				DF0FC4682017E29600165600 /* HomeViewModel.swift in Sources */,
 				DFBA9AAD20225D0B00021F19 /* Enemy.swift in Sources */,
 				DFECCC1C20630E02000A6BDD /* Assets.swift in Sources */,
+				535CC2AD2084AC15007D7FD6 /* ScoreView.swift in Sources */,
 				DFB9626C201E898B00AF7EBE /* SKPhysicsBody.swift in Sources */,
 				0F38C7C7201D332F00AC9902 /* Bindable.swift in Sources */,
 				DFF3202A2061B90C00DCCB49 /* StandardButton.swift in Sources */,
@@ -429,6 +440,7 @@
 				DF3456DC204ADB8400BBC077 /* Randomizable.swift in Sources */,
 				DF3DE3BB2044C28B00825680 /* GameOverViewModel.swift in Sources */,
 				DF3456DE204ADBC700BBC077 /* PhysicsComparable.swift in Sources */,
+				539B56912084B9EF00EBFACC /* BoostType.swift in Sources */,
 				DF3456DA204ADAFE00BBC077 /* Localizable.swift in Sources */,
 				DF0FC47C2017ED0600165600 /* String.swift in Sources */,
 				DFC6C44A2045EB3600BAD25D /* GameOverView.swift in Sources */,

@@ -15,54 +15,57 @@ protocol GameViewControllerNavigation: class {
 }
 
 class GameViewController: UIViewController {
-
+    
     // MARK: - OUTLETS
     @IBOutlet private weak var spriteKitView: SKView!
-    @IBOutlet private weak var scoreLabel: UILabel!
-
+    @IBOutlet weak var scoreView: ScoreView!
+    
     // MARK: - PROPERTIES
     weak var navigationDelegate: GameViewControllerNavigation?
-
-    private var viewModel: GameViewModel {
+    
+    private var viewModel: GameViewModel? {
         didSet {
-            viewModel.score.bind(observer: { [weak self] in
-                guard let scoreLabel = self?.scoreLabel else { return }
-                scoreLabel.text = "\($0)"
+            viewModel?.score.bind(observer: { [weak self] in
+                guard let scoreView = self?.scoreView else { return }
+                scoreView.score = $0
             })
         }
     }
     private var scene = GameScene()
-
+    
     // MARK: - INIT
     init(with viewModel: GameViewModel) {
-        self.viewModel = viewModel
+        defer {
+            self.viewModel = viewModel
+        }
+        
         super.init(nibName: GameViewController.name, bundle: nil)
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     // MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSpriteKitView()
     }
-
+    
     // MARK: - SETUP
     private func setupSpriteKitView() {
         scene = GameScene(size: spriteKitView.bounds.size)
         scene.scaleMode = .aspectFill
         scene.anchorPoint = CGPoint(x: 0, y: 0)
-
+        
         scene.viewModel = viewModel
         scene.sceneDelegate = self
-
+        
         spriteKitView.showsFPS = true
-
+        
         spriteKitView.presentScene(scene)
     }
-
+    
     // MARK: - GAME LIFECYCLE
     func restart() {
         scene.restart()
