@@ -19,6 +19,7 @@ class GameViewController: UIViewController {
     // MARK: - OUTLETS
     @IBOutlet private weak var spriteKitView: SKView!
     @IBOutlet private weak var scoreView: ScoreView!
+    @IBOutlet private weak var scoreViewTopConstraint: NSLayoutConstraint!
     
     // MARK: - PROPERTIES
     weak var navigationDelegate: GameViewControllerNavigation?
@@ -36,7 +37,14 @@ class GameViewController: UIViewController {
             })
         }
     }
+    
     private var scene: GameScene?
+    
+    // MARK: - CONSTANTS
+    private enum Constants{
+        static let scoreViewAppearingTopConstraintToAdd = 100
+        static let scoreViewDisappearingTopConstraintToAdd = -100
+    }
     
     // MARK: - INIT
     init(with viewModel: GameViewModel) {
@@ -77,14 +85,31 @@ class GameViewController: UIViewController {
     
     // MARK: - GAME LIFECYCLE
     func restart() {
+        animateScore(with: .appearing)
         scene?.restart()
+    }
+    
+    // MARK: - ANIMATION
+    private func animateScore(with type: AnimationType) {
+        let valueToAdd: CGFloat
+        
+        switch type {
+        case .appearing:
+            valueToAdd = Constants.scoreViewAppearingTopConstraintToAdd
+        case .disappearing:
+            valueToAdd = Constants.scoreViewDisappearingTopConstraintToAdd
+        }
+        
+        UIView.animate(withDuration: AnimationDurations.short.rawValue) { [weak self] in
+            self?.scoreViewTopConstraint.constant += valueToAdd
+            self?.view.layoutIfNeeded()
+        }
     }
 }
 
 extension GameViewController: GameSceneDelegate {    
     func gameSceneDidEnd(_ gameScene: GameScene) {
+        animateScore(with: .disappearing)
         navigationDelegate?.gameViewController(self, didEndGameWith: 0)
     }
-    
-    
 }

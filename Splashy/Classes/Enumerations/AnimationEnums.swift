@@ -17,3 +17,8 @@ enum AnimationDurations: Double {
     case normal = 0.66
     case long = 1
 }
+
+enum AnimationType {
+    case appearing
+    case disappearing
+}

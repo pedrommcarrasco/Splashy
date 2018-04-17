@@ -20,7 +20,6 @@ class GameOverViewController: UIViewController {
     @IBOutlet weak var gameoverViewContainer: UIView!
 
     // MARK: - PROPERTIES
-    private var isFirstAppearance = true
     private var viewModel: GameOverViewModel
     weak var navigationDelegate: GameoverViewControllerNavigationDelegate?
 
