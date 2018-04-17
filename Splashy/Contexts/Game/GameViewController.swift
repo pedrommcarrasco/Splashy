@@ -63,7 +63,9 @@ class GameViewController: UIViewController {
 
         scene.sceneDelegate = self
         
-        spriteKitView.showsFPS = true
+        #if DEBUG
+            spriteKitView.showsFPS = true
+        #endif
         
         spriteKitView.presentScene(scene)
     }
