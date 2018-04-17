@@ -19,8 +19,8 @@ class ScoreView: UIView {
         didSet { scoreChanged(to: score) }
     }
     
-    var hasBoost = false {
-        didSet {}
+    var boost = BoostType.none {
+        didSet { boostChanged(to: boost) }
     }
     
     // MARK: - INITS
@@ -40,6 +40,6 @@ class ScoreView: UIView {
     }
     
     private func boostChanged(to boost: BoostType) {
-        boostLabel.text = "\(boost.toString()) \("score-points".localizedString)"
+        boostLabel.text = "\(boost.toString()) \("score-boost".localizedString)"
     }
 }

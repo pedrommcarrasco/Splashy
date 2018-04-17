@@ -39,7 +39,6 @@ class GameScene: SKScene {
 	}
 
 	// MARK: - LIFECYCLE
-	
 	override func didMove(to view: SKView) {
 		setup()
 	}
@@ -138,6 +137,26 @@ class GameScene: SKScene {
 			)
 		}
 	}
+	
+	private func body(_ a: SKPhysicsBody, didCollideWith b : SKPhysicsBody) {
+		if a.collision(with: b, isBetween: .splashy, and: .ruby), !viewModel.isDead {
+			viewModel.didPickRuby()
+			
+			if a.isKind(of: .ruby) { a.node?.removeFromParent()
+			} else { b.node?.removeFromParent() }
+		}
+		
+		if a.collision(with: b, isBetween: .splashy, and: .enemy) ||
+			a.collision(with: b, isBetween: .splashy, and: .ground) ||
+			a.collision(with: b, isBetween: .splashy, and: .sky) {
+			
+			if !viewModel.isDead { sceneDelegate?.gameSceneDidEnd(self) }
+			
+			viewModel.splashyCollided()
+			scene?.speed = 0
+			removeAllActions()
+		}
+	}
 
 	// MARK: - INTERACTION
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -155,26 +174,5 @@ class GameScene: SKScene {
 extension GameScene: SKPhysicsContactDelegate {
 	func didBegin(_ contact: SKPhysicsContact) {
 		body(contact.bodyA, didCollideWith: contact.bodyB)
-	}
-
-	private func body(_ a: SKPhysicsBody, didCollideWith b : SKPhysicsBody) {
-		if a.collision(with: b, isBetween: .splashy, and: .ruby) {
-			viewModel.didPickRuby()
-
-			if a.isKind(of: .ruby) { a.node?.removeFromParent()
-			} else { b.node?.removeFromParent() }
-		}
-		
-		
-		if a.collision(with: b, isBetween: .splashy, and: .enemy) ||
-			a.collision(with: b, isBetween: .splashy, and: .ground) ||
-			a.collision(with: b, isBetween: .splashy, and: .sky) {
-
-			if !viewModel.isDead { sceneDelegate?.gameSceneDidEnd(self) }
-
-			viewModel.splashyCollided()
-			scene?.speed = 0
-			removeAllActions()
-		}
 	}
 }

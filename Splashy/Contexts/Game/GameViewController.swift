@@ -29,6 +29,11 @@ class GameViewController: UIViewController {
                 guard let scoreView = self?.scoreView else { return }
                 scoreView.score = $0
             })
+            
+            viewModel?.boost.bind(observer: { [weak self] in
+                guard let scoreView = self?.scoreView else { return }
+                scoreView.boost = $0
+            })
         }
     }
     private var scene: GameScene?
@@ -76,8 +81,10 @@ class GameViewController: UIViewController {
     }
 }
 
-extension GameViewController: GameSceneDelegate {
+extension GameViewController: GameSceneDelegate {    
     func gameSceneDidEnd(_ gameScene: GameScene) {
         navigationDelegate?.gameViewController(self, didEndGameWith: 0)
     }
+    
+    
 }
