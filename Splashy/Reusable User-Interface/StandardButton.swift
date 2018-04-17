@@ -33,6 +33,13 @@ class StandardButton: UIButton {
         addVisualEffectView()
     }
     
+    // MARK: - PUBLIC
+    func configureImage(with name: String) {
+        guard let image = UIImage(named: name) else { return }
+        self.image = image
+    }
+    
+    // MARK: - PRIVATE
     private func addVisualEffectView() {
         guard let imageView = imageView else { return }
         let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))

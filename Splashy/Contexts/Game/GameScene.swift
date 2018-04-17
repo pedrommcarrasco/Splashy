@@ -13,6 +13,11 @@ protocol GameSceneDelegate: class {
 }
 
 class GameScene: SKScene {
+	
+	// MARK: - CONSTANTS
+	private enum Constants {
+		static let backgroundWidthExtension: CGFloat = 2
+	}
 
 	// MARK: - SPRITES
 	private var splashy: Splashy!
@@ -132,7 +137,7 @@ class GameScene: SKScene {
 	private func attemptToReset(_ background: SKSpriteNode) {
 		if background.position.x <= -background.size.width {
 			background.position = CGPoint(
-				x: background.position.x + (background.size.width * 2),
+				x: background.position.x + (background.size.width * Constants.backgroundWidthExtension),
 				y: background.position.y
 			)
 		}

@@ -9,5 +9,9 @@
 import Foundation
 
 struct HomeViewModel {
-    let playButtonText = "home-play".localizedUppercaseString
+    
+    // MARK: - PROPERTIES
+    let playImage = Assets.iconPlay
+    let tutorialImage = Assets.iconTutorial
+    let recordImage = Assets.iconRecords
 }
