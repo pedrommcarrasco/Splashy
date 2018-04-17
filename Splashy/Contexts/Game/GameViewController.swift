@@ -42,8 +42,8 @@ class GameViewController: UIViewController {
     
     // MARK: - CONSTANTS
     private enum Constants{
-        static let scoreViewAppearingTopConstraintToAdd = 100
-        static let scoreViewDisappearingTopConstraintToAdd = -100
+        static let scoreViewAppearingTopConstraintToAdd: CGFloat = 100
+        static let scoreViewDisappearingTopConstraintToAdd: CGFloat = -100
     }
     
     // MARK: - INIT
