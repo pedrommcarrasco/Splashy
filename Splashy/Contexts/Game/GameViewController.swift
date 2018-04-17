@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
     
     // MARK: - OUTLETS
     @IBOutlet private weak var spriteKitView: SKView!
-    @IBOutlet weak var scoreView: ScoreView!
+    @IBOutlet private weak var scoreView: ScoreView!
     
     // MARK: - PROPERTIES
     weak var navigationDelegate: GameViewControllerNavigation?
@@ -31,12 +31,13 @@ class GameViewController: UIViewController {
             })
         }
     }
-    private var scene = GameScene()
+    private var scene: GameScene?
     
     // MARK: - INIT
     init(with viewModel: GameViewModel) {
         defer {
             self.viewModel = viewModel
+            self.scene = GameScene(with: .zero, and: viewModel)
         }
         
         super.init(nibName: GameViewController.name, bundle: nil)
@@ -54,11 +55,12 @@ class GameViewController: UIViewController {
     
     // MARK: - SETUP
     private func setupSpriteKitView() {
-        scene = GameScene(size: spriteKitView.bounds.size)
+        guard let scene = scene else { return }
+        
+        scene.size = spriteKitView.bounds.size
         scene.scaleMode = .aspectFill
         scene.anchorPoint = CGPoint(x: 0, y: 0)
-        
-        scene.viewModel = viewModel
+
         scene.sceneDelegate = self
         
         spriteKitView.showsFPS = true
@@ -68,7 +70,7 @@ class GameViewController: UIViewController {
     
     // MARK: - GAME LIFECYCLE
     func restart() {
-        scene.restart()
+        scene?.restart()
     }
 }
 

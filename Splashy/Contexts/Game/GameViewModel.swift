@@ -9,16 +9,19 @@
 import Foundation
 
 class GameViewModel {
+    
+    // MARK: - PROPERTIES
     var hasStarted = false
     var isDead = false
     let score: Bindable<Int> = Bindable(0)
     
+    // MARK: - FUNCTIONS
     func didPickRuby() {
         score.value += 1
     }
 
     func splashyCollided() {
-        isDead = true 
+        isDead = true
     }
 
     func shouldAnimate() -> Bool {

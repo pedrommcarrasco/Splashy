@@ -15,20 +15,31 @@ protocol GameSceneDelegate: class {
 class GameScene: SKScene {
 
 	// MARK: - SPRITES
-	var splashy: Splashy!
-	var enemiesAndRuby: EnemiesAndRuby!
+	private var splashy: Splashy!
+	private var enemiesAndRuby: EnemiesAndRuby!
 	
-	var sky = SKSpriteNode()
-	var ground = SKSpriteNode()
-	var background = SKSpriteNode()
+	private var sky = SKSpriteNode()
+	private var ground = SKSpriteNode()
+	private var background = SKSpriteNode()
 
 	// MARK: - PROPERTIES
-	var moveRemoveAction = SKAction()
-	var viewModel: GameViewModel!
+	private var moveRemoveAction = SKAction()
+	private var viewModel: GameViewModel
 
 	weak var sceneDelegate: GameSceneDelegate?
+	
+	// MARK: - PROPERTIES
+	init(with size: CGSize, and viewModel: GameViewModel) {
+		self.viewModel = viewModel
+		super.init(size: size)
+	}
+	
+	required init?(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
 
 	// MARK: - LIFECYCLE
+	
 	override func didMove(to view: SKView) {
 		setup()
 	}
