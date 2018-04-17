@@ -8,13 +8,13 @@
 
 import UIKit
 
-struct SplashyConstants {
+enum SplashyConstants {
    static let physicsBodyRatio: CGFloat = 0.9
    static let dxVelocity: CGFloat = 0
    static let dyVelocity: CGFloat = 14.5
 }
 
-struct EnemyConstants {
+enum EnemyConstants {
    static let upperY: CGFloat = 105
    static let lowerY: CGFloat = -105
    static let topVariation: CGFloat = 150
@@ -24,6 +24,6 @@ struct EnemyConstants {
    static let movementRate: CGFloat = 0.0075
 }
 
-struct BackgroundConstants {
+enum BackgroundConstants {
    static let velocity: CGFloat = 0.25
 }

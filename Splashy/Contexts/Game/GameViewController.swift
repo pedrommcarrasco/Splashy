@@ -50,8 +50,8 @@ class GameViewController: UIViewController {
     init(with viewModel: GameViewModel) {
         defer {
             self.viewModel = viewModel
-            self.scene = GameScene(with: .zero, and: viewModel)
         }
+        self.scene = GameScene(with: .zero, and: viewModel)
         
         super.init(nibName: GameViewController.name, bundle: nil)
     }
@@ -109,7 +109,8 @@ class GameViewController: UIViewController {
 
 extension GameViewController: GameSceneDelegate {    
     func gameSceneDidEnd(_ gameScene: GameScene) {
+        guard let viewModel = viewModel else { return }
         animateScore(with: .disappearing)
-        navigationDelegate?.gameViewController(self, didEndGameWith: 0)
+        navigationDelegate?.gameViewController(self, didEndGameWith: viewModel.score.value)
     }
 }

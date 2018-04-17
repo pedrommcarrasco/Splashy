@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Sizes {
+enum Sizes {
     static let cornerRadius = 15
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Assets {
+enum Assets {
     static let iconPlay = "btn-play"
     static let iconRetry = "btn-retry"
     static let iconRecords = "btn-record"
