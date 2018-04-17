@@ -10,6 +10,10 @@ import Foundation
 
 class GameViewModel {
     
+    private enum Constants {
+        static let rubyPoint = 1
+    }
+    
     // MARK: - PROPERTIES
     let score: Bindable<Int> = Bindable(0)
     let boost: Bindable<BoostType> = Bindable(.none)
@@ -19,8 +23,8 @@ class GameViewModel {
     
     // MARK: - FUNCTIONS
     func didPickRuby() {
-        score.value += 1 * boost.value.rawValue
-        boost.value = BoostType(rawValue: boost.value.rawValue + 1) ?? .quintuple
+        score.value += Constants.rubyPoint * boost.value.rawValue
+        boost.value = BoostType(rawValue: boost.value.rawValue + Constants.rubyPoint) ?? .quintuple
     }
 
     func splashyCollided() {
