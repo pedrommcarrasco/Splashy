@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F38C7C7201D332F00AC9902 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F38C7C6201D332F00AC9902 /* Bindable.swift */; };
 		530557712087462C0017BCEE /* RecordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530557702087462C0017BCEE /* RecordsManager.swift */; };
+		5305577320879FB80017BCEE /* CountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5305577220879FB80017BCEE /* CountingLabel.swift */; };
 		535CC2AB2084AA59007D7FD6 /* ScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 535CC2AA2084AA59007D7FD6 /* ScoreView.xib */; };
 		535CC2AD2084AC15007D7FD6 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535CC2AC2084AC15007D7FD6 /* ScoreView.swift */; };
 		5366C3822080B61900299A4C /* NodeColliding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366C3812080B61900299A4C /* NodeColliding.swift */; };
@@ -63,6 +64,7 @@
 /* Begin PBXFileReference section */
 		0F38C7C6201D332F00AC9902 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		530557702087462C0017BCEE /* RecordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsManager.swift; sourceTree = "<group>"; };
+		5305577220879FB80017BCEE /* CountingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingLabel.swift; sourceTree = "<group>"; };
 		535CC2AA2084AA59007D7FD6 /* ScoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreView.xib; sourceTree = "<group>"; };
 		535CC2AC2084AC15007D7FD6 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		5366C3812080B61900299A4C /* NodeColliding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeColliding.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				DFF320292061B90C00DCCB49 /* StandardButton.swift */,
+				5305577220879FB80017BCEE /* CountingLabel.swift */,
 			);
 			path = "Reusable User-Interface";
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				DF045FC1201A9CA200349006 /* SpriteFactory.swift in Sources */,
 				DFA675A7201957AA00543CEE /* GameConstants.swift in Sources */,
 				DFBA9AA72022556900021F19 /* Splashy.swift in Sources */,
+				5305577320879FB80017BCEE /* CountingLabel.swift in Sources */,
 				DFBA9AB120225DBB00021F19 /* Ruby.swift in Sources */,
 				DF0FC4682017E29600165600 /* HomeViewModel.swift in Sources */,
 				DFBA9AAD20225D0B00021F19 /* Enemy.swift in Sources */,

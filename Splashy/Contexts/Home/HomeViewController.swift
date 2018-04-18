@@ -15,7 +15,6 @@ protocol HomeViewNavigationDelegate: class {
 class HomeViewController: UIViewController {
     
     // MARK: - OUTLETS
-    
     @IBOutlet private weak var playButton: StandardButton!
     @IBOutlet private weak var tutorialButton: StandardButton!
     @IBOutlet private weak var recordsButton: StandardButton!
@@ -55,6 +54,7 @@ class HomeViewController: UIViewController {
     private func setupActionsStackView() {
         let offset = buttonsStackView.bounds.size.height
         buttonsStackView.bounds.origin.y -= offset
+		
         UIView.animate(withDuration: AnimationDurations.normal.rawValue) { [weak self] in
             self?.buttonsStackView.bounds.origin.y += offset
         }
