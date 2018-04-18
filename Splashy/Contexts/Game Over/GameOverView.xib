@@ -22,7 +22,7 @@
                 <outlet property="recordButton" destination="5ui-rK-irh" id="pmZ-vy-Ui5"/>
                 <outlet property="retryButton" destination="ruT-aq-u89" id="rvH-7u-ld1"/>
                 <outlet property="scoreDescriptionLabel" destination="eVD-oQ-Czh" id="gVA-Xc-9WH"/>
-                <outlet property="scoreLabel" destination="mD3-Lx-goy" id="1CV-cT-lOh"/>
+                <outlet property="scoreLabel" destination="mD3-Lx-goy" id="fRW-hk-drJ"/>
                 <outlet property="scoreStateImageView" destination="IyY-F8-jPJ" id="V9S-MW-btt"/>
                 <outlet property="tutorialButton" destination="Wf3-Cl-J3k" id="e4y-GX-QRx"/>
             </connections>
@@ -38,7 +38,7 @@
                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H7A-2Q-5rn">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="283.5"/>
                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LDE-Z4-DuW">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="283"/>
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="283.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </view>
                             <blurEffect style="light"/>
@@ -52,7 +52,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wRv-gD-aQh">
                             <rect key="frame" x="115" y="187.5" width="114.5" height="64"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mD3-Lx-goy">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mD3-Lx-goy" customClass="CountingLabel" customModule="Splashy" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="63.5" height="64"/>
                                     <fontDescription key="fontDescription" name="Yikes" family="Yikes!" pointSize="60"/>
                                     <color key="textColor" red="0.84313725490000002" green="0.3294117647" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

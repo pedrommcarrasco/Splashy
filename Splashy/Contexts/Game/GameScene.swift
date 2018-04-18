@@ -107,11 +107,8 @@ class GameScene: SKScene {
 		run(SKAction.repeatForever(spawnWithRateAction))
 
 		let distance = CGFloat(frame.width + EnemyConstants.widthExtra)
-		let moveEnemies = SKAction.moveBy(
-			x: -distance,
-			y: 0,
-			duration: TimeInterval(EnemyConstants.movementRate * distance)
-		)
+		let moveEnemies = SKAction.moveBy(x: -distance, y: 0,
+			duration: TimeInterval(EnemyConstants.movementRate * distance))
 		let removeEnemies = SKAction.removeFromParent()
 
 		moveRemoveAction = SKAction.sequence([moveEnemies, removeEnemies])

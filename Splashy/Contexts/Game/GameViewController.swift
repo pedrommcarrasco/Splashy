@@ -16,6 +16,12 @@ protocol GameViewControllerNavigation: class {
 
 class GameViewController: UIViewController {
     
+    // MARK: - CONSTANTS
+    private enum Constants{
+        static let scoreViewAppearingTopConstraintToAdd: CGFloat = 100
+        static let scoreViewDisappearingTopConstraintToAdd: CGFloat = -100
+    }
+    
     // MARK: - OUTLETS
     @IBOutlet private weak var spriteKitView: SKView!
     @IBOutlet private weak var scoreView: ScoreView!
@@ -39,12 +45,6 @@ class GameViewController: UIViewController {
     }
     
     private var scene: GameScene?
-    
-    // MARK: - CONSTANTS
-    private enum Constants{
-        static let scoreViewAppearingTopConstraintToAdd: CGFloat = 100
-        static let scoreViewDisappearingTopConstraintToAdd: CGFloat = -100
-    }
     
     // MARK: - INIT
     init(with viewModel: GameViewModel) {

@@ -19,7 +19,7 @@ class GameOverView: UIView {
     // MARK: - OUTLETS
     @IBOutlet private weak var containerView: UIView!
 
-    @IBOutlet private weak var scoreLabel: UILabel!
+    @IBOutlet private weak var scoreLabel: CountingLabel!
     @IBOutlet private weak var scoreDescriptionLabel: UILabel!
     @IBOutlet private weak var scoreStateImageView: UIImageView!
     
@@ -46,7 +46,8 @@ class GameOverView: UIView {
 
     private func initContent() {
         containerView.roundedCorners()
-        scoreLabel.text = viewModel.score
+        
+        scoreLabel.count(until: Float(viewModel.score), with: AnimationDurations.normal.rawValue)
         scoreDescriptionLabel.text = viewModel.scoreDescription
         
         retryButton.image = UIImage(named: viewModel.retryIcon)
