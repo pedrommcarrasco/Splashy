@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F38C7C7201D332F00AC9902 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F38C7C6201D332F00AC9902 /* Bindable.swift */; };
+		530557712087462C0017BCEE /* RecordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530557702087462C0017BCEE /* RecordsManager.swift */; };
 		535CC2AB2084AA59007D7FD6 /* ScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 535CC2AA2084AA59007D7FD6 /* ScoreView.xib */; };
 		535CC2AD2084AC15007D7FD6 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535CC2AC2084AC15007D7FD6 /* ScoreView.swift */; };
 		5366C3822080B61900299A4C /* NodeColliding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366C3812080B61900299A4C /* NodeColliding.swift */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		0F38C7C6201D332F00AC9902 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		530557702087462C0017BCEE /* RecordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsManager.swift; sourceTree = "<group>"; };
 		535CC2AA2084AA59007D7FD6 /* ScoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreView.xib; sourceTree = "<group>"; };
 		535CC2AC2084AC15007D7FD6 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		5366C3812080B61900299A4C /* NodeColliding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeColliding.swift; sourceTree = "<group>"; };
@@ -141,9 +143,18 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		5305576F2087460F0017BCEE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				530557702087462C0017BCEE /* RecordsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		DF045FC2201A9E6000349006 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5305576F2087460F0017BCEE /* Managers */,
 				DFBA9AA52022555C00021F19 /* Nodes */,
 				DF8C59332016A7290022F2CF /* Extensions */,
 				DF8C59342016A7340022F2CF /* Protocols */,
@@ -415,6 +426,7 @@
 			files = (
 				DF0FC4652017E26800165600 /* HomeViewController.swift in Sources */,
 				DF3456D8204ADAB800BBC077 /* NibLoadable.swift in Sources */,
+				530557712087462C0017BCEE /* RecordsManager.swift in Sources */,
 				DF045FC1201A9CA200349006 /* SpriteFactory.swift in Sources */,
 				DFA675A7201957AA00543CEE /* GameConstants.swift in Sources */,
 				DFBA9AA72022556900021F19 /* Splashy.swift in Sources */,

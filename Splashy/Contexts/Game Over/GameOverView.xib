@@ -22,6 +22,7 @@
                 <outlet property="recordButton" destination="5ui-rK-irh" id="pmZ-vy-Ui5"/>
                 <outlet property="retryButton" destination="ruT-aq-u89" id="rvH-7u-ld1"/>
                 <outlet property="scoreLabel" destination="mD3-Lx-goy" id="1CV-cT-lOh"/>
+                <outlet property="scoreStateImageView" destination="IyY-F8-jPJ" id="V9S-MW-btt"/>
                 <outlet property="tutorialButton" destination="Wf3-Cl-J3k" id="e4y-GX-QRx"/>
             </connections>
         </placeholder>

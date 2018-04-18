@@ -17,13 +17,14 @@ protocol GameOverViewDelegate: class {
 class GameOverView: UIView {
 
     // MARK: - OUTLETS
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet private weak var containerView: UIView!
 
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet private weak var scoreLabel: UILabel!
+    @IBOutlet private weak var scoreStateImageView: UIImageView!
     
-    @IBOutlet weak var retryButton: StandardButton!
-    @IBOutlet weak var recordButton: StandardButton!
-    @IBOutlet weak var tutorialButton: StandardButton!
+    @IBOutlet private weak var retryButton: StandardButton!
+    @IBOutlet private weak var recordButton: StandardButton!
+    @IBOutlet private weak var tutorialButton: StandardButton!
 
     // MARK: - PROPERTIES
     let viewModel: GameOverViewModel
@@ -46,9 +47,12 @@ class GameOverView: UIView {
         containerView.roundedCorners()
         scoreLabel.text = viewModel.score
         
-        retryButton.image = UIImage(named: viewModel.iconRetry)
-        recordButton.image = UIImage(named: viewModel.iconRecords)
-        tutorialButton.image = UIImage(named: viewModel.iconTutorial)
+        retryButton.image = UIImage(named: viewModel.retryIcon)
+        recordButton.image = UIImage(named: viewModel.recordsIcon)
+        tutorialButton.image = UIImage(named: viewModel.tutorialIcon)
+        
+        guard let scoreImage = UIImage(named: viewModel.scoreAsset) else { return }
+        scoreStateImageView.image = scoreImage
     }
 
     // MARK: - ACTIONS

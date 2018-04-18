@@ -11,13 +11,21 @@ import Foundation
 struct GameOverViewModel {
 
     // MARK: - PROPERTIES
+    let retryIcon = Assets.iconRetry
+    let recordsIcon = Assets.iconRecords
+    let tutorialIcon = Assets.iconTutorial
+    
     let score: String
     
-    let iconRetry = Assets.iconRetry
-    let iconRecords = Assets.iconRecords
-    let iconTutorial = Assets.iconTutorial
+    var scoreAsset: String {
+        return isNewRecord ? Assets.newRecordImage : Assets.gameoverImage
+    }
     
-    init(with score: Int) {
+    private let isNewRecord: Bool
+    
+    // MARK: - INIT
+    init(with score: Int, and recordsManager: RecordsManager) {
         self.score = "\(score)"
+        self.isNewRecord = recordsManager.isNewRecord(score)
     }
 }

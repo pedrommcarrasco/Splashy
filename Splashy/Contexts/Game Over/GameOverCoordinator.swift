@@ -26,7 +26,7 @@ class GameOverCoordinator: Coordinator {
         self.navigationController = navigationController
         self.coordinators = []
 
-        let viewModel = GameOverViewModel(with: score)
+        let viewModel = GameOverViewModel(with: score, and: RecordsManager())
         self.viewController = GameOverViewController(with: viewModel)
 
         self.viewController.navigationDelegate = self
