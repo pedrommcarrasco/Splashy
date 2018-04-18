@@ -16,6 +16,7 @@ struct GameOverViewModel {
     let tutorialIcon = Assets.iconTutorial
     
     let score: String
+    let scoreDescription: String
     
     var scoreAsset: String {
         return isNewRecord ? Assets.newRecordImage : Assets.gameoverImage
@@ -27,5 +28,6 @@ struct GameOverViewModel {
     init(with score: Int, and recordsManager: RecordsManager) {
         self.score = "\(score)"
         self.isNewRecord = recordsManager.isNewRecord(score)
+        self.scoreDescription = score == 1 ? "score-point".localizedString : "score-points".localizedString
     }
 }

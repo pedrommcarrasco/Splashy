@@ -36,7 +36,8 @@ class ScoreView: UIView {
     
     // MARK: - PRIVATE FUNCTIONS
     private func scoreChanged(to score: Int) {
-        scoreLabel.text = "\(score) \("score-points".localizedString)"
+        let scoreText = score == 1 ? "score-point".localizedString : "score-points".localizedString
+        scoreLabel.text = "\(score) \(scoreText)"
     }
     
     private func boostChanged(to boost: BoostType) {

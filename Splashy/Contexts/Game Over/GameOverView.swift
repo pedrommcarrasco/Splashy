@@ -20,6 +20,7 @@ class GameOverView: UIView {
     @IBOutlet private weak var containerView: UIView!
 
     @IBOutlet private weak var scoreLabel: UILabel!
+    @IBOutlet private weak var scoreDescriptionLabel: UILabel!
     @IBOutlet private weak var scoreStateImageView: UIImageView!
     
     @IBOutlet private weak var retryButton: StandardButton!
@@ -46,6 +47,7 @@ class GameOverView: UIView {
     private func initContent() {
         containerView.roundedCorners()
         scoreLabel.text = viewModel.score
+        scoreDescriptionLabel.text = viewModel.scoreDescription
         
         retryButton.image = UIImage(named: viewModel.retryIcon)
         recordButton.image = UIImage(named: viewModel.recordsIcon)

@@ -12,6 +12,7 @@
 "gameover-score-object" = "rubies!";
 
 "score-points" = "points";
+"score-point" = "point";
 "score-boost" = "boost";
 
 
