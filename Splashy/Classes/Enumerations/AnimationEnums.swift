@@ -22,3 +22,10 @@ enum AnimationType {
     case appearing
     case disappearing
 }
+
+enum AnimationStyling {
+    enum Scale: CGFloat {
+        case low = 0.5
+        case high = 2.0
+    }
+}

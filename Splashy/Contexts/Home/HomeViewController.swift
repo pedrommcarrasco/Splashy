@@ -72,12 +72,19 @@ class HomeViewController: UIViewController {
     
     private func animate(button: StandardButton) {
         guard let index = actionButtons.index(of: button)?.hashValue else { return }
-        
-        button.isHidden = true
-        UIView.animate(withDuration: AnimationDurations.short.rawValue,
+		
+		button.alpha = 0
+		button.isHidden = false
+		
+		let scaleProportion = AnimationStyling.Scale.high.rawValue
+		button.transform = CGAffineTransform(scaleX: scaleProportion, y: scaleProportion)
+		
+		UIView.animate(withDuration: AnimationDurations.short.rawValue,
                        delay: delayForButton(at: index),
                        options: .curveEaseOut, animations: {
-                        button.isHidden = false
+						
+						button.alpha = 1
+						button.transform = CGAffineTransform.identity
                         button.layoutIfNeeded()
         }, completion: nil)
     }
