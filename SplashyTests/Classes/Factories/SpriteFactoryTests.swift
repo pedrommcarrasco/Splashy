@@ -12,29 +12,116 @@ import XCTest
 class SpriteFactoryTests: XCTestCase {
 
     let contentRect = CGRect(x: 0, y: 0, width: 100, height: 100)
+    let cgfloatAccuracy: CGFloat = 0.01 // CGFloat.uplOfOne isn't working for enemy scale 🤷‍♂️
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
 
     func testCreateSplashy() {
-        let sprite = SpriteFactory.sprite(of: .splashy, in: contentRect)
+        let type = SpriteType.splashy
+        let sprite = SpriteFactory.sprite(of: type, in: contentRect)
 
-        assert(sprite.xScale == SpriteType.splashy.scale && sprite.yScale == SpriteType.splashy.scale)
-        assert(sprite.position == SpriteType.splashy.position(in: contentRect, with: sprite))
-        assert(sprite.zPosition == SpriteType.splashy.zPosition)
-        assert(sprite.name == SpriteType.splashy.rawValue)
+        XCTAssertEqual(sprite.xScale, type.scale, accuracy: cgfloatAccuracy)
+        XCTAssertEqual(sprite.yScale, type.scale, accuracy: cgfloatAccuracy)
 
-        assert(sprite.physicsBody?.affectedByGravity == SpriteType.splashy.isAffectedByGravity)
-        assert(sprite.physicsBody?.categoryBitMask == SpriteType.splashy.physicsId)
-        assert(sprite.physicsBody?.collisionBitMask == SpriteType.splashy.colisionBitmask)
-        assert(sprite.physicsBody?.contactTestBitMask == SpriteType.splashy.colisionBitmask)
-        assert(sprite.physicsBody?.isDynamic == SpriteType.splashy.isDynamic)
+        assert(sprite.position == type.position(in: contentRect, with: sprite))
+        assert(sprite.zPosition == type.zPosition)
+        assert(sprite.name == type.rawValue)
+
+        assert(sprite.physicsBody?.affectedByGravity == type.isAffectedByGravity)
+        assert(sprite.physicsBody?.categoryBitMask == type.physicsId)
+        assert(sprite.physicsBody?.collisionBitMask == type.colisionBitmask)
+        assert(sprite.physicsBody?.contactTestBitMask == type.colisionBitmask)
+        assert(sprite.physicsBody?.isDynamic == type.isDynamic)
+    }
+
+    func testCreateEnemy() {
+        let type = SpriteType.enemy
+        let sprite = SpriteFactory.sprite(of: type, in: contentRect)
+
+        XCTAssertEqual(sprite.xScale, type.scale, accuracy: cgfloatAccuracy)
+        XCTAssertEqual(sprite.yScale, type.scale, accuracy: cgfloatAccuracy)
+
+        assert(sprite.position == type.position(in: contentRect, with: sprite))
+        assert(sprite.zPosition == type.zPosition)
+        assert(sprite.name == type.rawValue)
+
+        assert(sprite.physicsBody?.affectedByGravity == type.isAffectedByGravity)
+        assert(sprite.physicsBody?.categoryBitMask == type.physicsId)
+        assert(sprite.physicsBody?.collisionBitMask == type.colisionBitmask)
+        assert(sprite.physicsBody?.contactTestBitMask == type.colisionBitmask)
+        assert(sprite.physicsBody?.isDynamic == type.isDynamic)
+    }
+
+    func testCreateRuby() {
+        let type = SpriteType.ruby
+        let sprite = SpriteFactory.sprite(of: type, in: contentRect)
+
+        XCTAssertEqual(sprite.xScale, type.scale, accuracy: cgfloatAccuracy)
+        XCTAssertEqual(sprite.yScale, type.scale, accuracy: cgfloatAccuracy)
+
+        assert(sprite.position == type.position(in: contentRect, with: sprite))
+        assert(sprite.zPosition == type.zPosition)
+        assert(sprite.name == type.rawValue)
+
+        assert(sprite.physicsBody?.affectedByGravity == type.isAffectedByGravity)
+        assert(sprite.physicsBody?.categoryBitMask == type.physicsId)
+        assert(sprite.physicsBody?.collisionBitMask == type.colisionBitmask)
+        assert(sprite.physicsBody?.contactTestBitMask == type.colisionBitmask)
+        assert(sprite.physicsBody?.isDynamic == type.isDynamic)
+    }
+
+    func testCreateGround() {
+        let type = SpriteType.ground
+        let sprite = SpriteFactory.sprite(of: type, in: contentRect)
+
+        XCTAssertEqual(sprite.xScale, type.scale, accuracy: cgfloatAccuracy)
+        XCTAssertEqual(sprite.yScale, type.scale, accuracy: cgfloatAccuracy)
+
+        assert(sprite.position == type.position(in: contentRect, with: sprite))
+        assert(sprite.zPosition == type.zPosition)
+        assert(sprite.name == type.rawValue)
+
+        assert(sprite.physicsBody?.affectedByGravity == type.isAffectedByGravity)
+        assert(sprite.physicsBody?.categoryBitMask == type.physicsId)
+        assert(sprite.physicsBody?.collisionBitMask == type.colisionBitmask)
+        assert(sprite.physicsBody?.contactTestBitMask == type.colisionBitmask)
+        assert(sprite.physicsBody?.isDynamic == type.isDynamic)
+    }
+
+    func testCreateSky() {
+        let type = SpriteType.sky
+        let sprite = SpriteFactory.sprite(of: type, in: contentRect)
+
+        XCTAssertEqual(sprite.xScale, type.scale, accuracy: cgfloatAccuracy)
+        XCTAssertEqual(sprite.yScale, type.scale, accuracy: cgfloatAccuracy)
+
+        assert(sprite.position == type.position(in: contentRect, with: sprite))
+        assert(sprite.zPosition == type.zPosition)
+        assert(sprite.name == type.rawValue)
+
+        assert(sprite.physicsBody?.affectedByGravity == type.isAffectedByGravity)
+        assert(sprite.physicsBody?.categoryBitMask == type.physicsId)
+        assert(sprite.physicsBody?.collisionBitMask == type.colisionBitmask)
+        assert(sprite.physicsBody?.contactTestBitMask == type.colisionBitmask)
+        assert(sprite.physicsBody?.isDynamic == type.isDynamic)
+    }
+
+    func testCreateBackground() {
+        let type = SpriteType.background
+        let sprite = SpriteFactory.sprite(of: type, in: contentRect)
+
+        assert(sprite.xScale == type.scale && sprite.yScale == type.scale)
+        assert(sprite.position == type.position(in: contentRect, with: sprite))
+        assert(sprite.zPosition == type.zPosition)
+        assert(sprite.name == type.rawValue)
+
+        assert(sprite.anchorPoint == CGPoint(x: 0, y: 0))
+        assert(sprite.physicsBody == nil)
     }
 }
