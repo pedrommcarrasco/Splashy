@@ -10,7 +10,10 @@ import UIKit
 class CountingLabel: UILabel {
     
     // MARK: - CONSTANTS
-    let counterRate: Float = 3.0
+    private enum Constants {
+        static let counterRate: Float = 3.0
+        static let updateCountTimeInterval: TimeInterval = 0.01
+    }
     
     // MARK: - PROPERTIES
     var progress: TimeInterval = 0.0
@@ -22,6 +25,7 @@ class CountingLabel: UILabel {
         if (progress >= duration) {
             return finalValue
         }
+
         let percent = Float(progress / duration)
         let update = updateCounter(with: percent)
         return update * finalValue
@@ -30,11 +34,14 @@ class CountingLabel: UILabel {
     // MARK: - METHODS
     func count(until value: Float, with duration: TimeInterval) {
         invalidate()
+
         self.duration = duration
         self.finalValue = value
         self.lastUpdate = Date.timeIntervalSinceReferenceDate
         
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: Constants.updateCountTimeInterval, target: self,
+                                     selector: #selector(update), userInfo: nil,
+                                     repeats: true)
     }
     
     @objc private func update() {
@@ -52,7 +59,7 @@ class CountingLabel: UILabel {
     }
     
     func updateCounter(with percentage: Float) -> Float {
-        return 1.0 - powf((1.0 - percentage), counterRate)
+        return 1.0 - powf((1.0 - percentage), Constants.counterRate)
     }
     
     private func invalidate() {
