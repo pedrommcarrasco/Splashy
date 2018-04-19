@@ -51,6 +51,7 @@ class GameViewController: UIViewController {
         defer {
             self.viewModel = viewModel
         }
+
         self.scene = GameScene(with: .zero, and: viewModel)
         
         super.init(nibName: GameViewController.name, bundle: nil)

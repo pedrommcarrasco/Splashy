@@ -15,29 +15,37 @@ protocol GameOverCoordinatorDelegate: class {
 class GameOverCoordinator: Coordinator {
 
     // MARK: - PROPERTIES
+    private let navigationController: UINavigationController
+    private let score: Int
+
     weak var coordinatorDelegate: CoordinatorDelegate?
     weak var delegate: GameOverCoordinatorDelegate?
-    private let navigationController: UINavigationController
-    private let viewController: GameOverViewController
+
     internal var coordinators: [Coordinator]
 
     // MARK: - INIT
     init(navigationController: UINavigationController, score: Int) {
         self.navigationController = navigationController
+        self.score = score
         self.coordinators = []
-
-        let viewModel = GameOverViewModel(with: score, and: RecordsManager())
-        self.viewController = GameOverViewController(with: viewModel)
-
-        self.viewController.navigationDelegate = self
-        self.viewController.modalTransitionStyle = .coverVertical
-        self.viewController.modalPresentationStyle = .overCurrentContext
     }
 
     // MARK: - START
     func start() {
         coordinatorDelegate?.coordinatorDidStart(self)
-        navigationController.present(viewController, animated: true, completion: nil)
+        navigationController.present(viewController(), animated: true, completion: nil)
+    }
+
+    // MARK: - FUNCTIONS
+    private func viewController() -> GameOverViewController {
+        let viewModel = GameOverViewModel(with: score, and: RecordsManager())
+        let viewController = GameOverViewController(with: viewModel)
+
+        viewController.navigationDelegate = self
+        viewController.modalTransitionStyle = .coverVertical
+        viewController.modalPresentationStyle = .overCurrentContext
+
+        return viewController
     }
 }
 
@@ -45,7 +53,8 @@ extension GameOverCoordinator: GameoverViewControllerNavigationDelegate {
     func didPressRetry(in gameoverViewController: GameOverViewController) {
         delegate?.retry(from: self)
         coordinatorDelegate?.coordinatorDidEnd(self)
-        viewController.dismiss(animated: true, completion: nil)
+        
+        navigationController.dismiss(animated: true, completion: nil)
     }
 
     func didPressRecords(in gameoverViewController: GameOverViewController) {}

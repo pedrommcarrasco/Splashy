@@ -11,8 +11,10 @@ import UIKit
 class HomeCoordinator: Coordinator {
 
    // MARK: - PROPERTIES
-   weak var coordinatorDelegate: CoordinatorDelegate?
    private let navigationController: UINavigationController
+
+   weak var coordinatorDelegate: CoordinatorDelegate?
+
    internal var coordinators: [Coordinator]
 
    // MARK: - INIT
@@ -24,9 +26,7 @@ class HomeCoordinator: Coordinator {
    // MARK: - START
    func start() {
       coordinatorDelegate?.coordinatorDidStart(self)
-      navigationController.pushViewController(
-         viewController(), animated: true
-      )
+      navigationController.pushViewController(viewController(), animated: true)
    }
 
    // MARK: - FUNCTIONS
@@ -40,7 +40,7 @@ class HomeCoordinator: Coordinator {
 }
 
 extension HomeCoordinator: HomeViewNavigationDelegate {
-   func homeViewControllerDidPressPlay(_ homeViewController: HomeViewController) {
+   func didPressPlay(in homeViewController: HomeViewController) {
       let gameCoordinator = GameCoordinator(navigationController: navigationController)
       gameCoordinator.coordinatorDelegate = self
       gameCoordinator.start()

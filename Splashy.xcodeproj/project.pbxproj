@@ -13,6 +13,10 @@
 		535CC2AB2084AA59007D7FD6 /* ScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 535CC2AA2084AA59007D7FD6 /* ScoreView.xib */; };
 		535CC2AD2084AC15007D7FD6 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535CC2AC2084AC15007D7FD6 /* ScoreView.swift */; };
 		5366C3822080B61900299A4C /* NodeColliding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366C3812080B61900299A4C /* NodeColliding.swift */; };
+		5392702820889066001E21A8 /* RecordsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392702720889066001E21A8 /* RecordsCoordinator.swift */; };
+		5392702A2088906E001E21A8 /* RecordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539270292088906E001E21A8 /* RecordsViewModel.swift */; };
+		5392702D20889083001E21A8 /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392702B20889083001E21A8 /* RecordsViewController.swift */; };
+		5392702E20889083001E21A8 /* RecordsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5392702C20889083001E21A8 /* RecordsViewController.xib */; };
 		539B56912084B9EF00EBFACC /* BoostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B56902084B9EF00EBFACC /* BoostType.swift */; };
 		DF045FC1201A9CA200349006 /* SpriteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF045FC0201A9CA200349006 /* SpriteFactory.swift */; };
 		DF0FC4612017E07E00165600 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4602017E07E00165600 /* HomeCoordinator.swift */; };
@@ -68,6 +72,10 @@
 		535CC2AA2084AA59007D7FD6 /* ScoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreView.xib; sourceTree = "<group>"; };
 		535CC2AC2084AC15007D7FD6 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		5366C3812080B61900299A4C /* NodeColliding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeColliding.swift; sourceTree = "<group>"; };
+		5392702720889066001E21A8 /* RecordsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCoordinator.swift; sourceTree = "<group>"; };
+		539270292088906E001E21A8 /* RecordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewModel.swift; sourceTree = "<group>"; };
+		5392702B20889083001E21A8 /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
+		5392702C20889083001E21A8 /* RecordsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordsViewController.xib; sourceTree = "<group>"; };
 		539B56902084B9EF00EBFACC /* BoostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostType.swift; sourceTree = "<group>"; };
 		DF045FC0201A9CA200349006 /* SpriteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteFactory.swift; sourceTree = "<group>"; };
 		DF0FC4602017E07E00165600 /* HomeCoordinator.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; tabWidth = 3; };
@@ -151,6 +159,17 @@
 				530557702087462C0017BCEE /* RecordsManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		5392702620889046001E21A8 /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				5392702720889066001E21A8 /* RecordsCoordinator.swift */,
+				539270292088906E001E21A8 /* RecordsViewModel.swift */,
+				5392702B20889083001E21A8 /* RecordsViewController.swift */,
+				5392702C20889083001E21A8 /* RecordsViewController.xib */,
+			);
+			path = Records;
 			sourceTree = "<group>";
 		};
 		DF045FC2201A9E6000349006 /* Classes */ = {
@@ -260,6 +279,7 @@
 				DF45A6582016B2D900C46D8E /* Home */,
 				DF0FC47D2017EE4400165600 /* Game */,
 				DF4F7FF920436AE2008B2B2C /* Game Over */,
+				5392702620889046001E21A8 /* Records */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
@@ -409,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF8C5927201684990022F2CF /* Assets.xcassets in Resources */,
+				5392702E20889083001E21A8 /* RecordsViewController.xib in Resources */,
 				535CC2AB2084AA59007D7FD6 /* ScoreView.xib in Resources */,
 				DF2D4685201FCA0F00F87D49 /* YIKES!__.TTF in Resources */,
 				DFC6C44C2045EB5300BAD25D /* GameOverView.xib in Resources */,
@@ -440,6 +461,7 @@
 				DFECCC1C20630E02000A6BDD /* Assets.swift in Sources */,
 				535CC2AD2084AC15007D7FD6 /* ScoreView.swift in Sources */,
 				DFB9626C201E898B00AF7EBE /* SKPhysicsBody.swift in Sources */,
+				5392702820889066001E21A8 /* RecordsCoordinator.swift in Sources */,
 				0F38C7C7201D332F00AC9902 /* Bindable.swift in Sources */,
 				DFF3202A2061B90C00DCCB49 /* StandardButton.swift in Sources */,
 				DF3DE3B92044C27E00825680 /* GameOverCoordinator.swift in Sources */,
@@ -447,6 +469,7 @@
 				DF0FC4912017F40000165600 /* SpriteType.swift in Sources */,
 				DF0FC48F2017F38400165600 /* GameScene.swift in Sources */,
 				DF45A6552016A91200C46D8E /* AppCoordinator.swift in Sources */,
+				5392702A2088906E001E21A8 /* RecordsViewModel.swift in Sources */,
 				DF0FC4712017E8A900165600 /* DesignConstants.swift in Sources */,
 				DF0FC4732017E91200165600 /* UIViewController.swift in Sources */,
 				DF724AFF201BDDA900E4576B /* CGFloat.swift in Sources */,
@@ -454,6 +477,7 @@
 				DF0FC46E2017E81200165600 /* Roundable.swift in Sources */,
 				DF0FC4872017EEB800165600 /* GameViewModel.swift in Sources */,
 				DF3456DC204ADB8400BBC077 /* Randomizable.swift in Sources */,
+				5392702D20889083001E21A8 /* RecordsViewController.swift in Sources */,
 				DF3DE3BB2044C28B00825680 /* GameOverViewModel.swift in Sources */,
 				DF3456DE204ADBC700BBC077 /* PhysicsComparable.swift in Sources */,
 				539B56912084B9EF00EBFACC /* BoostType.swift in Sources */,
