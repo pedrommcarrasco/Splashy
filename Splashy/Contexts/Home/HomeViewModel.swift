@@ -8,7 +8,13 @@
 
 import Foundation
 
-struct HomeViewModel {
+protocol HomeViewModelRepresentable {
+    var playImage: String { get }
+    var tutorialImage: String { get }
+    var recordImage: String { get }
+}
+
+struct HomeViewModel: HomeViewModelRepresentable {
     
     // MARK: - PROPERTIES
     let playImage = Assets.iconPlay

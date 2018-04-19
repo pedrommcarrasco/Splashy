@@ -25,11 +25,11 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var buttonsStackView: UIStackView!
     
     // MARK: - PROPERTIES
-    private var viewModel: HomeViewModel
+    private var viewModel: HomeViewModelRepresentable
     weak var navigationDelegate: HomeViewNavigationDelegate?
     
     // MARK: - INIT
-    init(with viewModel: HomeViewModel) {
+    init(with viewModel: HomeViewModelRepresentable) {
         self.viewModel = viewModel
         super.init(nibName: HomeViewController.name, bundle: nil)
     }
