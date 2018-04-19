@@ -29,12 +29,12 @@ class GameScene: SKScene {
 
 	// MARK: - PROPERTIES
 	private var moveRemoveAction = SKAction()
-	private var viewModel: GameViewModel
+	private var viewModel: GameViewModelRepresentable
 
 	weak var sceneDelegate: GameSceneDelegate?
 	
 	// MARK: - PROPERTIES
-	init(with size: CGSize, and viewModel: GameViewModel) {
+	init(with size: CGSize, and viewModel: GameViewModelRepresentable) {
 		self.viewModel = viewModel
 		super.init(size: size)
 	}

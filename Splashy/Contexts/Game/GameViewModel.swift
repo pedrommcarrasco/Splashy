@@ -8,7 +8,19 @@
 
 import Foundation
 
-class GameViewModel {
+protocol GameViewModelRepresentable {
+    var score: Bindable<Int> { get }
+    var boost: Bindable<BoostType> { get }
+    var hasStarted: Bool { get set }
+    var isDead: Bool{ get }
+
+    func didPickRuby()
+    func splashyCollided()
+    func shouldAnimate() -> Bool
+    func restart()
+}
+
+class GameViewModel: GameViewModelRepresentable {
     
     private enum Constants {
         static let rubyPoint = 1

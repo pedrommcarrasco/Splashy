@@ -28,11 +28,11 @@ class GameOverView: UIView {
     @IBOutlet private weak var tutorialButton: StandardButton!
 
     // MARK: - PROPERTIES
-    let viewModel: GameOverViewModel
+    let viewModel: GameOverViewModelRepresentable
     weak var delegate: GameOverViewDelegate?
 
     // MARK: - INIT
-    init(with viewModel: GameOverViewModel) {
+    init(with viewModel: GameOverViewModelRepresentable) {
         self.viewModel = viewModel
         super.init(frame: .zero)
 

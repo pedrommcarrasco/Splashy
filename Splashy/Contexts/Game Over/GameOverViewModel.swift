@@ -8,7 +8,16 @@
 
 import Foundation
 
-struct GameOverViewModel {
+protocol GameOverViewModelRepresentable {
+    var retryIcon: String { get }
+    var recordsIcon: String { get }
+    var tutorialIcon: String { get }
+    var score: Int { get }
+    var scoreDescription: String { get }
+    var scoreAsset: String { get }
+}
+
+struct GameOverViewModel: GameOverViewModelRepresentable {
 
     // MARK: - PROPERTIES
     let retryIcon = Assets.iconRetry

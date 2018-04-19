@@ -30,7 +30,7 @@ class GameViewController: UIViewController {
     // MARK: - PROPERTIES
     weak var navigationDelegate: GameViewControllerNavigation?
     
-    private var viewModel: GameViewModel? {
+    private var viewModel: GameViewModelRepresentable? {
         didSet {
             viewModel?.score.bind(observer: { [weak self] in
                 guard let scoreView = self?.scoreView else { return }
@@ -47,7 +47,7 @@ class GameViewController: UIViewController {
     private var scene: GameScene?
     
     // MARK: - INIT
-    init(with viewModel: GameViewModel) {
+    init(with viewModel: GameViewModelRepresentable) {
         defer {
             self.viewModel = viewModel
         }
