@@ -37,7 +37,7 @@ class RecordsCoordinator: Coordinator {
 
     // MARK: - FUNCTIONS
     private func viewController() -> RecordsViewController {
-        let viewModel = RecordsViewModel()
+        let viewModel = RecordsViewModel(with: RecordsManager())
         let viewController = RecordsViewController(with: viewModel)
         
         viewController.navigationDelegate = self

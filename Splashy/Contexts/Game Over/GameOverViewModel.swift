@@ -25,7 +25,7 @@ struct GameOverViewModel {
     private let isNewRecord: Bool
     
     // MARK: - INIT
-    init(with score: Int, and recordsManager: RecordsManager) {
+    init(with score: Int, and recordsManager: RecordsManagerRepresentable) {
         self.score = score
         self.isNewRecord = recordsManager.isNewRecord(score)
         self.scoreDescription = score == 1 ? "score-point".localizedString : "score-points".localizedString

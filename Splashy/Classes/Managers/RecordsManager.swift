@@ -8,7 +8,13 @@
 
 import Foundation
 
-struct RecordsManager {
+protocol RecordsManagerRepresentable {
+    var currentRecord: Int { get }
+
+    func isNewRecord(_ score: Int) -> Bool
+}
+
+struct RecordsManager: RecordsManagerRepresentable {
     
     // MARK: - CONSTANTS
     private enum Constants {

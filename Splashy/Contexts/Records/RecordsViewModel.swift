@@ -8,4 +8,13 @@
 
 import Foundation
 
-struct RecordsViewModel {}
+struct RecordsViewModel {
+
+    // MARK: - PROPERTIES
+    private let recordsManager: RecordsManagerRepresentable
+
+    // MARK: - INIT
+    init(with recordsManager: RecordsManagerRepresentable) {
+        self.recordsManager = recordsManager
+    }
+}
