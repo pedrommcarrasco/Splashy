@@ -15,12 +15,12 @@ protocol RecordsViewControllerNavigationDelegate: class {
 class RecordsViewController: UIViewController {
 
     // MARK: - PROPERTIES
-    private let viewModel: RecordsViewModel
+    private let viewModel: RecordsViewModelRepresentable
 
     weak var navigationDelegate: RecordsViewControllerNavigationDelegate?
 
     // MARK: - INIT
-    init(with viewModel: RecordsViewModel) {
+    init(with viewModel: RecordsViewModelRepresentable) {
         self.viewModel = viewModel
         super.init(nibName: RecordsViewController.name, bundle: nil)
     }

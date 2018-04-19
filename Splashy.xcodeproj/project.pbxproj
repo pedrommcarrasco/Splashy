@@ -65,6 +65,16 @@
 		DFF3202A2061B90C00DCCB49 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF320292061B90C00DCCB49 /* StandardButton.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		539270382088EACA001E21A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF8C590E201684990022F2CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF8C5915201684990022F2CF;
+			remoteInfo = Splashy;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0F38C7C6201D332F00AC9902 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		530557702087462C0017BCEE /* RecordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsManager.swift; sourceTree = "<group>"; };
@@ -76,6 +86,8 @@
 		539270292088906E001E21A8 /* RecordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewModel.swift; sourceTree = "<group>"; };
 		5392702B20889083001E21A8 /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		5392702C20889083001E21A8 /* RecordsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordsViewController.xib; sourceTree = "<group>"; };
+		539270332088EACA001E21A8 /* SplashyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplashyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		539270372088EACA001E21A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		539B56902084B9EF00EBFACC /* BoostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostType.swift; sourceTree = "<group>"; };
 		DF045FC0201A9CA200349006 /* SpriteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteFactory.swift; sourceTree = "<group>"; };
 		DF0FC4602017E07E00165600 /* HomeCoordinator.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; tabWidth = 3; };
@@ -127,6 +139,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		539270302088EACA001E21A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DF8C5913201684990022F2CF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -170,6 +189,14 @@
 				5392702C20889083001E21A8 /* RecordsViewController.xib */,
 			);
 			path = Records;
+			sourceTree = "<group>";
+		};
+		539270342088EACA001E21A8 /* SplashyTests */ = {
+			isa = PBXGroup;
+			children = (
+				539270372088EACA001E21A8 /* Info.plist */,
+			);
+			path = SplashyTests;
 			sourceTree = "<group>";
 		};
 		DF045FC2201A9E6000349006 /* Classes */ = {
@@ -247,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				DF8C5918201684990022F2CF /* Splashy */,
+				539270342088EACA001E21A8 /* SplashyTests */,
 				DF8C5917201684990022F2CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -255,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				DF8C5916201684990022F2CF /* Splashy.app */,
+				539270332088EACA001E21A8 /* SplashyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -372,6 +401,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		539270322088EACA001E21A8 /* SplashyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5392703A2088EACA001E21A8 /* Build configuration list for PBXNativeTarget "SplashyTests" */;
+			buildPhases = (
+				5392702F2088EACA001E21A8 /* Sources */,
+				539270302088EACA001E21A8 /* Frameworks */,
+				539270312088EACA001E21A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				539270392088EACA001E21A8 /* PBXTargetDependency */,
+			);
+			name = SplashyTests;
+			productName = SplashyTests;
+			productReference = 539270332088EACA001E21A8 /* SplashyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DF8C5915201684990022F2CF /* Splashy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF8C592E201684990022F2CF /* Build configuration list for PBXNativeTarget "Splashy" */;
@@ -395,10 +442,15 @@
 		DF8C590E201684990022F2CF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Pedro Carrasco";
 				TargetAttributes = {
+					539270322088EACA001E21A8 = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DF8C5915201684990022F2CF;
+					};
 					DF8C5915201684990022F2CF = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -419,11 +471,19 @@
 			projectRoot = "";
 			targets = (
 				DF8C5915201684990022F2CF /* Splashy */,
+				539270322088EACA001E21A8 /* SplashyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		539270312088EACA001E21A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DF8C5914201684990022F2CF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -444,6 +504,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5392702F2088EACA001E21A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DF8C5912201684990022F2CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -499,6 +566,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		539270392088EACA001E21A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF8C5915201684990022F2CF /* Splashy */;
+			targetProxy = 539270382088EACA001E21A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		DF0FC47A2017ECCF00165600 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -519,6 +594,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5392703B2088EACA001E21A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GE4Q65N57;
+				INFOPLIST_FILE = SplashyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pedrommcarrasco.SplashyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Splashy.app/Splashy";
+			};
+			name = Debug;
+		};
+		5392703C2088EACA001E21A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GE4Q65N57;
+				INFOPLIST_FILE = SplashyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pedrommcarrasco.SplashyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Splashy.app/Splashy";
+			};
+			name = Release;
+		};
 		DF8C592C201684990022F2CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -663,6 +774,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5392703A2088EACA001E21A8 /* Build configuration list for PBXNativeTarget "SplashyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5392703B2088EACA001E21A8 /* Debug */,
+				5392703C2088EACA001E21A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DF8C5911201684990022F2CF /* Build configuration list for PBXProject "Splashy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

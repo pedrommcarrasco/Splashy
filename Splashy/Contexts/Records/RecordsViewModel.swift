@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct RecordsViewModel {
+protocol RecordsViewModelRepresentable {}
+
+struct RecordsViewModel: RecordsViewModelRepresentable {
 
     // MARK: - PROPERTIES
     private let recordsManager: RecordsManagerRepresentable
