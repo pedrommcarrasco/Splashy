@@ -17,6 +17,7 @@
 		5392702A2088906E001E21A8 /* RecordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539270292088906E001E21A8 /* RecordsViewModel.swift */; };
 		5392702D20889083001E21A8 /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392702B20889083001E21A8 /* RecordsViewController.swift */; };
 		5392702E20889083001E21A8 /* RecordsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5392702C20889083001E21A8 /* RecordsViewController.xib */; };
+		539270412088EB9B001E21A8 /* SpriteFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539270402088EB9B001E21A8 /* SpriteFactoryTests.swift */; };
 		539B56912084B9EF00EBFACC /* BoostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B56902084B9EF00EBFACC /* BoostType.swift */; };
 		DF045FC1201A9CA200349006 /* SpriteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF045FC0201A9CA200349006 /* SpriteFactory.swift */; };
 		DF0FC4612017E07E00165600 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4602017E07E00165600 /* HomeCoordinator.swift */; };
@@ -88,6 +89,7 @@
 		5392702C20889083001E21A8 /* RecordsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordsViewController.xib; sourceTree = "<group>"; };
 		539270332088EACA001E21A8 /* SplashyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplashyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		539270372088EACA001E21A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		539270402088EB9B001E21A8 /* SpriteFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteFactoryTests.swift; sourceTree = "<group>"; };
 		539B56902084B9EF00EBFACC /* BoostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostType.swift; sourceTree = "<group>"; };
 		DF045FC0201A9CA200349006 /* SpriteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteFactory.swift; sourceTree = "<group>"; };
 		DF0FC4602017E07E00165600 /* HomeCoordinator.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; tabWidth = 3; };
@@ -194,9 +196,26 @@
 		539270342088EACA001E21A8 /* SplashyTests */ = {
 			isa = PBXGroup;
 			children = (
+				5392703D2088EB38001E21A8 /* Classes */,
 				539270372088EACA001E21A8 /* Info.plist */,
 			);
 			path = SplashyTests;
+			sourceTree = "<group>";
+		};
+		5392703D2088EB38001E21A8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5392703E2088EB53001E21A8 /* Factories */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5392703E2088EB53001E21A8 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				539270402088EB9B001E21A8 /* SpriteFactoryTests.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		DF045FC2201A9E6000349006 /* Classes */ = {
@@ -448,6 +467,7 @@
 				TargetAttributes = {
 					539270322088EACA001E21A8 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DF8C5915201684990022F2CF;
 					};
@@ -508,6 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				539270412088EB9B001E21A8 /* SpriteFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GE4Q65N57;
@@ -606,6 +628,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pedrommcarrasco.SplashyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Splashy.app/Splashy";
@@ -616,6 +639,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GE4Q65N57;
