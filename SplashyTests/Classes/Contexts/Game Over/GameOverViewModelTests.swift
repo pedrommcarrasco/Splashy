@@ -35,7 +35,7 @@ class GameOverViewModelTests: XCTestCase {
         super.tearDown()
     }
 
-    // MARK: - TEST: init(with score: Int, and recordsManager: RecordsManagerRepresentable)
+    // MARK: - TEST: init(with score: Int, and recordsManager: RecordsManagerRepresentable) + scoreAsset
     func testInitWithLowerScoreBeingOne() {
         let viewModel = GameOverViewModel(with: Constants.lowerScore, and: RecordsManagerMock())
 
