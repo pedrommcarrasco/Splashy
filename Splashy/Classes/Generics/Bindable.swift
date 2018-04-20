@@ -30,4 +30,3 @@ class Bindable<T> {
         observer?(value)
     }
 }
-
