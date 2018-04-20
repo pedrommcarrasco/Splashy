@@ -219,6 +219,8 @@
 		539270342088EACA001E21A8 /* SplashyTests */ = {
 			isa = PBXGroup;
 			children = (
+				53E1B09B2089E69F0086BCB7 /* Mocks */,
+				53271B122089DD35004D6676 /* Contexts */,
 				5392703D2088EB38001E21A8 /* Classes */,
 				539270372088EACA001E21A8 /* Info.plist */,
 			);
@@ -228,8 +230,6 @@
 		5392703D2088EB38001E21A8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				53E1B09B2089E69F0086BCB7 /* Mocks */,
-				53271B122089DD35004D6676 /* Contexts */,
 				5392703E2088EB53001E21A8 /* Factories */,
 			);
 			path = Classes;
