@@ -39,11 +39,11 @@ class CoordinatorTests: XCTestCase {
 
     // MARK: - TEST: coordinatorDidStart(_ coordinator: Coordinator)
     func testCoordinatorDidStart() {
-        assert(homeCoordinator.coordinators.count == Constants.initialHomeCoordinatorsCount)
+        XCTAssert(homeCoordinator.coordinators.count == Constants.initialHomeCoordinatorsCount)
 
         gameCoordinator.start()
 
-        assert(homeCoordinator.coordinators.count == Constants.afterAddHomeCoordinatorsCount)
+        XCTAssert(homeCoordinator.coordinators.count == Constants.afterAddHomeCoordinatorsCount)
     }
 
     // MARK: - TEST: coordinatorDidEnd(_ coordinator: Coordinator)
@@ -52,6 +52,6 @@ class CoordinatorTests: XCTestCase {
 
         gameCoordinator.coordinatorDelegate?.coordinatorDidEnd(gameCoordinator)
 
-        assert(homeCoordinator.coordinators.count == Constants.initialHomeCoordinatorsCount)
+        XCTAssert(homeCoordinator.coordinators.count == Constants.initialHomeCoordinatorsCount)
     }
 }

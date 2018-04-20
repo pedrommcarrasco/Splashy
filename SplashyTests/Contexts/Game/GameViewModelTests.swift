@@ -40,18 +40,18 @@ class GameViewModelTests: XCTestCase {
 
     // MARK: - TEST: init()
     func testInitialSetup() {
-        assert(viewModel.score.value == Constants.initialScore)
-        assert(viewModel.boost.value == Constants.initialBoost)
-        assert(viewModel.isDead == false)
-        assert(viewModel.hasStarted == false)
+        XCTAssert(viewModel.score.value == Constants.initialScore)
+        XCTAssert(viewModel.boost.value == Constants.initialBoost)
+        XCTAssert(viewModel.isDead == false)
+        XCTAssert(viewModel.hasStarted == false)
     }
 
     // MARK: - TEST: didPickRuby()
     func testDidPickRuby() {
         viewModel.didPickRuby()
 
-        assert(viewModel.score.value == Constants.scoreAfterFirstRuby)
-        assert(viewModel.boost.value == Constants.boostAfterFirstRuby)
+        XCTAssert(viewModel.score.value == Constants.scoreAfterFirstRuby)
+        XCTAssert(viewModel.boost.value == Constants.boostAfterFirstRuby)
     }
 
     func testDidPickRubySixTimesFromStart() {
@@ -59,15 +59,15 @@ class GameViewModelTests: XCTestCase {
             viewModel.didPickRuby()
         }
 
-        assert(viewModel.score.value == Constants.scoreAfterConsecutiveRubies)
-        assert(viewModel.boost.value == Constants.boostAfterConsecutiveRubies)
+        XCTAssert(viewModel.score.value == Constants.scoreAfterConsecutiveRubies)
+        XCTAssert(viewModel.boost.value == Constants.boostAfterConsecutiveRubies)
     }
 
     // MARK: - TEST: splashyCollided()
     func testSplashyCollided() {
         viewModel.splashyCollided()
 
-        assert(viewModel.isDead == true)
+        XCTAssert(viewModel.isDead == true)
     }
 
     // MARK: - TEST: shouldAnimate()
@@ -77,7 +77,7 @@ class GameViewModelTests: XCTestCase {
 
         let result = viewModel.shouldAnimate()
 
-        assert(result == false)
+        XCTAssert(result == false)
     }
 
     func testShouldAnimateTrue() {
@@ -86,7 +86,7 @@ class GameViewModelTests: XCTestCase {
 
         let result = viewModel.shouldAnimate()
 
-        assert(result == true)
+        XCTAssert(result == true)
     }
 
     func testShouldAnimateFalse() {
@@ -95,16 +95,16 @@ class GameViewModelTests: XCTestCase {
 
         let result = viewModel.shouldAnimate()
 
-        assert(result == false)
+        XCTAssert(result == false)
     }
 
     // MARK: - TEST: restart()
     func testRestart() {
         viewModel.restart()
 
-        assert(viewModel.score.value == Constants.initialScore)
-        assert(viewModel.boost.value == Constants.initialBoost)
-        assert(viewModel.isDead == false)
-        assert(viewModel.hasStarted == false)
+        XCTAssert(viewModel.score.value == Constants.initialScore)
+        XCTAssert(viewModel.boost.value == Constants.initialBoost)
+        XCTAssert(viewModel.isDead == false)
+        XCTAssert(viewModel.hasStarted == false)
     }
 }

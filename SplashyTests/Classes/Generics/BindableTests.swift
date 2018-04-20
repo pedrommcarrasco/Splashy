@@ -37,16 +37,16 @@ class BindableTests: XCTestCase {
 
     // MARK: - TEST: init(_ value: T)
     func testInit() {
-        assert(intBindable.value == Constants.initialValue)
+        XCTAssert(intBindable.value == Constants.initialValue)
     }
 
     // MARK: - TEST: bind(observer: Observer?)
     func testBind() {
         intBindable.bind {
             if self.valueUpdated {
-                assert($0 == Constants.finalValue)
+                XCTAssert($0 == Constants.finalValue)
             } else {
-                assert($0 == Constants.initialValue)
+                XCTAssert($0 == Constants.initialValue)
             }
         }
 

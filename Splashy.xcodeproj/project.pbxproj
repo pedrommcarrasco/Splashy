@@ -27,6 +27,7 @@
 		53E1B0A9208A04190086BCB7 /* HomeCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E1B0A8208A04190086BCB7 /* HomeCoordinatorMock.swift */; };
 		53E1B0AB208A04250086BCB7 /* GameCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E1B0AA208A04250086BCB7 /* GameCoordinatorMock.swift */; };
 		53E1B0AE208A07C00086BCB7 /* BindableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E1B0AD208A07C00086BCB7 /* BindableTests.swift */; };
+		53E1B0B2208A0D330086BCB7 /* NodeCollidingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E1B0B1208A0D330086BCB7 /* NodeCollidingTests.swift */; };
 		DF045FC1201A9CA200349006 /* SpriteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF045FC0201A9CA200349006 /* SpriteFactory.swift */; };
 		DF0FC4612017E07E00165600 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4602017E07E00165600 /* HomeCoordinator.swift */; };
 		DF0FC4652017E26800165600 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4632017E26800165600 /* HomeViewController.swift */; };
@@ -107,6 +108,7 @@
 		53E1B0A8208A04190086BCB7 /* HomeCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorMock.swift; sourceTree = "<group>"; };
 		53E1B0AA208A04250086BCB7 /* GameCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinatorMock.swift; sourceTree = "<group>"; };
 		53E1B0AD208A07C00086BCB7 /* BindableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableTests.swift; sourceTree = "<group>"; };
+		53E1B0B1208A0D330086BCB7 /* NodeCollidingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeCollidingTests.swift; sourceTree = "<group>"; };
 		DF045FC0201A9CA200349006 /* SpriteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteFactory.swift; sourceTree = "<group>"; };
 		DF0FC4602017E07E00165600 /* HomeCoordinator.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; tabWidth = 3; };
 		DF0FC4632017E26800165600 /* HomeViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; };
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				53E1B0A6208A01250086BCB7 /* CoordinatorTests.swift */,
+				53E1B0B1208A0D330086BCB7 /* NodeCollidingTests.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 				53E1B0AB208A04250086BCB7 /* GameCoordinatorMock.swift in Sources */,
 				53E1B0A02089F2FB0086BCB7 /* GameOverViewModelTests.swift in Sources */,
 				53E1B09D2089E6B30086BCB7 /* RecordsManagerMock.swift in Sources */,
+				53E1B0B2208A0D330086BCB7 /* NodeCollidingTests.swift in Sources */,
 				53E1B0A9208A04190086BCB7 /* HomeCoordinatorMock.swift in Sources */,
 				53E1B0A7208A01250086BCB7 /* CoordinatorTests.swift in Sources */,
 				53E1B0AE208A07C00086BCB7 /* BindableTests.swift in Sources */,

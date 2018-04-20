@@ -22,10 +22,10 @@ class BoostTypeTests: XCTestCase {
     
     // MARK: - TEST: toString()
     func testToString() {
-        assert(BoostType.none.toString() == Constants.noneString)
-        assert(BoostType.double.toString() == Constants.doubleString)
-        assert(BoostType.triple.toString() == Constants.tripleString)
-        assert(BoostType.quadruple.toString() == Constants.quadrupleString)
-        assert(BoostType.quintuple.toString() == Constants.quintupleString)
+        XCTAssert(BoostType.none.toString() == Constants.noneString)
+        XCTAssert(BoostType.double.toString() == Constants.doubleString)
+        XCTAssert(BoostType.triple.toString() == Constants.tripleString)
+        XCTAssert(BoostType.quadruple.toString() == Constants.quadrupleString)
+        XCTAssert(BoostType.quintuple.toString() == Constants.quintupleString)
     }
 }

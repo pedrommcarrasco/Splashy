@@ -29,15 +29,15 @@ class SpriteFactoryTests: XCTestCase {
         XCTAssertEqual(sprite.xScale, type.scale, accuracy: cgfloatAccuracy)
         XCTAssertEqual(sprite.yScale, type.scale, accuracy: cgfloatAccuracy)
 
-        assert(sprite.position == type.position(in: contentRect, with: sprite))
-        assert(sprite.zPosition == type.zPosition)
-        assert(sprite.name == type.rawValue)
+        XCTAssert(sprite.position == type.position(in: contentRect, with: sprite))
+        XCTAssert(sprite.zPosition == type.zPosition)
+        XCTAssert(sprite.name == type.rawValue)
 
-        assert(sprite.physicsBody?.affectedByGravity == type.isAffectedByGravity)
-        assert(sprite.physicsBody?.categoryBitMask == type.physicsId)
-        assert(sprite.physicsBody?.collisionBitMask == type.colisionBitmask)
-        assert(sprite.physicsBody?.contactTestBitMask == type.colisionBitmask)
-        assert(sprite.physicsBody?.isDynamic == type.isDynamic)
+        XCTAssert(sprite.physicsBody?.affectedByGravity == type.isAffectedByGravity)
+        XCTAssert(sprite.physicsBody?.categoryBitMask == type.physicsId)
+        XCTAssert(sprite.physicsBody?.collisionBitMask == type.colisionBitmask)
+        XCTAssert(sprite.physicsBody?.contactTestBitMask == type.colisionBitmask)
+        XCTAssert(sprite.physicsBody?.isDynamic == type.isDynamic)
     }
 
     func testCreateEnemy() {
@@ -47,15 +47,15 @@ class SpriteFactoryTests: XCTestCase {
         XCTAssertEqual(sprite.xScale, type.scale, accuracy: cgfloatAccuracy)
         XCTAssertEqual(sprite.yScale, type.scale, accuracy: cgfloatAccuracy)
 
-        assert(sprite.position == type.position(in: contentRect, with: sprite))
-        assert(sprite.zPosition == type.zPosition)
-        assert(sprite.name == type.rawValue)
+        XCTAssert(sprite.position == type.position(in: contentRect, with: sprite))
+        XCTAssert(sprite.zPosition == type.zPosition)
+        XCTAssert(sprite.name == type.rawValue)
 
-        assert(sprite.physicsBody?.affectedByGravity == type.isAffectedByGravity)
-        assert(sprite.physicsBody?.categoryBitMask == type.physicsId)
-        assert(sprite.physicsBody?.collisionBitMask == type.colisionBitmask)
-        assert(sprite.physicsBody?.contactTestBitMask == type.colisionBitmask)
-        assert(sprite.physicsBody?.isDynamic == type.isDynamic)
+        XCTAssert(sprite.physicsBody?.affectedByGravity == type.isAffectedByGravity)
+        XCTAssert(sprite.physicsBody?.categoryBitMask == type.physicsId)
+        XCTAssert(sprite.physicsBody?.collisionBitMask == type.colisionBitmask)
+        XCTAssert(sprite.physicsBody?.contactTestBitMask == type.colisionBitmask)
+        XCTAssert(sprite.physicsBody?.isDynamic == type.isDynamic)
     }
 
     func testCreateRuby() {
@@ -65,15 +65,15 @@ class SpriteFactoryTests: XCTestCase {
         XCTAssertEqual(sprite.xScale, type.scale, accuracy: cgfloatAccuracy)
         XCTAssertEqual(sprite.yScale, type.scale, accuracy: cgfloatAccuracy)
 
-        assert(sprite.position == type.position(in: contentRect, with: sprite))
-        assert(sprite.zPosition == type.zPosition)
-        assert(sprite.name == type.rawValue)
+        XCTAssert(sprite.position == type.position(in: contentRect, with: sprite))
+        XCTAssert(sprite.zPosition == type.zPosition)
+        XCTAssert(sprite.name == type.rawValue)
 
-        assert(sprite.physicsBody?.affectedByGravity == type.isAffectedByGravity)
-        assert(sprite.physicsBody?.categoryBitMask == type.physicsId)
-        assert(sprite.physicsBody?.collisionBitMask == type.colisionBitmask)
-        assert(sprite.physicsBody?.contactTestBitMask == type.colisionBitmask)
-        assert(sprite.physicsBody?.isDynamic == type.isDynamic)
+        XCTAssert(sprite.physicsBody?.affectedByGravity == type.isAffectedByGravity)
+        XCTAssert(sprite.physicsBody?.categoryBitMask == type.physicsId)
+        XCTAssert(sprite.physicsBody?.collisionBitMask == type.colisionBitmask)
+        XCTAssert(sprite.physicsBody?.contactTestBitMask == type.colisionBitmask)
+        XCTAssert(sprite.physicsBody?.isDynamic == type.isDynamic)
     }
 
     func testCreateGround() {
@@ -83,15 +83,15 @@ class SpriteFactoryTests: XCTestCase {
         XCTAssertEqual(sprite.xScale, type.scale, accuracy: cgfloatAccuracy)
         XCTAssertEqual(sprite.yScale, type.scale, accuracy: cgfloatAccuracy)
 
-        assert(sprite.position == type.position(in: contentRect, with: sprite))
-        assert(sprite.zPosition == type.zPosition)
-        assert(sprite.name == type.rawValue)
+        XCTAssert(sprite.position == type.position(in: contentRect, with: sprite))
+        XCTAssert(sprite.zPosition == type.zPosition)
+        XCTAssert(sprite.name == type.rawValue)
 
-        assert(sprite.physicsBody?.affectedByGravity == type.isAffectedByGravity)
-        assert(sprite.physicsBody?.categoryBitMask == type.physicsId)
-        assert(sprite.physicsBody?.collisionBitMask == type.colisionBitmask)
-        assert(sprite.physicsBody?.contactTestBitMask == type.colisionBitmask)
-        assert(sprite.physicsBody?.isDynamic == type.isDynamic)
+        XCTAssert(sprite.physicsBody?.affectedByGravity == type.isAffectedByGravity)
+        XCTAssert(sprite.physicsBody?.categoryBitMask == type.physicsId)
+        XCTAssert(sprite.physicsBody?.collisionBitMask == type.colisionBitmask)
+        XCTAssert(sprite.physicsBody?.contactTestBitMask == type.colisionBitmask)
+        XCTAssert(sprite.physicsBody?.isDynamic == type.isDynamic)
     }
 
     func testCreateSky() {
@@ -101,27 +101,27 @@ class SpriteFactoryTests: XCTestCase {
         XCTAssertEqual(sprite.xScale, type.scale, accuracy: cgfloatAccuracy)
         XCTAssertEqual(sprite.yScale, type.scale, accuracy: cgfloatAccuracy)
 
-        assert(sprite.position == type.position(in: contentRect, with: sprite))
-        assert(sprite.zPosition == type.zPosition)
-        assert(sprite.name == type.rawValue)
+        XCTAssert(sprite.position == type.position(in: contentRect, with: sprite))
+        XCTAssert(sprite.zPosition == type.zPosition)
+        XCTAssert(sprite.name == type.rawValue)
 
-        assert(sprite.physicsBody?.affectedByGravity == type.isAffectedByGravity)
-        assert(sprite.physicsBody?.categoryBitMask == type.physicsId)
-        assert(sprite.physicsBody?.collisionBitMask == type.colisionBitmask)
-        assert(sprite.physicsBody?.contactTestBitMask == type.colisionBitmask)
-        assert(sprite.physicsBody?.isDynamic == type.isDynamic)
+        XCTAssert(sprite.physicsBody?.affectedByGravity == type.isAffectedByGravity)
+        XCTAssert(sprite.physicsBody?.categoryBitMask == type.physicsId)
+        XCTAssert(sprite.physicsBody?.collisionBitMask == type.colisionBitmask)
+        XCTAssert(sprite.physicsBody?.contactTestBitMask == type.colisionBitmask)
+        XCTAssert(sprite.physicsBody?.isDynamic == type.isDynamic)
     }
 
     func testCreateBackground() {
         let type = SpriteType.background
         let sprite = SpriteFactory.sprite(of: type, in: contentRect)
 
-        assert(sprite.xScale == type.scale && sprite.yScale == type.scale)
-        assert(sprite.position == type.position(in: contentRect, with: sprite))
-        assert(sprite.zPosition == type.zPosition)
-        assert(sprite.name == type.rawValue)
+        XCTAssert(sprite.xScale == type.scale && sprite.yScale == type.scale)
+        XCTAssert(sprite.position == type.position(in: contentRect, with: sprite))
+        XCTAssert(sprite.zPosition == type.zPosition)
+        XCTAssert(sprite.name == type.rawValue)
 
-        assert(sprite.anchorPoint == CGPoint(x: 0, y: 0))
-        assert(sprite.physicsBody == nil)
+        XCTAssert(sprite.anchorPoint == CGPoint(x: 0, y: 0))
+        XCTAssert(sprite.physicsBody == nil)
     }
 }

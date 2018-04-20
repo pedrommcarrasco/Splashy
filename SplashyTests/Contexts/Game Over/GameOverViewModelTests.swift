@@ -40,17 +40,17 @@ class GameOverViewModelTests: XCTestCase {
         let viewModel = GameOverViewModel(with: Constants.lowerScore, and: RecordsManagerMock())
 
 
-        assert(viewModel.score == Constants.lowerScore)
-        assert(viewModel.scoreAsset == Assets.gameoverImage)
-        assert(viewModel.scoreDescription == Constants.pointInSingular)
+        XCTAssert(viewModel.score == Constants.lowerScore)
+        XCTAssert(viewModel.scoreAsset == Assets.gameoverImage)
+        XCTAssert(viewModel.scoreDescription == Constants.pointInSingular)
     }
 
     func testInitWithHigherScore() {
         let viewModel = GameOverViewModel(with: Constants.higherScore, and: RecordsManagerMock())
 
-        assert(viewModel.score == Constants.higherScore)
-        assert(viewModel.scoreAsset == Assets.newRecordImage)
-        assert(viewModel.scoreDescription == Constants.pointInPlural)
+        XCTAssert(viewModel.score == Constants.higherScore)
+        XCTAssert(viewModel.scoreAsset == Assets.newRecordImage)
+        XCTAssert(viewModel.scoreDescription == Constants.pointInPlural)
     }
 
 }
