@@ -9,11 +9,22 @@
 import Foundation
 @testable import Splashy
 
-struct RecordsManagerMock: RecordsManagerRepresentable {
+class RecordsManagerMock: RecordsManagerRepresentable {
 
-    var currentRecord: Int = 3
+    // MARK: - CONTANTS
+    private enum Constants {
+        static let record = 5
+    }
 
+    // MARK: - PROPERTIES
+    var currentRecord = Constants.record
+
+    // MARK: - FUNCTIONS
     func isNewRecord(_ score: Int) -> Bool {
-        return score > currentRecord
+        let isNewRecord = score > currentRecord
+
+        if isNewRecord { currentRecord = score }
+
+        return isNewRecord
     }
 }
