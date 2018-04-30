@@ -11,25 +11,21 @@ import XCTest
 
 class SpriteFactoryTests: XCTestCase {
 
-    let contentRect = CGRect(x: 0, y: 0, width: 100, height: 100)
-    let cgfloatAccuracy: CGFloat = 0.01 // CGFloat.uplOfOne isn't working for enemy scale 🤷‍♂️
-    
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
+    // MARK: - CONSTANTS
+    private enum Constants {
+        static let contentRect = CGRect(x: 0, y: 0, width: 100, height: 100)
+        static  let cgfloatAccuracy: CGFloat = 0.01 // CGFloat.uplOfOne isn't working for enemy scale 🤷‍♂️
     }
 
+    // MARK: - TEST: sprite(of type: SpriteType, in frame: CGRect) -> SKSpriteNode
     func testCreateSplashy() {
         let type = SpriteType.splashy
-        let sprite = SpriteFactory.sprite(of: type, in: contentRect)
+        let sprite = SpriteFactory.sprite(of: type, in: Constants.contentRect)
 
-        XCTAssertEqual(sprite.xScale, type.scale, accuracy: cgfloatAccuracy)
-        XCTAssertEqual(sprite.yScale, type.scale, accuracy: cgfloatAccuracy)
+        XCTAssertEqual(sprite.xScale, type.scale, accuracy: Constants.cgfloatAccuracy)
+        XCTAssertEqual(sprite.yScale, type.scale, accuracy: Constants.cgfloatAccuracy)
 
-        XCTAssert(sprite.position == type.position(in: contentRect, with: sprite))
+        XCTAssert(sprite.position == type.position(in: Constants.contentRect, with: sprite))
         XCTAssert(sprite.zPosition == type.zPosition)
         XCTAssert(sprite.name == type.rawValue)
 
@@ -42,12 +38,12 @@ class SpriteFactoryTests: XCTestCase {
 
     func testCreateEnemy() {
         let type = SpriteType.enemy
-        let sprite = SpriteFactory.sprite(of: type, in: contentRect)
+        let sprite = SpriteFactory.sprite(of: type, in: Constants.contentRect)
 
-        XCTAssertEqual(sprite.xScale, type.scale, accuracy: cgfloatAccuracy)
-        XCTAssertEqual(sprite.yScale, type.scale, accuracy: cgfloatAccuracy)
+        XCTAssertEqual(sprite.xScale, type.scale, accuracy: Constants.cgfloatAccuracy)
+        XCTAssertEqual(sprite.yScale, type.scale, accuracy: Constants.cgfloatAccuracy)
 
-        XCTAssert(sprite.position == type.position(in: contentRect, with: sprite))
+        XCTAssert(sprite.position == type.position(in: Constants.contentRect, with: sprite))
         XCTAssert(sprite.zPosition == type.zPosition)
         XCTAssert(sprite.name == type.rawValue)
 
@@ -60,12 +56,12 @@ class SpriteFactoryTests: XCTestCase {
 
     func testCreateRuby() {
         let type = SpriteType.ruby
-        let sprite = SpriteFactory.sprite(of: type, in: contentRect)
+        let sprite = SpriteFactory.sprite(of: type, in: Constants.contentRect)
 
-        XCTAssertEqual(sprite.xScale, type.scale, accuracy: cgfloatAccuracy)
-        XCTAssertEqual(sprite.yScale, type.scale, accuracy: cgfloatAccuracy)
+        XCTAssertEqual(sprite.xScale, type.scale, accuracy: Constants.cgfloatAccuracy)
+        XCTAssertEqual(sprite.yScale, type.scale, accuracy: Constants.cgfloatAccuracy)
 
-        XCTAssert(sprite.position == type.position(in: contentRect, with: sprite))
+        XCTAssert(sprite.position == type.position(in: Constants.contentRect, with: sprite))
         XCTAssert(sprite.zPosition == type.zPosition)
         XCTAssert(sprite.name == type.rawValue)
 
@@ -78,12 +74,12 @@ class SpriteFactoryTests: XCTestCase {
 
     func testCreateGround() {
         let type = SpriteType.ground
-        let sprite = SpriteFactory.sprite(of: type, in: contentRect)
+        let sprite = SpriteFactory.sprite(of: type, in: Constants.contentRect)
 
-        XCTAssertEqual(sprite.xScale, type.scale, accuracy: cgfloatAccuracy)
-        XCTAssertEqual(sprite.yScale, type.scale, accuracy: cgfloatAccuracy)
+        XCTAssertEqual(sprite.xScale, type.scale, accuracy: Constants.cgfloatAccuracy)
+        XCTAssertEqual(sprite.yScale, type.scale, accuracy: Constants.cgfloatAccuracy)
 
-        XCTAssert(sprite.position == type.position(in: contentRect, with: sprite))
+        XCTAssert(sprite.position == type.position(in: Constants.contentRect, with: sprite))
         XCTAssert(sprite.zPosition == type.zPosition)
         XCTAssert(sprite.name == type.rawValue)
 
@@ -96,12 +92,12 @@ class SpriteFactoryTests: XCTestCase {
 
     func testCreateSky() {
         let type = SpriteType.sky
-        let sprite = SpriteFactory.sprite(of: type, in: contentRect)
+        let sprite = SpriteFactory.sprite(of: type, in: Constants.contentRect)
 
-        XCTAssertEqual(sprite.xScale, type.scale, accuracy: cgfloatAccuracy)
-        XCTAssertEqual(sprite.yScale, type.scale, accuracy: cgfloatAccuracy)
+        XCTAssertEqual(sprite.xScale, type.scale, accuracy: Constants.cgfloatAccuracy)
+        XCTAssertEqual(sprite.yScale, type.scale, accuracy: Constants.cgfloatAccuracy)
 
-        XCTAssert(sprite.position == type.position(in: contentRect, with: sprite))
+        XCTAssert(sprite.position == type.position(in: Constants.contentRect, with: sprite))
         XCTAssert(sprite.zPosition == type.zPosition)
         XCTAssert(sprite.name == type.rawValue)
 
@@ -114,10 +110,10 @@ class SpriteFactoryTests: XCTestCase {
 
     func testCreateBackground() {
         let type = SpriteType.background
-        let sprite = SpriteFactory.sprite(of: type, in: contentRect)
+        let sprite = SpriteFactory.sprite(of: type, in: Constants.contentRect)
 
         XCTAssert(sprite.xScale == type.scale && sprite.yScale == type.scale)
-        XCTAssert(sprite.position == type.position(in: contentRect, with: sprite))
+        XCTAssert(sprite.position == type.position(in: Constants.contentRect, with: sprite))
         XCTAssert(sprite.zPosition == type.zPosition)
         XCTAssert(sprite.name == type.rawValue)
 

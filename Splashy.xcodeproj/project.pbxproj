@@ -11,6 +11,7 @@
 		530557712087462C0017BCEE /* RecordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530557702087462C0017BCEE /* RecordsManager.swift */; };
 		5305577320879FB80017BCEE /* CountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5305577220879FB80017BCEE /* CountingLabel.swift */; };
 		53271B152089DD50004D6676 /* GameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53271B142089DD50004D6676 /* GameViewModelTests.swift */; };
+		53338B7D20976BB600D96681 /* EnemyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53338B7C20976BB600D96681 /* EnemyTests.swift */; };
 		535CC2AB2084AA59007D7FD6 /* ScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 535CC2AA2084AA59007D7FD6 /* ScoreView.xib */; };
 		535CC2AD2084AC15007D7FD6 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535CC2AC2084AC15007D7FD6 /* ScoreView.swift */; };
 		5366C3822080B61900299A4C /* NodeColliding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366C3812080B61900299A4C /* NodeColliding.swift */; };
@@ -92,6 +93,7 @@
 		530557702087462C0017BCEE /* RecordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsManager.swift; sourceTree = "<group>"; };
 		5305577220879FB80017BCEE /* CountingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingLabel.swift; sourceTree = "<group>"; };
 		53271B142089DD50004D6676 /* GameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelTests.swift; sourceTree = "<group>"; };
+		53338B7C20976BB600D96681 /* EnemyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyTests.swift; sourceTree = "<group>"; };
 		535CC2AA2084AA59007D7FD6 /* ScoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreView.xib; sourceTree = "<group>"; };
 		535CC2AC2084AC15007D7FD6 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		5366C3812080B61900299A4C /* NodeColliding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeColliding.swift; sourceTree = "<group>"; };
@@ -221,6 +223,14 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
+		53338B792097697000D96681 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				53338B7C20976BB600D96681 /* EnemyTests.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
 		53845F5B208A419B00C35DFA /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +263,7 @@
 		5392703D2088EB38001E21A8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				53338B792097697000D96681 /* Nodes */,
 				53845F5B208A419B00C35DFA /* Managers */,
 				53E1B0AC208A07AE0086BCB7 /* Generics */,
 				53E1B0A5208A01100086BCB7 /* Protocols */,
@@ -632,6 +643,7 @@
 				53E1B0A9208A04190086BCB7 /* HomeCoordinatorMock.swift in Sources */,
 				53E1B0A7208A01250086BCB7 /* CoordinatorTests.swift in Sources */,
 				53845F5A208A22E400C35DFA /* LocalizableTests.swift in Sources */,
+				53338B7D20976BB600D96681 /* EnemyTests.swift in Sources */,
 				53845F56208A128800C35DFA /* PhysicsComparableTests.swift in Sources */,
 				53E1B0AE208A07C00086BCB7 /* BindableTests.swift in Sources */,
 				53271B152089DD50004D6676 /* GameViewModelTests.swift in Sources */,

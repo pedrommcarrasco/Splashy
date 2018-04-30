@@ -39,7 +39,7 @@ class NodeCollidingTests: XCTestCase {
         super.tearDown()
     }
 
-    // MARK: - collision(with node: SKPhysicsBody, isBetween typeA: SpriteType, and typeB: SpriteType)
+    // MARK: - TEST: collision(with node: SKPhysicsBody, isBetween typeA: SpriteType, and typeB: SpriteType)
     func testCollisionBetweenSplashyAndEnemy() {
         guard let splashyPhysicsBody = splashy.physicsBody, let enemyPhysicsBody = enemy.physicsBody else {
             XCTFail()
