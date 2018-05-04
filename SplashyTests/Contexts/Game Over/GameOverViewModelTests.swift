@@ -9,7 +9,7 @@
 import XCTest
 @testable import Splashy
 
-class GameOverViewModelTests: XCTestCase {
+final class GameOverViewModelTests: XCTestCase {
 
     // MARK: - CONSTANTS
     private enum Constants {

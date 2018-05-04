@@ -9,7 +9,7 @@
 import XCTest
 @testable import Splashy
 
-class LocalizableTests: XCTestCase {
+final class LocalizableTests: XCTestCase {
 
     // MARK: - CONSTANTS
     private enum Constants {

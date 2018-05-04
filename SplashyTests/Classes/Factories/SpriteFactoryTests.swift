@@ -9,7 +9,7 @@
 import XCTest
 @testable import Splashy
 
-class SpriteFactoryTests: XCTestCase {
+final class SpriteFactoryTests: XCTestCase {
 
     // MARK: - CONSTANTS
     private enum Constants {

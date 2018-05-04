@@ -10,7 +10,7 @@ import XCTest
 import SpriteKit
 @testable import Splashy
 
-class NodeCollidingTests: XCTestCase {
+final class NodeCollidingTests: XCTestCase {
 
     // MARK: - CONSTANTS
     private enum Constants {
