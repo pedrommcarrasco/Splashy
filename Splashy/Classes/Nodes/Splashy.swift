@@ -12,7 +12,7 @@ struct Splashy {
 
     // MARK: - PROPERTIES
     let node: SKSpriteNode
-    let jumpActionTextures: [SKTexture]
+    private let jumpActionTextures: [SKTexture]
 
     // MARK: - INIT
     init(in frame: CGRect) {

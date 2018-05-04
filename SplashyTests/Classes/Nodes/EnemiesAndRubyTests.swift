@@ -1,5 +1,6 @@
+
 //
-//  RubyTests.swift
+//  EnemiesAndRuby.swift
 //  SplashyTests
 //
 //  Created by Pedro Carrasco on 04/05/2018.
@@ -9,17 +10,18 @@
 import XCTest
 @testable import Splashy
 
-final class RubyTests: XCTestCase {
+final class EnemiesAndRubyTests: XCTestCase {
     
     // MARK: - CONSTANTS
     private enum Constants {
         static let contentRect = CGRect(x: 0, y: 0, width: 100, height: 100)
+        static let numberOfChildrenNodes = 3
     }
 
     // MARK: - TEST: init(in frame: CGRect)
-    func testRubyInit() {
-        let ruby = Ruby(in: Constants.contentRect)
+    func testEnemiesAndRubyInit() {
+        let enemiesAndRuby = EnemiesAndRuby.init(in: Constants.contentRect)
 
-        XCTAssert(ruby.node.physicsBody?.categoryBitMask == SpriteType.ruby.physicsId)
+        XCTAssert(enemiesAndRuby.node.children.count == Constants.numberOfChildrenNodes)
     }
 }

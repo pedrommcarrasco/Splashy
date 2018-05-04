@@ -12,15 +12,12 @@ struct EnemiesAndRuby {
 
     // MARK: - PROPERTIES
     let node: SKNode
-    let ruby: Ruby
-    let topEnemy: Enemy
-    let bottomEnemy: Enemy
 
     // MARK: - INIT
     init(in frame: CGRect) {
-        self.ruby = Ruby(in: frame)
-        self.topEnemy = Enemy(in: frame, with: EnemyConstants.upperY)
-        self.bottomEnemy = Enemy(in: frame, with: EnemyConstants.lowerY)
+        let ruby = Ruby(in: frame)
+        let topEnemy = Enemy(in: frame, with: EnemyConstants.upperY)
+        let bottomEnemy = Enemy(in: frame, with: EnemyConstants.lowerY)
 
         self.node = SKNode()
         node.addChild(ruby.node)
