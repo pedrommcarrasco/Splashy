@@ -21,6 +21,8 @@
 		53687806209CB0B700720556 /* RubyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53687805209CB0B700720556 /* RubyTests.swift */; };
 		53687808209CB2A300720556 /* SplashyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53687807209CB2A300720556 /* SplashyTests.swift */; };
 		5368780A209CB6F100720556 /* EnemiesAndRubyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53687809209CB6F100720556 /* EnemiesAndRubyTests.swift */; };
+		5368780C209CB92C00720556 /* NibLoadableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368780B209CB92C00720556 /* NibLoadableTests.swift */; };
+		5368780E209CBDC500720556 /* GameOverViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368780D209CBDC500720556 /* GameOverViewModelMock.swift */; };
 		53845F56208A128800C35DFA /* PhysicsComparableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53845F55208A128800C35DFA /* PhysicsComparableTests.swift */; };
 		53845F5A208A22E400C35DFA /* LocalizableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53845F59208A22E400C35DFA /* LocalizableTests.swift */; };
 		5392702820889066001E21A8 /* RecordsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392702720889066001E21A8 /* RecordsCoordinator.swift */; };
@@ -109,6 +111,8 @@
 		53687805209CB0B700720556 /* RubyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyTests.swift; sourceTree = "<group>"; };
 		53687807209CB2A300720556 /* SplashyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashyTests.swift; sourceTree = "<group>"; };
 		53687809209CB6F100720556 /* EnemiesAndRubyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemiesAndRubyTests.swift; sourceTree = "<group>"; };
+		5368780B209CB92C00720556 /* NibLoadableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableTests.swift; sourceTree = "<group>"; };
+		5368780D209CBDC500720556 /* GameOverViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewModelMock.swift; sourceTree = "<group>"; };
 		53845F55208A128800C35DFA /* PhysicsComparableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsComparableTests.swift; sourceTree = "<group>"; };
 		53845F59208A22E400C35DFA /* LocalizableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableTests.swift; sourceTree = "<group>"; };
 		5392702720889066001E21A8 /* RecordsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCoordinator.swift; sourceTree = "<group>"; };
@@ -321,6 +325,7 @@
 				53E1B09C2089E6B30086BCB7 /* RecordsManagerMock.swift */,
 				53E1B0A8208A04190086BCB7 /* HomeCoordinatorMock.swift */,
 				53E1B0AA208A04250086BCB7 /* GameCoordinatorMock.swift */,
+				5368780D209CBDC500720556 /* GameOverViewModelMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 				53E1B0B1208A0D330086BCB7 /* NodeCollidingTests.swift */,
 				53845F55208A128800C35DFA /* PhysicsComparableTests.swift */,
 				53845F59208A22E400C35DFA /* LocalizableTests.swift */,
+				5368780B209CB92C00720556 /* NibLoadableTests.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -671,6 +677,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53E1B0AB208A04250086BCB7 /* GameCoordinatorMock.swift in Sources */,
+				5368780C209CB92C00720556 /* NibLoadableTests.swift in Sources */,
 				53E1B0A02089F2FB0086BCB7 /* GameOverViewModelTests.swift in Sources */,
 				536877FF209C9AB500720556 /* LoaderTests.swift in Sources */,
 				53E1B09D2089E6B30086BCB7 /* RecordsManagerMock.swift in Sources */,
@@ -686,6 +693,7 @@
 				53E1B0AE208A07C00086BCB7 /* BindableTests.swift in Sources */,
 				53687806209CB0B700720556 /* RubyTests.swift in Sources */,
 				53271B152089DD50004D6676 /* GameViewModelTests.swift in Sources */,
+				5368780E209CBDC500720556 /* GameOverViewModelMock.swift in Sources */,
 				53687804209CA84A00720556 /* CountingLabelTests.swift in Sources */,
 				53E1B0A42089FF500086BCB7 /* BoostTypeTests.swift in Sources */,
 				539270412088EB9B001E21A8 /* SpriteFactoryTests.swift in Sources */,
