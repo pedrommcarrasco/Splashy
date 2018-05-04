@@ -16,6 +16,7 @@
 		535CC2AD2084AC15007D7FD6 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535CC2AC2084AC15007D7FD6 /* ScoreView.swift */; };
 		5366C3822080B61900299A4C /* NodeColliding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366C3812080B61900299A4C /* NodeColliding.swift */; };
 		536877FF209C9AB500720556 /* LoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536877FE209C9AB500720556 /* LoaderTests.swift */; };
+		53687802209C9F3B00720556 /* StandardButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53687801209C9F3B00720556 /* StandardButtonTests.swift */; };
 		53845F56208A128800C35DFA /* PhysicsComparableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53845F55208A128800C35DFA /* PhysicsComparableTests.swift */; };
 		53845F5A208A22E400C35DFA /* LocalizableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53845F59208A22E400C35DFA /* LocalizableTests.swift */; };
 		5392702820889066001E21A8 /* RecordsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392702720889066001E21A8 /* RecordsCoordinator.swift */; };
@@ -99,6 +100,7 @@
 		535CC2AC2084AC15007D7FD6 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		5366C3812080B61900299A4C /* NodeColliding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeColliding.swift; sourceTree = "<group>"; };
 		536877FE209C9AB500720556 /* LoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderTests.swift; sourceTree = "<group>"; };
+		53687801209C9F3B00720556 /* StandardButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButtonTests.swift; sourceTree = "<group>"; };
 		53845F55208A128800C35DFA /* PhysicsComparableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsComparableTests.swift; sourceTree = "<group>"; };
 		53845F59208A22E400C35DFA /* LocalizableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableTests.swift; sourceTree = "<group>"; };
 		5392702720889066001E21A8 /* RecordsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCoordinator.swift; sourceTree = "<group>"; };
@@ -241,6 +243,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		53687800209C9F0500720556 /* Reusable User-Interface */ = {
+			isa = PBXGroup;
+			children = (
+				53687801209C9F3B00720556 /* StandardButtonTests.swift */,
+			);
+			path = "Reusable User-Interface";
+			sourceTree = "<group>";
+		};
 		53845F5B208A419B00C35DFA /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +275,7 @@
 				53E1B09B2089E69F0086BCB7 /* Mocks */,
 				53271B122089DD35004D6676 /* Contexts */,
 				5392703D2088EB38001E21A8 /* Classes */,
+				53687800209C9F0500720556 /* Reusable User-Interface */,
 				536877FD209C9A8F00720556 /* Utils */,
 				539270372088EACA001E21A8 /* Info.plist */,
 			);
@@ -657,6 +668,7 @@
 				53845F5A208A22E400C35DFA /* LocalizableTests.swift in Sources */,
 				53338B7D20976BB600D96681 /* EnemyTests.swift in Sources */,
 				53845F56208A128800C35DFA /* PhysicsComparableTests.swift in Sources */,
+				53687802209C9F3B00720556 /* StandardButtonTests.swift in Sources */,
 				53E1B0AE208A07C00086BCB7 /* BindableTests.swift in Sources */,
 				53271B152089DD50004D6676 /* GameViewModelTests.swift in Sources */,
 				53E1B0A42089FF500086BCB7 /* BoostTypeTests.swift in Sources */,

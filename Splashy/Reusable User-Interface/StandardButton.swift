@@ -9,14 +9,7 @@
 import UIKit
 
 class StandardButton: UIButton {
-    
-    // MARK: - PROPERTIES
-    var image: UIImage? {
-        didSet {
-            self.setImage(image, for: .normal)
-        }
-    }
-    
+
     // MARK: - INIT
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,8 +28,7 @@ class StandardButton: UIButton {
     
     // MARK: - PUBLIC
     func configureImage(with name: String) {
-        guard let image = UIImage(named: name) else { return }
-        self.image = image
+        self.setImage(UIImage(named: name), for: .normal)
     }
     
     // MARK: - PRIVATE

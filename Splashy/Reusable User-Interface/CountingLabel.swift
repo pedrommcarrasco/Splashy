@@ -58,7 +58,7 @@ class CountingLabel: UILabel {
         self.text = "\(Int(currentValue))"
     }
     
-    func updateCounter(with percentage: Float) -> Float {
+    private func updateCounter(with percentage: Float) -> Float {
         return 1.0 - powf((1.0 - percentage), Constants.counterRate)
     }
     

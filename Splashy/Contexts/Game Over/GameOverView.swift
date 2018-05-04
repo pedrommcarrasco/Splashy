@@ -50,9 +50,9 @@ class GameOverView: UIView {
         scoreLabel.count(until: Float(viewModel.score), with: AnimationDurations.normal.rawValue)
         scoreDescriptionLabel.text = viewModel.scoreDescription
         
-        retryButton.image = UIImage(named: viewModel.retryIcon)
-        recordButton.image = UIImage(named: viewModel.recordsIcon)
-        tutorialButton.image = UIImage(named: viewModel.tutorialIcon)
+        retryButton.configureImage(with: viewModel.retryIcon)
+        recordButton.configureImage(with: viewModel.recordsIcon)
+        tutorialButton.configureImage(with: viewModel.tutorialIcon)
         
         guard let scoreImage = UIImage(named: viewModel.scoreAsset) else { return }
         scoreStateImageView.image = scoreImage
