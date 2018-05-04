@@ -30,7 +30,18 @@ class CountingLabel: UILabel {
         let update = updateCounter(with: percent)
         return update * finalValue
     }
-    
+
+    // MARK: - INIT
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.text = "0"
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.text = "0"
+    }
+
     // MARK: - METHODS
     func count(until value: Float, with duration: TimeInterval) {
         invalidate()
@@ -43,26 +54,29 @@ class CountingLabel: UILabel {
                                      selector: #selector(update), userInfo: nil,
                                      repeats: true)
     }
-    
-    @objc private func update() {
-        
+}
+
+private extension CountingLabel {
+
+    @objc func update() {
+
         let now = Date.timeIntervalSinceReferenceDate
         progress = progress + (now - lastUpdate)
         lastUpdate = now
-        
+
         if (progress >= duration) {
             invalidate()
             progress = duration
         }
-        
+
         self.text = "\(Int(currentValue))"
     }
-    
-    private func updateCounter(with percentage: Float) -> Float {
+
+    func updateCounter(with percentage: Float) -> Float {
         return 1.0 - powf((1.0 - percentage), Constants.counterRate)
     }
-    
-    private func invalidate() {
+
+    func invalidate() {
         timer?.invalidate()
         timer = nil
     }
