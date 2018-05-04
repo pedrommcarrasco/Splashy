@@ -22,7 +22,6 @@ final class EnemyTests: XCTestCase {
         let enemy = Enemy(in: Constants.contentRect, with: Constants.variation)
         let expectedPositionInY = SpriteFactory.sprite(of: .enemy, in: Constants.contentRect).position.y + Constants.variation
 
-
         XCTAssert(enemy.node.position.y == expectedPositionInY)
     }
 }

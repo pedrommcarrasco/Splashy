@@ -13,15 +13,20 @@ enum LoadType {
 }
 
 struct Loader {
+
     static func load(texture type: LoadType) -> [SKTexture] {
         switch type{
         case .splashyJump:
             return splashyJump()
         }
     }
+}
 
-    private static func splashyJump() -> [SKTexture] {
+private extension Loader {
+
+    static func splashyJump() -> [SKTexture] {
         var textureArray = [SKTexture]()
+
         for index in 1 ... 9 {
             let textureName = "jump\(index)"
             let texture = SKTexture(imageNamed: textureName)
