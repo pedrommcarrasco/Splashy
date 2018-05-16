@@ -15,17 +15,17 @@ protocol GameOverCoordinatorDelegate: class {
 class GameOverCoordinator: Coordinator {
 
     // MARK: - PROPERTIES
-    private let navigationController: UINavigationController
+    private let navigator: NavigatorRepresentable
     private let score: Int
 
     weak var coordinatorDelegate: CoordinatorDelegate?
     weak var delegate: GameOverCoordinatorDelegate?
 
-    internal var coordinators: [Coordinator]
+    internal var coordinators: [Coordinator] = []
 
     // MARK: - INIT
-    init(navigationController: UINavigationController, score: Int) {
-        self.navigationController = navigationController
+    init(with navigator: NavigatorRepresentable, score: Int) {
+        self.navigator = navigator
         self.score = score
         self.coordinators = []
     }
@@ -33,7 +33,7 @@ class GameOverCoordinator: Coordinator {
     // MARK: - START
     func start() {
         coordinatorDelegate?.coordinatorDidStart(self)
-        navigationController.present(viewController(), animated: true, completion: nil)
+        navigator.transition(to: viewController(), as: .modal)
     }
 
     // MARK: - FUNCTIONS
@@ -53,8 +53,8 @@ extension GameOverCoordinator: GameoverViewControllerNavigationDelegate {
     func didPressRetry(in gameoverViewController: GameOverViewController) {
         delegate?.retry(from: self)
         coordinatorDelegate?.coordinatorDidEnd(self)
-        
-        navigationController.dismiss(animated: true, completion: nil)
+
+        navigator.dismiss()
     }
 
     func didPressRecords(in gameoverViewController: GameOverViewController) {}

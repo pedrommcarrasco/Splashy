@@ -12,25 +12,23 @@ class AppCoordinator: Coordinator {
 
     // MARK: - PROPERTIES
     weak var coordinatorDelegate: CoordinatorDelegate?
-    private let window: UIWindow
-    private let navigationController: UINavigationController
-    internal var coordinators: [Coordinator]
+
+    private let navigator: NavigatorRepresentable
+
+    internal var coordinators: [Coordinator] = []
 
     // MARK: - INITIALIZATION
-    init(window: UIWindow) {
-        self.window = window
-        self.navigationController = UINavigationController()
-        self.coordinators = []
+    init(with window: UIWindow, navigator: NavigatorRepresentable) {
+        window.rootViewController = navigator.root()
+        window.makeKeyAndVisible()
 
-        self.window.rootViewController = self.navigationController
-        navigationController.setNavigationBarHidden(true, animated: false)
+        self.navigator = navigator
     }
 
     // MARK: - FUNCTIONS
     func start() {
-        let homeCoordinator = HomeCoordinator(navigationController: navigationController)
+        let homeCoordinator = HomeCoordinator(with: self.navigator)
         homeCoordinator.coordinatorDelegate = self
         homeCoordinator.start()
-
     }
 }

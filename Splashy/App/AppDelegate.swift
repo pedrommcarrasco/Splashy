@@ -17,13 +17,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         // Coordinator
-        window = UIWindow()
-        guard let window = window else { return true }
-        appCoordinator = AppCoordinator(window: window)
-        appCoordinator.start()
-        window.makeKeyAndVisible()
+        setupCoordinator()
 
         return true
+    }
+}
+
+// MARK: - Private
+private extension AppDelegate {
+
+    // MARK: PROPERTIES
+    var navigationController: UINavigationController {
+        let navigationController = UINavigationController()
+        navigationController.isNavigationBarHidden = true
+
+        return navigationController
+    }
+
+    // MARK: COORDINATOR
+    func setupCoordinator() {
+
+        self.window = UIWindow()
+        guard let window = window else { return }
+
+        let navigator = Navigator(with: self.navigationController)
+        self.appCoordinator = AppCoordinator(with: window, navigator: navigator)
+        self.appCoordinator.start()
+        window.makeKeyAndVisible()
     }
 }
 

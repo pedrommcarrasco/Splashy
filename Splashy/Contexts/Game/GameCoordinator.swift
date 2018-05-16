@@ -11,17 +11,16 @@ import UIKit
 class GameCoordinator: Coordinator {
 
     // MARK: - PROPERTIES
-    private let navigationController: UINavigationController
+    private let navigator: NavigatorRepresentable
     private let viewController: GameViewController
 
     weak var coordinatorDelegate: CoordinatorDelegate?
 
-    internal var coordinators: [Coordinator]
+    internal var coordinators: [Coordinator] = []
 
     // MARK: - INIT
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-        self.coordinators = []
+    init(with navigator: NavigatorRepresentable) {
+        self.navigator = navigator
 
         let viewModel = GameViewModel()
         self.viewController = GameViewController(with: viewModel)
@@ -31,13 +30,14 @@ class GameCoordinator: Coordinator {
     // MARK: - START
     func start() {
         coordinatorDelegate?.coordinatorDidStart(self)
-        navigationController.pushViewController(viewController, animated: true)
+
+        navigator.transition(to: self.viewController, as: .push)
     }
 }
 
 extension GameCoordinator: GameViewControllerNavigation {
     func gameViewController(_ gameViewController: GameViewController, didEndGameWith points: Int) {
-        let gameoverCoordinator = GameOverCoordinator(navigationController: navigationController, score: points)
+        let gameoverCoordinator = GameOverCoordinator(with: self.navigator, score: points)
         gameoverCoordinator.coordinatorDelegate = self
         gameoverCoordinator.delegate = self
         gameoverCoordinator.start()
