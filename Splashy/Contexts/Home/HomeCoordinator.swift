@@ -41,7 +41,7 @@ class HomeCoordinator: Coordinator {
 
 extension HomeCoordinator: HomeViewNavigationDelegate {
    func didPressPlay(in homeViewController: HomeViewController) {
-      let gameCoordinator = GameCoordinator(with: self.navigator)
+      let gameCoordinator = GameCoordinator(with: navigator)
       gameCoordinator.coordinatorDelegate = self
       gameCoordinator.start()
    }

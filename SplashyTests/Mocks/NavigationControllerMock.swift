@@ -23,30 +23,30 @@ class NavigationControllerMock: UINavigationController {
 
     // MARK: - PUBLIC FUNCTIONS
     override func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
-        self.actualViewController = viewControllers.first
-        self.wasRoot = true
+        actualViewController = viewControllers.first
+        wasRoot = true
         super.setViewControllers(viewControllers, animated: animated)
     }
 
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        self.actualViewController = viewController
-        self.wasPush = true
+        actualViewController = viewController
+        wasPush = true
         super.pushViewController(viewController, animated: animated)
     }
 
     override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
-        self.actualViewController = viewControllerToPresent
-        self.wasPresent = true
+        actualViewController = viewControllerToPresent
+        wasPresent = true
         super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
 
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-        self.wasDismiss = true
+        wasDismiss = true
         super.dismiss(animated: flag, completion: completion)
     }
 
     override func popViewController(animated: Bool) -> UIViewController? {
-        self.wasPop = true
+        wasPop = true
         return super.popViewController(animated: animated)
     }
 }

@@ -31,13 +31,13 @@ class GameCoordinator: Coordinator {
     func start() {
         coordinatorDelegate?.coordinatorDidStart(self)
 
-        navigator.transition(to: self.viewController, as: .push)
+        navigator.transition(to: viewController, as: .push)
     }
 }
 
 extension GameCoordinator: GameViewControllerNavigation {
     func gameViewController(_ gameViewController: GameViewController, didEndGameWith points: Int) {
-        let gameoverCoordinator = GameOverCoordinator(with: self.navigator, score: points)
+        let gameoverCoordinator = GameOverCoordinator(with: navigator, score: points)
         gameoverCoordinator.coordinatorDelegate = self
         gameoverCoordinator.delegate = self
         gameoverCoordinator.start()

@@ -27,7 +27,7 @@ class AppCoordinator: Coordinator {
 
     // MARK: - FUNCTIONS
     func start() {
-        let homeCoordinator = HomeCoordinator(with: self.navigator)
+        let homeCoordinator = HomeCoordinator(with: navigator)
         homeCoordinator.coordinatorDelegate = self
         homeCoordinator.start()
     }

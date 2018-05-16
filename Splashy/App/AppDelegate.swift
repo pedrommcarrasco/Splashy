@@ -37,12 +37,12 @@ private extension AppDelegate {
     // MARK: COORDINATOR
     func setupCoordinator() {
 
-        self.window = UIWindow()
+        window = UIWindow()
         guard let window = window else { return }
 
-        let navigator = Navigator(with: self.navigationController)
-        self.appCoordinator = AppCoordinator(with: window, navigator: navigator)
-        self.appCoordinator.start()
+        let navigator = Navigator(with: navigationController)
+        appCoordinator = AppCoordinator(with: window, navigator: navigator)
+        appCoordinator.start()
         window.makeKeyAndVisible()
     }
 }

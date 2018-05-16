@@ -31,6 +31,7 @@ class HomeViewController: UIViewController {
     // MARK: - INIT
     init(with viewModel: HomeViewModelRepresentable) {
         self.viewModel = viewModel
+
         super.init(nibName: HomeViewController.name, bundle: nil)
     }
     
@@ -102,8 +103,7 @@ class HomeViewController: UIViewController {
     }
     
     // MARK: - ACTIONS
-    
     @IBAction func playButtonAction(_ sender: StandardButton) {
-		self.navigationDelegate?.didPressPlay(in: self)
+		navigationDelegate?.didPressPlay(in: self)
     }
 }

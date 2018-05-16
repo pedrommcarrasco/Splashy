@@ -20,6 +20,8 @@ class GameViewController: UIViewController {
     private enum Constants{
         static let scoreViewAppearingTopConstraintToAdd: CGFloat = 100
         static let scoreViewDisappearingTopConstraintToAdd: CGFloat = -100
+
+        static let sceneAnchorPoint = CGPoint(x: 0, y: 0)
     }
     
     // MARK: - OUTLETS
@@ -64,16 +66,18 @@ class GameViewController: UIViewController {
     // MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.clipsToBounds = true
         setupSpriteKitView()
     }
     
     // MARK: - SETUP
     private func setupSpriteKitView() {
-        guard let scene = scene else { return }
+        guard let scene = self.scene else { return }
         
         scene.size = spriteKitView.bounds.size
         scene.scaleMode = .aspectFill
-        scene.anchorPoint = CGPoint(x: 0, y: 0)
+        scene.anchorPoint = Constants.sceneAnchorPoint
 
         scene.sceneDelegate = self
         
