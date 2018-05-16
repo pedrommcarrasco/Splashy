@@ -14,6 +14,10 @@
 		53338B7D20976BB600D96681 /* EnemyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53338B7C20976BB600D96681 /* EnemyTests.swift */; };
 		535CC2AB2084AA59007D7FD6 /* ScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 535CC2AA2084AA59007D7FD6 /* ScoreView.xib */; };
 		535CC2AD2084AC15007D7FD6 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535CC2AC2084AC15007D7FD6 /* ScoreView.swift */; };
+		5365D47120AC2A0F00EBD319 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365D47020AC2A0F00EBD319 /* Navigator.swift */; };
+		5365D47320AC2A5300EBD319 /* NavigatorTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365D47220AC2A5300EBD319 /* NavigatorTransitionType.swift */; };
+		5365D47520AC307400EBD319 /* NavigationControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365D47420AC307400EBD319 /* NavigationControllerMock.swift */; };
+		5365D47820AC317000EBD319 /* NavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365D47720AC317000EBD319 /* NavigatorTests.swift */; };
 		5366C3822080B61900299A4C /* NodeColliding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366C3812080B61900299A4C /* NodeColliding.swift */; };
 		536877FF209C9AB500720556 /* LoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536877FE209C9AB500720556 /* LoaderTests.swift */; };
 		53687802209C9F3B00720556 /* StandardButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53687801209C9F3B00720556 /* StandardButtonTests.swift */; };
@@ -104,6 +108,10 @@
 		53338B7C20976BB600D96681 /* EnemyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyTests.swift; sourceTree = "<group>"; };
 		535CC2AA2084AA59007D7FD6 /* ScoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreView.xib; sourceTree = "<group>"; };
 		535CC2AC2084AC15007D7FD6 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		5365D47020AC2A0F00EBD319 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		5365D47220AC2A5300EBD319 /* NavigatorTransitionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorTransitionType.swift; sourceTree = "<group>"; };
+		5365D47420AC307400EBD319 /* NavigationControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerMock.swift; sourceTree = "<group>"; };
+		5365D47720AC317000EBD319 /* NavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorTests.swift; sourceTree = "<group>"; };
 		5366C3812080B61900299A4C /* NodeColliding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeColliding.swift; sourceTree = "<group>"; };
 		536877FE209C9AB500720556 /* LoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderTests.swift; sourceTree = "<group>"; };
 		53687801209C9F3B00720556 /* StandardButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButtonTests.swift; sourceTree = "<group>"; };
@@ -250,6 +258,22 @@
 			path = Nodes;
 			sourceTree = "<group>";
 		};
+		5365D46E20AC29E400EBD319 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				5365D47020AC2A0F00EBD319 /* Navigator.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		5365D47620AC314A00EBD319 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				5365D47720AC317000EBD319 /* NavigatorTests.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
 		536877FD209C9A8F00720556 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,13 +289,6 @@
 				53687803209CA84A00720556 /* CountingLabelTests.swift */,
 			);
 			path = "Reusable User-Interface";
-			sourceTree = "<group>";
-		};
-		53845F5B208A419B00C35DFA /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		5392702620889046001E21A8 /* Records */ = {
@@ -301,8 +318,8 @@
 		5392703D2088EB38001E21A8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5365D47620AC314A00EBD319 /* Handlers */,
 				53338B792097697000D96681 /* Nodes */,
-				53845F5B208A419B00C35DFA /* Managers */,
 				53E1B0AC208A07AE0086BCB7 /* Generics */,
 				53E1B0A5208A01100086BCB7 /* Protocols */,
 				53E1B0A22089FF3A0086BCB7 /* Enumerations */,
@@ -326,6 +343,7 @@
 				53E1B0A8208A04190086BCB7 /* HomeCoordinatorMock.swift */,
 				53E1B0AA208A04250086BCB7 /* GameCoordinatorMock.swift */,
 				5368780D209CBDC500720556 /* GameOverViewModelMock.swift */,
+				5365D47420AC307400EBD319 /* NavigationControllerMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -369,6 +387,7 @@
 		DF045FC2201A9E6000349006 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5365D46E20AC29E400EBD319 /* Handlers */,
 				5305576F2087460F0017BCEE /* Managers */,
 				DFBA9AA52022555C00021F19 /* Nodes */,
 				DF8C59332016A7290022F2CF /* Extensions */,
@@ -483,6 +502,7 @@
 		DF8C59322016A71F0022F2CF /* Enumerations */ = {
 			isa = PBXGroup;
 			children = (
+				5365D47220AC2A5300EBD319 /* NavigatorTransitionType.swift */,
 				DF0FC4902017F40000165600 /* SpriteType.swift */,
 				DF1CB3E72042282700164F8E /* AnimationEnums.swift */,
 				539B56902084B9EF00EBFACC /* BoostType.swift */,
@@ -684,6 +704,7 @@
 				53E1B0B2208A0D330086BCB7 /* NodeCollidingTests.swift in Sources */,
 				53E1B0A9208A04190086BCB7 /* HomeCoordinatorMock.swift in Sources */,
 				5368780A209CB6F100720556 /* EnemiesAndRubyTests.swift in Sources */,
+				5365D47820AC317000EBD319 /* NavigatorTests.swift in Sources */,
 				53E1B0A7208A01250086BCB7 /* CoordinatorTests.swift in Sources */,
 				53845F5A208A22E400C35DFA /* LocalizableTests.swift in Sources */,
 				53687808209CB2A300720556 /* SplashyTests.swift in Sources */,
@@ -693,6 +714,7 @@
 				53E1B0AE208A07C00086BCB7 /* BindableTests.swift in Sources */,
 				53687806209CB0B700720556 /* RubyTests.swift in Sources */,
 				53271B152089DD50004D6676 /* GameViewModelTests.swift in Sources */,
+				5365D47520AC307400EBD319 /* NavigationControllerMock.swift in Sources */,
 				5368780E209CBDC500720556 /* GameOverViewModelMock.swift in Sources */,
 				53687804209CA84A00720556 /* CountingLabelTests.swift in Sources */,
 				53E1B0A42089FF500086BCB7 /* BoostTypeTests.swift in Sources */,
@@ -727,6 +749,7 @@
 				DF45A6552016A91200C46D8E /* AppCoordinator.swift in Sources */,
 				5392702A2088906E001E21A8 /* RecordsViewModel.swift in Sources */,
 				DF0FC4712017E8A900165600 /* DesignConstants.swift in Sources */,
+				5365D47120AC2A0F00EBD319 /* Navigator.swift in Sources */,
 				DF0FC4732017E91200165600 /* UIViewController.swift in Sources */,
 				DF724AFF201BDDA900E4576B /* CGFloat.swift in Sources */,
 				DFBA9AAF20225DA300021F19 /* EnemiesAndRuby.swift in Sources */,
@@ -735,6 +758,7 @@
 				DF3456DC204ADB8400BBC077 /* Randomizable.swift in Sources */,
 				5392702D20889083001E21A8 /* RecordsViewController.swift in Sources */,
 				DF3DE3BB2044C28B00825680 /* GameOverViewModel.swift in Sources */,
+				5365D47320AC2A5300EBD319 /* NavigatorTransitionType.swift in Sources */,
 				DF3456DE204ADBC700BBC077 /* PhysicsComparable.swift in Sources */,
 				539B56912084B9EF00EBFACC /* BoostType.swift in Sources */,
 				DF3456DA204ADAFE00BBC077 /* Localizable.swift in Sources */,

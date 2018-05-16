@@ -17,7 +17,7 @@ final class EnemyTests: XCTestCase {
         static let variation: CGFloat = 10.0
     }
 
-    // MARK: - init(in frame: CGRect, with variation: CGFloat)
+    // MARK: - TEST: init(in frame: CGRect, with variation: CGFloat)
     func testEnemyInit() {
         let enemy = Enemy(in: Constants.contentRect, with: Constants.variation)
         let expectedPositionInY = SpriteFactory.sprite(of: .enemy, in: Constants.contentRect).position.y + Constants.variation
