@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+enum NavigatorTransitionType {
+    case root
+    case push
+    case modal
+}
