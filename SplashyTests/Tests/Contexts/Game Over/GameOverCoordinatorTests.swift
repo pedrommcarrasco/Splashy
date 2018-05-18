@@ -46,9 +46,9 @@ class GameOverCoordinatorTests: XCTestCase {
         coordinator = nil
     }
 
-    // MARK: - TEST: init(with navigator: NavigatorRepresentable, score: Int)
-    func testInit() {
-        XCTAssertNotNil(coordinator)
+    // MARK: - TEST: start()
+    func testStart() {
+        XCTAssertTrue(navigationController.wasPresent)
     }
 
     // MARK: - TEST: didPressRetry(in gameoverViewController: GameOverViewController)

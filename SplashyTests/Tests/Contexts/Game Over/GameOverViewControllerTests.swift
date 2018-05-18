@@ -46,11 +46,6 @@ class GameOverViewControllerTests: XCTestCase {
         navigationDelegateSpy = nil
     }
 
-    // MARK: - TEST: init
-    func testInit() {
-        XCTAssertNotNil(viewController)
-    }
-
     // MARK: - TEST: didPressRetry(in gameoverView: GameOverView)
     func testDidPressRetry() {
         runAndTest(viewController.didPressRetry)
