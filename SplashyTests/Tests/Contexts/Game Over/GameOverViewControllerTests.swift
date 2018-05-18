@@ -68,8 +68,9 @@ class GameOverViewControllerTests: XCTestCase {
 
 // MARK: - PRIVATE
 private extension GameOverViewControllerTests {
+    typealias GameoverVCNavigationDelegateFunction = (GameOverView) -> ()
 
-    func runAndTest(_ function: (GameOverView) -> ()) {
+    func runAndTest(_ function: GameoverVCNavigationDelegateFunction) {
         prepareSpy()
 
         function(view)
