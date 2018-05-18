@@ -12,6 +12,9 @@
 		5305577320879FB80017BCEE /* CountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5305577220879FB80017BCEE /* CountingLabel.swift */; };
 		53271B152089DD50004D6676 /* GameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53271B142089DD50004D6676 /* GameViewModelTests.swift */; };
 		53338B7D20976BB600D96681 /* EnemyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53338B7C20976BB600D96681 /* EnemyTests.swift */; };
+		5351337220AEC75B004FE473 /* GameOverViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5351337120AEC75B004FE473 /* GameOverViewControllerTests.swift */; };
+		5351337520AECAB4004FE473 /* GameoverViewControllerNavigationDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5351337420AECAB4004FE473 /* GameoverViewControllerNavigationDelegateSpy.swift */; };
+		5351337C20AEE01D004FE473 /* Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5351337B20AEE01D004FE473 /* Timeout.swift */; };
 		535CC2AB2084AA59007D7FD6 /* ScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 535CC2AA2084AA59007D7FD6 /* ScoreView.xib */; };
 		535CC2AD2084AC15007D7FD6 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535CC2AC2084AC15007D7FD6 /* ScoreView.swift */; };
 		5365D47120AC2A0F00EBD319 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365D47020AC2A0F00EBD319 /* Navigator.swift */; };
@@ -106,6 +109,9 @@
 		5305577220879FB80017BCEE /* CountingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingLabel.swift; sourceTree = "<group>"; };
 		53271B142089DD50004D6676 /* GameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelTests.swift; sourceTree = "<group>"; };
 		53338B7C20976BB600D96681 /* EnemyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyTests.swift; sourceTree = "<group>"; };
+		5351337120AEC75B004FE473 /* GameOverViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewControllerTests.swift; sourceTree = "<group>"; };
+		5351337420AECAB4004FE473 /* GameoverViewControllerNavigationDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameoverViewControllerNavigationDelegateSpy.swift; sourceTree = "<group>"; };
+		5351337B20AEE01D004FE473 /* Timeout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeout.swift; sourceTree = "<group>"; };
 		535CC2AA2084AA59007D7FD6 /* ScoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreView.xib; sourceTree = "<group>"; };
 		535CC2AC2084AC15007D7FD6 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		5365D47020AC2A0F00EBD319 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
@@ -258,6 +264,33 @@
 			path = Nodes;
 			sourceTree = "<group>";
 		};
+		5351337320AECAA8004FE473 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				5351337420AECAB4004FE473 /* GameoverViewControllerNavigationDelegateSpy.swift */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
+		5351337920AEDFE6004FE473 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				53271B122089DD35004D6676 /* Contexts */,
+				5392703D2088EB38001E21A8 /* Classes */,
+				53687800209C9F0500720556 /* Reusable User-Interface */,
+				536877FD209C9A8F00720556 /* Utils */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		5351337A20AEE00F004FE473 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				5351337B20AEE01D004FE473 /* Timeout.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		5365D46E20AC29E400EBD319 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,11 +338,10 @@
 		539270342088EACA001E21A8 /* SplashyTests */ = {
 			isa = PBXGroup;
 			children = (
+				5351337A20AEE00F004FE473 /* Constants */,
+				5351337320AECAA8004FE473 /* Spies */,
 				53E1B09B2089E69F0086BCB7 /* Mocks */,
-				53271B122089DD35004D6676 /* Contexts */,
-				5392703D2088EB38001E21A8 /* Classes */,
-				53687800209C9F0500720556 /* Reusable User-Interface */,
-				536877FD209C9A8F00720556 /* Utils */,
+				5351337920AEDFE6004FE473 /* Tests */,
 				539270372088EACA001E21A8 /* Info.plist */,
 			);
 			path = SplashyTests;
@@ -352,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				53E1B09F2089F2FB0086BCB7 /* GameOverViewModelTests.swift */,
+				5351337120AEC75B004FE473 /* GameOverViewControllerTests.swift */,
 			);
 			path = "Game Over";
 			sourceTree = "<group>";
@@ -700,8 +733,10 @@
 				5368780C209CB92C00720556 /* NibLoadableTests.swift in Sources */,
 				53E1B0A02089F2FB0086BCB7 /* GameOverViewModelTests.swift in Sources */,
 				536877FF209C9AB500720556 /* LoaderTests.swift in Sources */,
+				5351337220AEC75B004FE473 /* GameOverViewControllerTests.swift in Sources */,
 				53E1B09D2089E6B30086BCB7 /* RecordsManagerMock.swift in Sources */,
 				53E1B0B2208A0D330086BCB7 /* NodeCollidingTests.swift in Sources */,
+				5351337C20AEE01D004FE473 /* Timeout.swift in Sources */,
 				53E1B0A9208A04190086BCB7 /* HomeCoordinatorMock.swift in Sources */,
 				5368780A209CB6F100720556 /* EnemiesAndRubyTests.swift in Sources */,
 				5365D47820AC317000EBD319 /* NavigatorTests.swift in Sources */,
@@ -718,6 +753,7 @@
 				5368780E209CBDC500720556 /* GameOverViewModelMock.swift in Sources */,
 				53687804209CA84A00720556 /* CountingLabelTests.swift in Sources */,
 				53E1B0A42089FF500086BCB7 /* BoostTypeTests.swift in Sources */,
+				5351337520AECAB4004FE473 /* GameoverViewControllerNavigationDelegateSpy.swift in Sources */,
 				539270412088EB9B001E21A8 /* SpriteFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

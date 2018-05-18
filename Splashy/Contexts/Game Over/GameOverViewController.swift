@@ -17,7 +17,7 @@ protocol GameoverViewControllerNavigationDelegate: class {
 class GameOverViewController: UIViewController {
 
     // MARK: - OUTLETS
-    @IBOutlet weak var gameoverViewContainer: UIView!
+    @IBOutlet private weak var gameoverViewContainer: UIView!
 
     // MARK: - PROPERTIES
     private var viewModel: GameOverViewModelRepresentable
