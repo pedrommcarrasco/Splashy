@@ -21,7 +21,7 @@ class GameOverCoordinator: Coordinator {
     weak var coordinatorDelegate: CoordinatorDelegate?
     weak var delegate: GameOverCoordinatorDelegate?
 
-    internal var coordinators: [Coordinator] = []
+    var coordinators: [Coordinator] = []
 
     // MARK: - INIT
     init(with navigator: NavigatorRepresentable, score: Int) {

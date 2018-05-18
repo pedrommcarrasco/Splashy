@@ -11,17 +11,15 @@ import UIKit
 class RecordsCoordinator: Coordinator {
 
     // MARK: - PROPERTIES
-    private let navigationController: UINavigationController
+    var coordinators: [Coordinator] = []
 
     weak var coordinatorDelegate: CoordinatorDelegate?
 
-    internal var coordinators: [Coordinator]
-
+    private let navigationController: UINavigationController
 
     // MARK: - INIT
     init(with navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.coordinators = []
     }
 
     // MARK: - START

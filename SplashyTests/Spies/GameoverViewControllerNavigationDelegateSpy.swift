@@ -9,33 +9,24 @@
 import XCTest
 @testable import Splashy
 
-class GameoverViewControllerNavigationDelegateSpy  {
+class GameoverViewControllerNavigationDelegateSpy: SimpleDelegatableSpy  {
 
     // MARK: - PROPERTIES
     var expectation: XCTestExpectation?
-}
-
-// MARK: - PRIVATE
-private extension GameoverViewControllerNavigationDelegateSpy {
-
-    func evaluateCall() {
-        guard let expectation = expectation else { return XCTFail() }
-        expectation.fulfill()
-    }
 }
 
 // MARK: - GameoverViewControllerNavigationDelegate
 extension GameoverViewControllerNavigationDelegateSpy: GameoverViewControllerNavigationDelegate {
 
     func didPressRetry(in gameoverViewController: GameOverViewController) {
-        evaluateCall()
+        evaluateCall(expectation: expectation)
     }
 
     func didPressRecords(in gameoverViewController: GameOverViewController) {
-        evaluateCall()
+        evaluateCall(expectation: expectation)
     }
 
     func didPressTutorial(in gameoverViewController: GameOverViewController) {
-        evaluateCall()
+        evaluateCall(expectation: expectation)
     }
 }

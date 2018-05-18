@@ -11,12 +11,12 @@ import UIKit
 class GameCoordinator: Coordinator {
 
     // MARK: - PROPERTIES
-    private let navigator: NavigatorRepresentable
-    private let viewController: GameViewController
+    var coordinators: [Coordinator] = []
 
     weak var coordinatorDelegate: CoordinatorDelegate?
 
-    internal var coordinators: [Coordinator] = []
+    private let navigator: NavigatorRepresentable
+    private let viewController: GameViewController
 
     // MARK: - INIT
     init(with navigator: NavigatorRepresentable) {

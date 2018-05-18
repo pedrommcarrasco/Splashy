@@ -43,6 +43,7 @@ class GameOverViewControllerTests: XCTestCase {
         viewController = nil
         viewModel = nil
         navigator = nil
+        navigationDelegateSpy = nil
     }
 
     // MARK: - TEST: init
@@ -71,7 +72,7 @@ private extension GameOverViewControllerTests {
     typealias GameoverVCNavigationDelegateFunction = (GameOverView) -> ()
 
     func runAndTest(_ function: GameoverVCNavigationDelegateFunction) {
-        prepareSpy()
+        setupDelegateSpy()
 
         function(view)
 
@@ -80,7 +81,7 @@ private extension GameOverViewControllerTests {
         }
     }
 
-    func prepareSpy() {
+    func setupDelegateSpy() {
         let delegateExpectation = expectation(description: "Calls the delegate")
         navigationDelegateSpy.expectation = delegateExpectation
     }

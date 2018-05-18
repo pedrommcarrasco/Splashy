@@ -15,6 +15,10 @@
 		5351337220AEC75B004FE473 /* GameOverViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5351337120AEC75B004FE473 /* GameOverViewControllerTests.swift */; };
 		5351337520AECAB4004FE473 /* GameoverViewControllerNavigationDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5351337420AECAB4004FE473 /* GameoverViewControllerNavigationDelegateSpy.swift */; };
 		5351337C20AEE01D004FE473 /* Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5351337B20AEE01D004FE473 /* Timeout.swift */; };
+		5351338020AEE38E004FE473 /* GameOverCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5351337F20AEE38E004FE473 /* GameOverCoordinatorTests.swift */; };
+		5351338220AEE620004FE473 /* GameOverCoordinatorDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5351338120AEE620004FE473 /* GameOverCoordinatorDelegateSpy.swift */; };
+		5351338520AEE69D004FE473 /* SimpleDelegatableSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5351338420AEE69D004FE473 /* SimpleDelegatableSpy.swift */; };
+		5351338A20AEEBC0004FE473 /* CoordinatorDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5351338920AEEBC0004FE473 /* CoordinatorDelegateSpy.swift */; };
 		535CC2AB2084AA59007D7FD6 /* ScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 535CC2AA2084AA59007D7FD6 /* ScoreView.xib */; };
 		535CC2AD2084AC15007D7FD6 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535CC2AC2084AC15007D7FD6 /* ScoreView.swift */; };
 		5365D47120AC2A0F00EBD319 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365D47020AC2A0F00EBD319 /* Navigator.swift */; };
@@ -112,6 +116,10 @@
 		5351337120AEC75B004FE473 /* GameOverViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewControllerTests.swift; sourceTree = "<group>"; };
 		5351337420AECAB4004FE473 /* GameoverViewControllerNavigationDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameoverViewControllerNavigationDelegateSpy.swift; sourceTree = "<group>"; };
 		5351337B20AEE01D004FE473 /* Timeout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeout.swift; sourceTree = "<group>"; };
+		5351337F20AEE38E004FE473 /* GameOverCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverCoordinatorTests.swift; sourceTree = "<group>"; };
+		5351338120AEE620004FE473 /* GameOverCoordinatorDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverCoordinatorDelegateSpy.swift; sourceTree = "<group>"; };
+		5351338420AEE69D004FE473 /* SimpleDelegatableSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDelegatableSpy.swift; sourceTree = "<group>"; };
+		5351338920AEEBC0004FE473 /* CoordinatorDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegateSpy.swift; sourceTree = "<group>"; };
 		535CC2AA2084AA59007D7FD6 /* ScoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreView.xib; sourceTree = "<group>"; };
 		535CC2AC2084AC15007D7FD6 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		5365D47020AC2A0F00EBD319 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
@@ -267,6 +275,8 @@
 		5351337320AECAA8004FE473 /* Spies */ = {
 			isa = PBXGroup;
 			children = (
+				5351338920AEEBC0004FE473 /* CoordinatorDelegateSpy.swift */,
+				5351338120AEE620004FE473 /* GameOverCoordinatorDelegateSpy.swift */,
 				5351337420AECAB4004FE473 /* GameoverViewControllerNavigationDelegateSpy.swift */,
 			);
 			path = Spies;
@@ -289,6 +299,21 @@
 				5351337B20AEE01D004FE473 /* Timeout.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		5351338320AEE683004FE473 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5351338420AEE69D004FE473 /* SimpleDelegatableSpy.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5351338620AEE9B9004FE473 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5365D46E20AC29E400EBD319 /* Handlers */ = {
@@ -338,6 +363,8 @@
 		539270342088EACA001E21A8 /* SplashyTests */ = {
 			isa = PBXGroup;
 			children = (
+				5351338620AEE9B9004FE473 /* Extensions */,
+				5351338320AEE683004FE473 /* Protocols */,
 				5351337A20AEE00F004FE473 /* Constants */,
 				5351337320AECAA8004FE473 /* Spies */,
 				53E1B09B2089E69F0086BCB7 /* Mocks */,
@@ -385,6 +412,7 @@
 			children = (
 				53E1B09F2089F2FB0086BCB7 /* GameOverViewModelTests.swift */,
 				5351337120AEC75B004FE473 /* GameOverViewControllerTests.swift */,
+				5351337F20AEE38E004FE473 /* GameOverCoordinatorTests.swift */,
 			);
 			path = "Game Over";
 			sourceTree = "<group>";
@@ -748,10 +776,14 @@
 				53687802209C9F3B00720556 /* StandardButtonTests.swift in Sources */,
 				53E1B0AE208A07C00086BCB7 /* BindableTests.swift in Sources */,
 				53687806209CB0B700720556 /* RubyTests.swift in Sources */,
+				5351338520AEE69D004FE473 /* SimpleDelegatableSpy.swift in Sources */,
 				53271B152089DD50004D6676 /* GameViewModelTests.swift in Sources */,
 				5365D47520AC307400EBD319 /* NavigationControllerMock.swift in Sources */,
 				5368780E209CBDC500720556 /* GameOverViewModelMock.swift in Sources */,
+				5351338020AEE38E004FE473 /* GameOverCoordinatorTests.swift in Sources */,
 				53687804209CA84A00720556 /* CountingLabelTests.swift in Sources */,
+				5351338220AEE620004FE473 /* GameOverCoordinatorDelegateSpy.swift in Sources */,
+				5351338A20AEEBC0004FE473 /* CoordinatorDelegateSpy.swift in Sources */,
 				53E1B0A42089FF500086BCB7 /* BoostTypeTests.swift in Sources */,
 				5351337520AECAB4004FE473 /* GameoverViewControllerNavigationDelegateSpy.swift in Sources */,
 				539270412088EB9B001E21A8 /* SpriteFactoryTests.swift in Sources */,

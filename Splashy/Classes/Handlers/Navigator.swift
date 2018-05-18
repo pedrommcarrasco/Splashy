@@ -25,7 +25,7 @@ struct Navigator: NavigatorRepresentable {
         self.navigationController = navigationController
     }
 
-    // MARK: - Publoc Navigation Functions
+    // MARK: - Public Navigation Functions
     func root() -> UINavigationController {
         return navigationController
     }

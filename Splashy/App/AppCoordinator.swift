@@ -11,11 +11,13 @@ import UIKit
 class AppCoordinator: Coordinator {
 
     // MARK: - PROPERTIES
+    var coordinators: [Coordinator] = []
+
     weak var coordinatorDelegate: CoordinatorDelegate?
 
     private let navigator: NavigatorRepresentable
 
-    internal var coordinators: [Coordinator] = []
+
 
     // MARK: - INITIALIZATION
     init(with window: UIWindow, navigator: NavigatorRepresentable) {

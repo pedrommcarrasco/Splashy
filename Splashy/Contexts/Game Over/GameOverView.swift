@@ -59,15 +59,15 @@ class GameOverView: UIView {
     }
 
     // MARK: - ACTIONS
-    @IBAction func retryButtonAction(_ sender: StandardButton) {
+    @IBAction private func retryButtonAction(_ sender: StandardButton) {
         delegate?.didPressRetry(in: self)
     }
 
-    @IBAction func recordsButtonAction(_ sender: StandardButton) {
+    @IBAction private func recordsButtonAction(_ sender: StandardButton) {
         delegate?.didPressRecords(in: self)
     }
 
-    @IBAction func tutorialButtonAction(_ sender: StandardButton) {
+    @IBAction private func tutorialButtonAction(_ sender: StandardButton) {
         delegate?.didPressTutorial(in: self)
     }
 }
