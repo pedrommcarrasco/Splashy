@@ -50,19 +50,23 @@ class GameOverViewControllerTests: XCTestCase {
         XCTAssertNotNil(viewController)
     }
 
+    // MARK: - TEST: didPressRetry(in gameoverView: GameOverView)
     func testDidPressRetry() {
         runAndTest(viewController.didPressRetry)
     }
 
+    // MARK: - TEST: didPressRecords(in gameoverView: GameOverView)
     func testDidPressRecords() {
         runAndTest(viewController.didPressRecords)
     }
 
+    // MARK: - TEST: didPressTutorial(in gameoverView: GameOverView)
     func testDidPressTutorial() {
         runAndTest(viewController.didPressTutorial)
     }
 }
 
+// MARK: - PRIVATE
 private extension GameOverViewControllerTests {
 
     func runAndTest(_ function: (GameOverView) -> ()) {
