@@ -24,5 +24,4 @@ extension Roundable where Self: UIView {
         clipsToBounds = true
         layer.cornerRadius = CGFloat(Sizes.cornerRadius)
     }
-
 }

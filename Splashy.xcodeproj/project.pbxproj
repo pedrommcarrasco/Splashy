@@ -36,6 +36,7 @@
 		5368780E209CBDC500720556 /* GameOverViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368780D209CBDC500720556 /* GameOverViewModelMock.swift */; };
 		53845F56208A128800C35DFA /* PhysicsComparableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53845F55208A128800C35DFA /* PhysicsComparableTests.swift */; };
 		53845F5A208A22E400C35DFA /* LocalizableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53845F59208A22E400C35DFA /* LocalizableTests.swift */; };
+		538B811D20AF166A0081E268 /* GameCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538B811C20AF166A0081E268 /* GameCoordinatorTests.swift */; };
 		5392702820889066001E21A8 /* RecordsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392702720889066001E21A8 /* RecordsCoordinator.swift */; };
 		5392702A2088906E001E21A8 /* RecordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539270292088906E001E21A8 /* RecordsViewModel.swift */; };
 		5392702D20889083001E21A8 /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392702B20889083001E21A8 /* RecordsViewController.swift */; };
@@ -137,6 +138,7 @@
 		5368780D209CBDC500720556 /* GameOverViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewModelMock.swift; sourceTree = "<group>"; };
 		53845F55208A128800C35DFA /* PhysicsComparableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsComparableTests.swift; sourceTree = "<group>"; };
 		53845F59208A22E400C35DFA /* LocalizableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableTests.swift; sourceTree = "<group>"; };
+		538B811C20AF166A0081E268 /* GameCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinatorTests.swift; sourceTree = "<group>"; };
 		5392702720889066001E21A8 /* RecordsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCoordinator.swift; sourceTree = "<group>"; };
 		539270292088906E001E21A8 /* RecordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewModel.swift; sourceTree = "<group>"; };
 		5392702B20889083001E21A8 /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				53271B142089DD50004D6676 /* GameViewModelTests.swift */,
+				538B811C20AF166A0081E268 /* GameCoordinatorTests.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -763,6 +766,7 @@
 				536877FF209C9AB500720556 /* LoaderTests.swift in Sources */,
 				5351337220AEC75B004FE473 /* GameOverViewControllerTests.swift in Sources */,
 				53E1B09D2089E6B30086BCB7 /* RecordsManagerMock.swift in Sources */,
+				538B811D20AF166A0081E268 /* GameCoordinatorTests.swift in Sources */,
 				53E1B0B2208A0D330086BCB7 /* NodeCollidingTests.swift in Sources */,
 				5351337C20AEE01D004FE473 /* Timeout.swift in Sources */,
 				53E1B0A9208A04190086BCB7 /* HomeCoordinatorMock.swift in Sources */,
