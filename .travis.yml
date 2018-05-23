@@ -2,6 +2,6 @@ language: swift
 osx_image: xcode9.3
 
 script:
-- xcodebuild build test -project Splashy.xcodeproj -scheme Splashy -destination "platform=iOS Simulator,name=iPhone 8,OS=11.3" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -quiet
+- xcodebuild -project Splashy.xcodeproj -scheme Splashy -destination "platform=iOS Simulator,name=iPhone 8,OS=11.3" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO build test
 after_success:
   - bash <(curl -s https://codecov.io/bash)
