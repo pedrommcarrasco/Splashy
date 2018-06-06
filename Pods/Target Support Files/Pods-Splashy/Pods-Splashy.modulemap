@@ -1,0 +1,6 @@
+module Pods_Splashy {
+  umbrella header "Pods-Splashy-umbrella.h"
+
+  export *
+  module * { export * }
+}

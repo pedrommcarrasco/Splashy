@@ -18,6 +18,17 @@ protocol GameOverViewModelRepresentable {
 }
 
 struct GameOverViewModel: GameOverViewModelRepresentable {
+    
+    // MARK: - STRINGS
+    private enum Strings {
+        static let scorePoint = "score-point".localizedString
+        static let scorePoints = "score-points".localizedString
+    }
+    
+    // MARK: - CONSTANTS
+    private enum Constants {
+        static let singularScore = 1
+    }
 
     // MARK: - PROPERTIES
     let retryIcon = Assets.iconRetry
@@ -37,6 +48,6 @@ struct GameOverViewModel: GameOverViewModelRepresentable {
     init(with score: Int, and recordsManager: RecordsManagerRepresentable) {
         self.score = score
         self.isNewRecord = recordsManager.isNewRecord(score)
-        self.scoreDescription = score == 1 ? "score-point".localizedString : "score-points".localizedString
+        self.scoreDescription = score == Constants.singularScore ? Strings.scorePoint : Strings.scorePoints
     }
 }

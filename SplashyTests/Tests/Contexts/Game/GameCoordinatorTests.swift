@@ -31,9 +31,6 @@ class GameCoordinatorTests: XCTestCase {
 
         coordinator = GameCoordinator(with: navigator)
 
-//        delegateSpy = GameOverCoordinatorDelegateSpy()
-//        coordinator.delegate = delegateSpy
-
         coordinator.start()
     }
 

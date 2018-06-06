@@ -17,8 +17,6 @@ class AppCoordinator: Coordinator {
 
     private let navigator: NavigatorRepresentable
 
-
-
     // MARK: - INITIALIZATION
     init(with window: UIWindow, navigator: NavigatorRepresentable) {
         window.rootViewController = navigator.root()

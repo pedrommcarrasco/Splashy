@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F38C7C7201D332F00AC9902 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F38C7C6201D332F00AC9902 /* Bindable.swift */; };
+		20E71BBD20C87F6D003D4374 /* ScoreViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E71BBC20C87F6D003D4374 /* ScoreViewTests.swift */; };
 		530557712087462C0017BCEE /* RecordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530557702087462C0017BCEE /* RecordsManager.swift */; };
 		5305577320879FB80017BCEE /* CountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5305577220879FB80017BCEE /* CountingLabel.swift */; };
 		53271B152089DD50004D6676 /* GameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53271B142089DD50004D6676 /* GameViewModelTests.swift */; };
@@ -51,6 +52,8 @@
 		53E1B0AB208A04250086BCB7 /* GameCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E1B0AA208A04250086BCB7 /* GameCoordinatorMock.swift */; };
 		53E1B0AE208A07C00086BCB7 /* BindableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E1B0AD208A07C00086BCB7 /* BindableTests.swift */; };
 		53E1B0B2208A0D330086BCB7 /* NodeCollidingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E1B0B1208A0D330086BCB7 /* NodeCollidingTests.swift */; };
+		9CA87640F6C377F586A462D6 /* libPods-SplashyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D25826F781180E89E6D1C7 /* libPods-SplashyTests.a */; };
+		DD6DD3D484FCF767D587A525 /* libPods-Splashy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD65DF31D3F7E34A642CA0B1 /* libPods-Splashy.a */; };
 		DF045FC1201A9CA200349006 /* SpriteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF045FC0201A9CA200349006 /* SpriteFactory.swift */; };
 		DF0FC4612017E07E00165600 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4602017E07E00165600 /* HomeCoordinator.swift */; };
 		DF0FC4652017E26800165600 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FC4632017E26800165600 /* HomeViewController.swift */; };
@@ -110,6 +113,10 @@
 
 /* Begin PBXFileReference section */
 		0F38C7C6201D332F00AC9902 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		20E71BBC20C87F6D003D4374 /* ScoreViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewTests.swift; sourceTree = "<group>"; };
+		28B49771DBB7A5D1D30B6495 /* Pods-Splashy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Splashy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Splashy/Pods-Splashy.release.xcconfig"; sourceTree = "<group>"; };
+		3379CA85D953824CC2954240 /* Pods-SplashyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplashyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplashyTests/Pods-SplashyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		52D25826F781180E89E6D1C7 /* libPods-SplashyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplashyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		530557702087462C0017BCEE /* RecordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsManager.swift; sourceTree = "<group>"; };
 		5305577220879FB80017BCEE /* CountingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingLabel.swift; sourceTree = "<group>"; };
 		53271B142089DD50004D6676 /* GameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelTests.swift; sourceTree = "<group>"; };
@@ -155,6 +162,9 @@
 		53E1B0AA208A04250086BCB7 /* GameCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinatorMock.swift; sourceTree = "<group>"; };
 		53E1B0AD208A07C00086BCB7 /* BindableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableTests.swift; sourceTree = "<group>"; };
 		53E1B0B1208A0D330086BCB7 /* NodeCollidingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeCollidingTests.swift; sourceTree = "<group>"; };
+		AA669B56EE51826C5F90A0AA /* Pods-SplashyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplashyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplashyTests/Pods-SplashyTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB2E9B215C51F9CBDF3D1E1A /* Pods-Splashy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Splashy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Splashy/Pods-Splashy.debug.xcconfig"; sourceTree = "<group>"; };
+		CD65DF31D3F7E34A642CA0B1 /* libPods-Splashy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Splashy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF045FC0201A9CA200349006 /* SpriteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteFactory.swift; sourceTree = "<group>"; };
 		DF0FC4602017E07E00165600 /* HomeCoordinator.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; tabWidth = 3; };
 		DF0FC4632017E26800165600 /* HomeViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; };
@@ -209,6 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA87640F6C377F586A462D6 /* libPods-SplashyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6DD3D484FCF767D587A525 /* libPods-Splashy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +272,7 @@
 			children = (
 				53271B142089DD50004D6676 /* GameViewModelTests.swift */,
 				538B811C20AF166A0081E268 /* GameCoordinatorTests.swift */,
+				20E71BBC20C87F6D003D4374 /* ScoreViewTests.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -448,6 +461,17 @@
 			path = Generics;
 			sourceTree = "<group>";
 		};
+		8DDF0CFF68F3319B1CBBE0BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB2E9B215C51F9CBDF3D1E1A /* Pods-Splashy.debug.xcconfig */,
+				28B49771DBB7A5D1D30B6495 /* Pods-Splashy.release.xcconfig */,
+				3379CA85D953824CC2954240 /* Pods-SplashyTests.debug.xcconfig */,
+				AA669B56EE51826C5F90A0AA /* Pods-SplashyTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DF045FC2201A9E6000349006 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,6 +550,8 @@
 				DF8C5918201684990022F2CF /* Splashy */,
 				539270342088EACA001E21A8 /* SplashyTests */,
 				DF8C5917201684990022F2CF /* Products */,
+				8DDF0CFF68F3319B1CBBE0BF /* Pods */,
+				ED1D892155D4C0C15E8A23AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -649,6 +675,15 @@
 			path = "Reusable User-Interface";
 			sourceTree = "<group>";
 		};
+		ED1D892155D4C0C15E8A23AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD65DF31D3F7E34A642CA0B1 /* libPods-Splashy.a */,
+				52D25826F781180E89E6D1C7 /* libPods-SplashyTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -656,6 +691,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5392703A2088EACA001E21A8 /* Build configuration list for PBXNativeTarget "SplashyTests" */;
 			buildPhases = (
+				28EB5B0EFE9EBC4F12F6EFB3 /* [CP] Check Pods Manifest.lock */,
 				5392702F2088EACA001E21A8 /* Sources */,
 				539270302088EACA001E21A8 /* Frameworks */,
 				539270312088EACA001E21A8 /* Resources */,
@@ -674,6 +710,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF8C592E201684990022F2CF /* Build configuration list for PBXNativeTarget "Splashy" */;
 			buildPhases = (
+				0E306762B3619FF45D1F78A5 /* [CP] Check Pods Manifest.lock */,
 				DF8C5912201684990022F2CF /* Sources */,
 				DF8C5913201684990022F2CF /* Frameworks */,
 				DF8C5914201684990022F2CF /* Resources */,
@@ -755,6 +792,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E306762B3619FF45D1F78A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Splashy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28EB5B0EFE9EBC4F12F6EFB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SplashyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5392702F2088EACA001E21A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -785,6 +861,7 @@
 				5365D47520AC307400EBD319 /* NavigationControllerMock.swift in Sources */,
 				5368780E209CBDC500720556 /* GameOverViewModelMock.swift in Sources */,
 				5351338020AEE38E004FE473 /* GameOverCoordinatorTests.swift in Sources */,
+				20E71BBD20C87F6D003D4374 /* ScoreViewTests.swift in Sources */,
 				53687804209CA84A00720556 /* CountingLabelTests.swift in Sources */,
 				5351338220AEE620004FE473 /* GameOverCoordinatorDelegateSpy.swift in Sources */,
 				5351338A20AEEBC0004FE473 /* CoordinatorDelegateSpy.swift in Sources */,
@@ -881,6 +958,7 @@
 /* Begin XCBuildConfiguration section */
 		5392703B2088EACA001E21A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3379CA85D953824CC2954240 /* Pods-SplashyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -901,6 +979,7 @@
 		};
 		5392703C2088EACA001E21A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA669B56EE51826C5F90A0AA /* Pods-SplashyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1031,6 +1110,7 @@
 		};
 		DF8C592F201684990022F2CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB2E9B215C51F9CBDF3D1E1A /* Pods-Splashy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1046,6 +1126,7 @@
 		};
 		DF8C5930201684990022F2CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28B49771DBB7A5D1D30B6495 /* Pods-Splashy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

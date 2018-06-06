@@ -13,6 +13,7 @@ class CountingLabel: UILabel {
     private enum Constants {
         static let counterRate: Float = 3.0
         static let updateCountTimeInterval: TimeInterval = 0.01
+        static let initialText = "0"
     }
     
     // MARK: - PROPERTIES
@@ -34,12 +35,12 @@ class CountingLabel: UILabel {
     // MARK: - INIT
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.text = "0"
+        self.text = Constants.initialText
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.text = "0"
+        self.text = Constants.initialText
     }
 
     // MARK: - METHODS
