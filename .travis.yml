@@ -1,7 +1,14 @@
 language: swift
 osx_image: xcode9.3
 
+before_install:
+  - gem install cocoapods
+  - pod --version
+
 script:
-- xcodebuild -project Splashy.xcodeproj -scheme Splashy -destination "platform=iOS Simulator,name=iPhone 8,OS=11.3" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO build test
+  - pod repo update && pod update
+  - set -o pipefail
+  - xcodebuild build test -workspace Splashy.xcworkspace -scheme Splashy -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
