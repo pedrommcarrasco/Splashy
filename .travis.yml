@@ -1,6 +1,14 @@
 language: swift
 osx_image: xcode9.3
 
+env:
+  global:
+  - PROJECT=Splashy.xcworkspace
+  - PROJECT_SCHEME=Splashy
+  - DESTINATION_PLATFORM='platform=iOS Simulator,name=iPhone 8,OS=11.3'
+  - CODECOV_ENDPOINT=https://codecov.io/bash
+  - SDK=iphonesimulator
+
 before_install:
   - gem install cocoapods
   - pod --version
@@ -8,7 +16,7 @@ before_install:
 script:
   - pod repo update && pod update
   - set -o pipefail
-  - xcodebuild -workspace Splashy.xcworkspace -scheme Splashy -destination "platform=iOS Simulator,name=iPhone 8,OS=11.3" CODE_SIGNING_REQUIRED=NO  build test| xcpretty -c
+  - xcodebuild -project "$PROJECT" -scheme "$FRAMEWORK_SCHEME" -sdk "$SDK" -configuration Debug ONLY_ACTIVE_ARCH=YES -destination "$DESTINATION_PLATFORM" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES clean build test  | xcpretty -c
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s "$CODECOV_ENDPOINT") -J '^Constrictor$'
