@@ -19,4 +19,4 @@ script:
   - xcodebuild -workspace "$PROJECT" -scheme "$SCHEME" -destination "$DESTINATION_PLATFORM" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES clean test  | xcpretty -c
 
 after_success:
-  - bash <(curl -s "$CODECOV_ENDPOINT")
+  - bash <(curl -s "$CODECOV_ENDPOINT") -J '^"$SCHEME"$'
