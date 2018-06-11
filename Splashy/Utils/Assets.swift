@@ -13,7 +13,9 @@ enum Assets {
     static let iconRetry = "btn-retry"
     static let iconRecords = "btn-record"
     static let iconTutorial = "btn-tutorial"
+    static let iconClose = "btn-close"
     
     static let newRecordImage = "gfx-newRecord"
     static let gameoverImage = "gfx-gameover"
+    static let yourRecordImage = "gfx-yourRecord"
 }

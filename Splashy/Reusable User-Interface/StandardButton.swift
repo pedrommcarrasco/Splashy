@@ -45,6 +45,5 @@ class StandardButton: UIButton {
              visualEffectView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
              visualEffectView.trailingAnchor.constraint(equalTo: self.trailingAnchor)]
         )
-        
     }
 }

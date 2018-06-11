@@ -20,7 +20,6 @@ class RecordsView: UIView {
     @IBOutlet private weak var scoreLabel: CountingLabel!
     @IBOutlet private weak var scoreDescriptionLabel: UILabel!
     @IBOutlet private weak var titleImageView: UIImageView!
-
     @IBOutlet private weak var dismissButton: StandardButton!
 
     // MARK: - PROPERTIES

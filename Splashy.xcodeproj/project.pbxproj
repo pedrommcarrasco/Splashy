@@ -332,13 +332,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		5351338620AEE9B9004FE473 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		5365D46E20AC29E400EBD319 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,7 +381,6 @@
 		539270342088EACA001E21A8 /* SplashyTests */ = {
 			isa = PBXGroup;
 			children = (
-				5351338620AEE9B9004FE473 /* Extensions */,
 				5351338320AEE683004FE473 /* Protocols */,
 				5351337A20AEE00F004FE473 /* Constants */,
 				5351337320AECAA8004FE473 /* Spies */,

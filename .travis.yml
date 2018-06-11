@@ -7,7 +7,6 @@ env:
   - SCHEME=Splashy
   - DESTINATION_PLATFORM='platform=iOS Simulator,name=iPhone 8,OS=11.3'
   - CODECOV_ENDPOINT=https://codecov.io/bash
-  - SDK=iphonesimulator
 
 before_install:
   - gem install cocoapods
@@ -19,4 +18,4 @@ script:
   - xcodebuild -workspace "$PROJECT" -scheme "$SCHEME" -destination "$DESTINATION_PLATFORM" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES clean test  | xcpretty -c
 
 after_success:
-  - bash <(curl -s "$CODECOV_ENDPOINT") -J '^"$SCHEME"$'
+  - bash <(curl -s "$CODECOV_ENDPOINT") -J '^Splashy$'
