@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0F38C7C7201D332F00AC9902 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F38C7C6201D332F00AC9902 /* Bindable.swift */; };
+		206D711E20CF2D550074560A /* RecordsCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206D711D20CF2D550074560A /* RecordsCoordinatorTests.swift */; };
+		206D712020CF2DE50074560A /* RecordsViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206D711F20CF2DE50074560A /* RecordsViewModelMock.swift */; };
+		206D712220CF2F640074560A /* RecordsViewControllerNavigationDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206D712120CF2F640074560A /* RecordsViewControllerNavigationDelegateSpy.swift */; };
 		20E71BBD20C87F6D003D4374 /* ScoreViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E71BBC20C87F6D003D4374 /* ScoreViewTests.swift */; };
 		530557712087462C0017BCEE /* RecordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530557702087462C0017BCEE /* RecordsManager.swift */; };
 		5305577320879FB80017BCEE /* CountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5305577220879FB80017BCEE /* CountingLabel.swift */; };
@@ -116,6 +119,9 @@
 
 /* Begin PBXFileReference section */
 		0F38C7C6201D332F00AC9902 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		206D711D20CF2D550074560A /* RecordsCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCoordinatorTests.swift; sourceTree = "<group>"; };
+		206D711F20CF2DE50074560A /* RecordsViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewModelMock.swift; sourceTree = "<group>"; };
+		206D712120CF2F640074560A /* RecordsViewControllerNavigationDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewControllerNavigationDelegateSpy.swift; sourceTree = "<group>"; };
 		20E71BBC20C87F6D003D4374 /* ScoreViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewTests.swift; sourceTree = "<group>"; };
 		28B49771DBB7A5D1D30B6495 /* Pods-Splashy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Splashy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Splashy/Pods-Splashy.release.xcconfig"; sourceTree = "<group>"; };
 		3379CA85D953824CC2954240 /* Pods-SplashyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplashyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplashyTests/Pods-SplashyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -301,6 +307,7 @@
 				5351338920AEEBC0004FE473 /* CoordinatorDelegateSpy.swift */,
 				5351338120AEE620004FE473 /* GameOverCoordinatorDelegateSpy.swift */,
 				5351337420AECAB4004FE473 /* GameoverViewControllerNavigationDelegateSpy.swift */,
+				206D712120CF2F640074560A /* RecordsViewControllerNavigationDelegateSpy.swift */,
 			);
 			path = Spies;
 			sourceTree = "<group>";
@@ -420,6 +427,7 @@
 				53E1B0AA208A04250086BCB7 /* GameCoordinatorMock.swift */,
 				5368780D209CBDC500720556 /* GameOverViewModelMock.swift */,
 				5365D47420AC307400EBD319 /* NavigationControllerMock.swift */,
+				206D711F20CF2DE50074560A /* RecordsViewModelMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -466,6 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				53F2D02B20CEDF3800E6B818 /* RecordsViewModelTests.swift */,
+				206D711D20CF2D550074560A /* RecordsCoordinatorTests.swift */,
 			);
 			path = Records;
 			sourceTree = "<group>";
@@ -861,6 +870,7 @@
 				53F2D02C20CEDF3800E6B818 /* RecordsViewModelTests.swift in Sources */,
 				53E1B0A7208A01250086BCB7 /* CoordinatorTests.swift in Sources */,
 				53845F5A208A22E400C35DFA /* LocalizableTests.swift in Sources */,
+				206D712220CF2F640074560A /* RecordsViewControllerNavigationDelegateSpy.swift in Sources */,
 				53687808209CB2A300720556 /* SplashyTests.swift in Sources */,
 				53338B7D20976BB600D96681 /* EnemyTests.swift in Sources */,
 				53845F56208A128800C35DFA /* PhysicsComparableTests.swift in Sources */,
@@ -873,6 +883,8 @@
 				5368780E209CBDC500720556 /* GameOverViewModelMock.swift in Sources */,
 				5351338020AEE38E004FE473 /* GameOverCoordinatorTests.swift in Sources */,
 				20E71BBD20C87F6D003D4374 /* ScoreViewTests.swift in Sources */,
+				206D712020CF2DE50074560A /* RecordsViewModelMock.swift in Sources */,
+				206D711E20CF2D550074560A /* RecordsCoordinatorTests.swift in Sources */,
 				53687804209CA84A00720556 /* CountingLabelTests.swift in Sources */,
 				5351338220AEE620004FE473 /* GameOverCoordinatorDelegateSpy.swift in Sources */,
 				5351338A20AEEBC0004FE473 /* CoordinatorDelegateSpy.swift in Sources */,

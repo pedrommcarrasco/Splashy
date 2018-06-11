@@ -63,7 +63,7 @@ class GameOverCoordinatorTests: XCTestCase {
         }
     }
 
-    // MARK: - TEST: didPressCLOSE(in gameoverViewController: GameOverViewController)
+    // MARK: - TEST: didPressClose(in gameoverViewController: GameOverViewController)
     func testDidPressClose() {
         setupDelegateSpy()
         coordinator.didPressClose(in: viewController)
