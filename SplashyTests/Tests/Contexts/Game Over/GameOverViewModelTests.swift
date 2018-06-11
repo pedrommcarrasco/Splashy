@@ -52,5 +52,4 @@ final class GameOverViewModelTests: XCTestCase {
         XCTAssert(viewModel.scoreAsset == Assets.newRecordImage)
         XCTAssert(viewModel.scoreDescription == Constants.pointInPlural)
     }
-
 }

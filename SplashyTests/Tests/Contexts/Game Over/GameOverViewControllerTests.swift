@@ -50,6 +50,11 @@ class GameOverViewControllerTests: XCTestCase {
     func testDidPressRetry() {
         runAndTest(viewController.didPressRetry)
     }
+
+    // MARK: - TEST: didPressClose(in gameoverView: GameOverView)
+    func testDidPressClose() {
+        runAndTest(viewController.didPressClose)
+    }
 }
 
 // MARK: - PRIVATE
