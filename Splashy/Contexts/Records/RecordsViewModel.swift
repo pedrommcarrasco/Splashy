@@ -9,7 +9,7 @@
 import Foundation
 
 protocol RecordsViewModelRepresentable {
-    var retryIcon: String { get }
+    var dismissIcon: String { get }
     var record: Int { get }
     var recordDescription: String { get }
 }
@@ -28,7 +28,7 @@ struct RecordsViewModel: RecordsViewModelRepresentable {
     }
 
     // MARK: - PROPERTIES
-    let retryIcon = Assets.iconRetry
+    let dismissIcon = Assets.iconRetry
     var record: Int { return recordsManager.currentRecord }
     var recordDescription: String { return recordsManager.currentRecord == 1 ? Strings.scorePoint : Strings.scorePoints}
 

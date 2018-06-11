@@ -54,13 +54,14 @@ class RecordsView: UIView {
     }
 
     private func setupRetryButton() {
-        dismissButton.configureImage(with: viewModel.retryIcon)
+        dismissButton.configureImage(with: viewModel.dismissIcon)
     }
 
     // MARK: - ACTIONS
     @IBAction func dismissButtonAction(_ sender: StandardButton) {
         delegate?.didPressDismiss(in: self)
     }
+    
 
 }
 

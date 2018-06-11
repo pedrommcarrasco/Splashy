@@ -11,6 +11,7 @@ import Constrictor
 
 protocol GameoverViewControllerNavigationDelegate: class {
     func didPressRetry(in gameoverViewController: GameOverViewController)
+    func didPressClose(in gameoverViewController: GameOverViewController)
 }
 
 class GameOverViewController: UIViewController {
@@ -49,6 +50,10 @@ class GameOverViewController: UIViewController {
 }
 
 extension GameOverViewController: GameOverViewDelegate {
+    func didPressClose(in gameoverView: GameOverView) {
+        navigationDelegate?.didPressClose(in: self)
+    }
+
     func didPressRetry(in gameoverView: GameOverView) {
         navigationDelegate?.didPressRetry(in: self)
     }

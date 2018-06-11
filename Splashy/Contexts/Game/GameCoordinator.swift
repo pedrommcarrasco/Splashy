@@ -12,26 +12,31 @@ class GameCoordinator: Coordinator {
 
     // MARK: - PROPERTIES
     var coordinators: [Coordinator] = []
-
     weak var coordinatorDelegate: CoordinatorDelegate?
-
     private let navigator: NavigatorRepresentable
-    private let viewController: GameViewController
+    private weak var gameViewController: GameViewController?
 
     // MARK: - INIT
     init(with navigator: NavigatorRepresentable) {
         self.navigator = navigator
-
-        let viewModel = GameViewModel()
-        self.viewController = GameViewController(with: viewModel)
-        self.viewController.navigationDelegate = self
     }
 
     // MARK: - START
     func start() {
         coordinatorDelegate?.coordinatorDidStart(self)
 
-        navigator.transition(to: viewController, as: .push)
+        let vc = viewController()
+        navigator.transition(to: vc, as: .push)
+
+        gameViewController = vc
+    }
+
+    private func viewController() -> GameViewController {
+        let viewModel = GameViewModel()
+        let viewcontroller = GameViewController(with: viewModel)
+        viewcontroller.navigationDelegate = self
+
+        return viewcontroller
     }
 }
 
@@ -45,7 +50,13 @@ extension GameCoordinator: GameViewControllerNavigation {
 }
 
 extension GameCoordinator: GameOverCoordinatorDelegate {
+
+    func close(from gameoverCoordinator: GameOverCoordinator) {
+        coordinatorDidEnd(self)
+        navigator.dismiss()
+    }
+
     func retry(from gameoverCoordinator: GameOverCoordinator) {
-        viewController.restart()
+        gameViewController?.restart()
     }
 }

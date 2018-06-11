@@ -10,6 +10,7 @@ import UIKit
 
 protocol GameOverViewDelegate: class {
     func didPressRetry(in gameoverView: GameOverView)
+    func didPressClose(in gameoverView: GameOverView)
 }
 
 class GameOverView: UIView {
@@ -22,6 +23,7 @@ class GameOverView: UIView {
     @IBOutlet private weak var scoreStateImageView: UIImageView!
     
     @IBOutlet private weak var retryButton: StandardButton!
+    @IBOutlet private weak var closeButton: StandardButton!
 
     // MARK: - PROPERTIES
     let viewModel: GameOverViewModelRepresentable
@@ -56,6 +58,7 @@ class GameOverView: UIView {
 
     private func setupButtons() {
         retryButton.configureImage(with: viewModel.retryIcon)
+        closeButton.configureImage(with: viewModel.retryIcon)
     }
 
     private func setupScoreDescriptionImageView() {
@@ -66,5 +69,9 @@ class GameOverView: UIView {
     // MARK: - ACTIONS
     @IBAction private func retryButtonAction(_ sender: StandardButton) {
         delegate?.didPressRetry(in: self)
+    }
+
+    @IBAction private func closeButtonAction(_ sender: StandardButton) {
+        delegate?.didPressClose(in: self)
     }
 }

@@ -18,6 +18,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameOverView" customModule="Splashy" customModuleProvider="target">
             <connections>
+                <outlet property="closeButton" destination="1wb-8x-4or" id="lup-UL-PAx"/>
                 <outlet property="containerView" destination="lxo-iJ-LYq" id="y5G-gg-CXZ"/>
                 <outlet property="retryButton" destination="ruT-aq-u89" id="rvH-7u-ld1"/>
                 <outlet property="scoreDescriptionLabel" destination="eVD-oQ-Czh" id="gVA-Xc-9WH"/>
@@ -83,7 +84,7 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5IT-H9-hSj">
-                    <rect key="frame" x="167" y="279.5" width="40" height="40"/>
+                    <rect key="frame" x="143" y="279.5" width="88" height="40"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruT-aq-u89" customClass="StandardButton" customModule="Splashy" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -95,8 +96,19 @@
                                 <action selector="retryButtonAction:" destination="-1" eventType="touchUpInside" id="8de-wd-e9e"/>
                             </connections>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wb-8x-4or" customClass="StandardButton" customModule="Splashy" customModuleProvider="target">
+                            <rect key="frame" x="48" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.75" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="1wb-8x-4or" secondAttribute="height" multiplier="1:1" id="fdN-1k-hkF"/>
+                            </constraints>
+                            <connections>
+                                <action selector="closeButtonAction:" destination="-1" eventType="touchUpInside" id="c49-39-lf2"/>
+                            </connections>
+                        </view>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="1wb-8x-4or" firstAttribute="width" secondItem="1wb-8x-4or" secondAttribute="height" multiplier="1:1" id="GYq-1s-1Ru"/>
                         <constraint firstAttribute="height" constant="40" id="h3P-YX-9cb"/>
                     </constraints>
                 </stackView>

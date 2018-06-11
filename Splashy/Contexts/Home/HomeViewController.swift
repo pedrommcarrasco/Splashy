@@ -10,6 +10,7 @@ import UIKit
 
 protocol HomeViewNavigationDelegate: class {
     func didPressPlay(in homeViewController: HomeViewController)
+	func didPressRecords(in homeViewController: HomeViewController)
 }
 
 class HomeViewController: UIViewController {
@@ -103,5 +104,9 @@ class HomeViewController: UIViewController {
     // MARK: - ACTIONS
     @IBAction func playButtonAction(_ sender: StandardButton) {
 		navigationDelegate?.didPressPlay(in: self)
+    }
+
+    @IBAction func recordsButtonAction(_ sender: StandardButton) {
+        navigationDelegate?.didPressRecords(in: self)
     }
 }

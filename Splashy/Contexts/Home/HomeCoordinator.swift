@@ -40,6 +40,12 @@ class HomeCoordinator: Coordinator {
 }
 
 extension HomeCoordinator: HomeViewNavigationDelegate {
+   func didPressRecords(in homeViewController: HomeViewController) {
+      let recordsCoordinator = RecordsCoordinator(with: navigator)
+      recordsCoordinator.coordinatorDelegate = self
+      recordsCoordinator.start()
+   }
+
    func didPressPlay(in homeViewController: HomeViewController) {
       let gameCoordinator = GameCoordinator(with: navigator)
       gameCoordinator.coordinatorDelegate = self

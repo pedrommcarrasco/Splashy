@@ -32,6 +32,8 @@ class RecordsCoordinator: Coordinator {
         let viewController = RecordsViewController(with: viewModel)
         
         viewController.navigationDelegate = self
+        viewController.modalTransitionStyle = .coverVertical
+        viewController.modalPresentationStyle = .overCurrentContext
 
         return viewController
     }

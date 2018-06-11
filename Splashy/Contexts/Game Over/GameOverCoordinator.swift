@@ -10,6 +10,7 @@ import UIKit
 
 protocol GameOverCoordinatorDelegate: class {
     func retry(from gameoverCoordinator: GameOverCoordinator)
+    func close(from gameoverCoordinator: GameOverCoordinator)
 }
 
 class GameOverCoordinator: Coordinator {
@@ -50,6 +51,13 @@ class GameOverCoordinator: Coordinator {
 }
 
 extension GameOverCoordinator: GameoverViewControllerNavigationDelegate {
+    func didPressClose(in gameoverViewController: GameOverViewController) {
+        coordinatorDelegate?.coordinatorDidEnd(self)
+        delegate?.close(from: self)
+
+        navigator.pop()
+    }
+
     func didPressRetry(in gameoverViewController: GameOverViewController) {
         delegate?.retry(from: self)
         coordinatorDelegate?.coordinatorDidEnd(self)

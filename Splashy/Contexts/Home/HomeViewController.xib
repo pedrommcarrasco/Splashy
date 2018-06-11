@@ -68,6 +68,9 @@
                             <state key="normal" image="btn-tutorial">
                                 <color key="titleColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </state>
+                            <connections>
+                                <action selector="recordsButtonAction:" destination="-1" eventType="touchUpInside" id="BH9-U6-0Jt"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
