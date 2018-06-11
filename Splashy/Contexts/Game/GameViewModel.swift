@@ -29,18 +29,28 @@ class GameViewModel: GameViewModelRepresentable {
     // MARK: - PROPERTIES
     let score: Bindable<Int> = Bindable(0)
     let boost: Bindable<BoostType> = Bindable(.none)
-    
     var hasStarted = false
     var isDead = false
-    
+
+    private var timer: Timer?
+
+    init() {
+        self.timer = nil
+        self.timer = GameViewModel.setupTimer(for: self)
+    }
+
     // MARK: - FUNCTIONS
     func didPickRuby() {
         score.value += Constants.rubyPoint * boost.value.rawValue
         boost.value = BoostType(rawValue: boost.value.rawValue + Constants.rubyPoint) ?? .quintuple
+
+        invalidadeBoostTimer()
+        timer = GameViewModel.setupTimer(for: self)
     }
 
     func splashyCollided() {
         isDead = true
+        invalidadeBoostTimer()
     }
 
     func shouldAnimate() -> Bool {
@@ -52,5 +62,25 @@ class GameViewModel: GameViewModelRepresentable {
         hasStarted = false
         score.value = 0
         boost.value = .none
+        timer = GameViewModel.setupTimer(for: self)
+    }
+
+    func invalidadeBoostTimer() {
+        timer?.invalidate()
+    }
+}
+
+private extension GameViewModel {
+
+    @objc private func decreaseBoost() {
+        boost.value = BoostType(rawValue: boost.value.rawValue - 1) ?? .none
+    }
+
+    static func setupTimer(for instance: GameViewModel) -> Timer {
+        return Timer.scheduledTimer(timeInterval: 2.5,
+                                    target: instance,
+                                    selector: #selector(decreaseBoost),
+                                    userInfo: nil,
+                                    repeats: true)
     }
 }

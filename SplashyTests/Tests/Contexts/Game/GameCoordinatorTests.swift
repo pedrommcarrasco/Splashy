@@ -17,8 +17,6 @@ class GameCoordinatorTests: XCTestCase {
     var viewController: GameViewController!
     var navigationController: NavigationControllerMock!
 
-//    var delegateSpy: GameOverCoordinatorDelegateSpy!
-
     // MARK: - LIFECYCLE
     override func setUp() {
         super.setUp()
@@ -30,23 +28,13 @@ class GameCoordinatorTests: XCTestCase {
         viewController = GameViewController(with: viewModel)
 
         coordinator = GameCoordinator(with: navigator)
-
-        coordinator.start()
-    }
-
-    override func tearDown() {
-        super.tearDown()
-
-//        delegateSpy = nil
-        viewController = nil
-        navigator = nil
-        coordinator = nil
     }
 
     // MARK: - TEST: start()
     func testStart() {
+        coordinator.start()
         XCTAssertTrue(navigationController.wasPush)
+        XCTAssert(navigationController.topViewController is GameViewController)
     }
 
-//    func testRetry()
 }

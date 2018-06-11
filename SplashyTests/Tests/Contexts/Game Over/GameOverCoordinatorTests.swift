@@ -62,6 +62,18 @@ class GameOverCoordinatorTests: XCTestCase {
             XCTAssertTrue(self.navigationController.wasDismiss)
         }
     }
+
+    // MARK: - TEST: didPressCLOSE(in gameoverViewController: GameOverViewController)
+    func testDidPressClose() {
+        setupDelegateSpy()
+        coordinator.didPressClose(in: viewController)
+
+        waitForExpectations(timeout: Timeout.short) {
+            guard $0 == nil else { return XCTFail() }
+
+            XCTAssertTrue(self.navigationController.wasPop)
+        }
+    }
 }
 
 // MARK: - PRIVATE

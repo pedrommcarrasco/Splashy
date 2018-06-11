@@ -63,10 +63,6 @@ class GameViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    deinit {
-        print("🔴🔴🔴")
-    }
-    
     // MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
