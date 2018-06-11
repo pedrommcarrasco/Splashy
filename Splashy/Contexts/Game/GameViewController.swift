@@ -8,7 +8,6 @@
 
 import SpriteKit
 import UIKit
-import SceneKit
 
 protocol GameViewControllerNavigation: class {
     func gameViewController(_ gameViewController: GameViewController, didEndGameWith points: Int)
@@ -81,9 +80,9 @@ class GameViewController: UIViewController {
 
         scene.sceneDelegate = self
         
-        #if DEBUG
-            spriteKitView.showsFPS = true
-        #endif
+//        #if DEBUG
+//            spriteKitView.showsFPS = true
+//        #endif
         
         spriteKitView.presentScene(scene)
     }
