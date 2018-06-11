@@ -17,6 +17,9 @@ class GameOverCoordinatorDelegateSpy: SimpleDelegatableSpy {
 
 // MARK: - GameoverViewControllerNavigationDelegate
 extension GameOverCoordinatorDelegateSpy: GameOverCoordinatorDelegate {
+    func close(from gameoverCoordinator: GameOverCoordinator) {
+        evaluateCall(expectation: expectation)
+    }
 
     func retry(from gameoverCoordinator: GameOverCoordinator) {
         evaluateCall(expectation: expectation)

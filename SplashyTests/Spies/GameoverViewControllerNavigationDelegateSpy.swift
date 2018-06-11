@@ -17,16 +17,11 @@ class GameoverViewControllerNavigationDelegateSpy: SimpleDelegatableSpy  {
 
 // MARK: - GameoverViewControllerNavigationDelegate
 extension GameoverViewControllerNavigationDelegateSpy: GameoverViewControllerNavigationDelegate {
-
+    func didPressClose(in gameoverViewController: GameOverViewController) {
+        evaluateCall(expectation: expectation)
+    }
+    
     func didPressRetry(in gameoverViewController: GameOverViewController) {
-        evaluateCall(expectation: expectation)
-    }
-
-    func didPressRecords(in gameoverViewController: GameOverViewController) {
-        evaluateCall(expectation: expectation)
-    }
-
-    func didPressTutorial(in gameoverViewController: GameOverViewController) {
         evaluateCall(expectation: expectation)
     }
 }
