@@ -10,8 +10,7 @@ import Foundation
 
 protocol GameOverViewModelRepresentable {
     var retryIcon: String { get }
-    var recordsIcon: String { get }
-    var tutorialIcon: String { get }
+    var closeIcon: String { get }
     var score: Int { get }
     var scoreDescription: String { get }
     var scoreAsset: String { get }
@@ -32,9 +31,7 @@ struct GameOverViewModel: GameOverViewModelRepresentable {
 
     // MARK: - PROPERTIES
     let retryIcon = Assets.iconRetry
-    let recordsIcon = Assets.iconRecords
-    let tutorialIcon = Assets.iconTutorial
-    
+    let closeIcon = Assets.iconClose
     let score: Int
     let scoreDescription: String
     

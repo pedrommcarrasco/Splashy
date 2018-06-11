@@ -28,7 +28,7 @@ struct RecordsViewModel: RecordsViewModelRepresentable {
     }
 
     // MARK: - PROPERTIES
-    let dismissIcon = Assets.iconRetry
+    let dismissIcon = Assets.iconClose
     var record: Int { return recordsManager.currentRecord }
     var recordDescription: String { return recordsManager.currentRecord == 1 ? Strings.scorePoint : Strings.scorePoints}
 

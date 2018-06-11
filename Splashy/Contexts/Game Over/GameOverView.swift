@@ -58,7 +58,7 @@ class GameOverView: UIView {
 
     private func setupButtons() {
         retryButton.configureImage(with: viewModel.retryIcon)
-        closeButton.configureImage(with: viewModel.retryIcon)
+        closeButton.configureImage(with: viewModel.closeIcon)
     }
 
     private func setupScoreDescriptionImageView() {
