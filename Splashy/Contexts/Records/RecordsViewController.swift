@@ -34,11 +34,14 @@ class RecordsViewController: UIViewController {
     // MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let r = RecordsView(with: viewModel)
-        recordsViewContainer.addSubview(r)
-        r.constrictEdgesToSuperview()
-        r.delegate = self
+        setupRecordsView()
+    }
+    
+    private func setupRecordsView() {
+        let recordsView = RecordsView(with: viewModel)
+        recordsViewContainer.addSubview(recordsView)
+        recordsView.constrictEdgesToSuperview()
+        recordsView.delegate = self
     }
 }
 
