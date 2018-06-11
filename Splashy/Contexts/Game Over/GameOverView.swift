@@ -10,8 +10,6 @@ import UIKit
 
 protocol GameOverViewDelegate: class {
     func didPressRetry(in gameoverView: GameOverView)
-    func didPressRecords(in gameoverView: GameOverView)
-    func didPressTutorial(in gameoverView: GameOverView)
 }
 
 class GameOverView: UIView {
@@ -24,8 +22,6 @@ class GameOverView: UIView {
     @IBOutlet private weak var scoreStateImageView: UIImageView!
     
     @IBOutlet private weak var retryButton: StandardButton!
-    @IBOutlet private weak var recordButton: StandardButton!
-    @IBOutlet private weak var tutorialButton: StandardButton!
 
     // MARK: - PROPERTIES
     let viewModel: GameOverViewModelRepresentable
@@ -46,14 +42,23 @@ class GameOverView: UIView {
 
     private func initContent() {
         containerView.roundedCorners()
-        
+
+        setupScoreLabel()
+        setupButtons()
+        setupScoreDescriptionImageView()
+    }
+
+    // MARK: - SETUP
+    private func setupScoreLabel() {
         scoreLabel.count(until: Float(viewModel.score), with: AnimationDurations.normal.rawValue)
         scoreDescriptionLabel.text = viewModel.scoreDescription
-        
+    }
+
+    private func setupButtons() {
         retryButton.configureImage(with: viewModel.retryIcon)
-        recordButton.configureImage(with: viewModel.recordsIcon)
-        tutorialButton.configureImage(with: viewModel.tutorialIcon)
-        
+    }
+
+    private func setupScoreDescriptionImageView() {
         guard let scoreImage = UIImage(named: viewModel.scoreAsset) else { return }
         scoreStateImageView.image = scoreImage
     }
@@ -61,13 +66,5 @@ class GameOverView: UIView {
     // MARK: - ACTIONS
     @IBAction private func retryButtonAction(_ sender: StandardButton) {
         delegate?.didPressRetry(in: self)
-    }
-
-    @IBAction private func recordsButtonAction(_ sender: StandardButton) {
-        delegate?.didPressRecords(in: self)
-    }
-
-    @IBAction private func tutorialButtonAction(_ sender: StandardButton) {
-        delegate?.didPressTutorial(in: self)
     }
 }

@@ -18,10 +18,8 @@
                 <outlet property="logoImageView" destination="7or-Pb-Nv9" id="NeC-dX-GgC"/>
                 <outlet property="playButton" destination="xhG-FP-ur3" id="eoQ-hL-hDH"/>
                 <outlet property="recordsButton" destination="uxV-xY-umP" id="vI6-06-Nyy"/>
-                <outlet property="tutorialButton" destination="diV-mb-7sE" id="qGJ-WJ-dBM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="actionButtons" destination="xhG-FP-ur3" collectionClass="NSMutableArray" id="rQx-jJ-zfU"/>
-                <outletCollection property="actionButtons" destination="diV-mb-7sE" collectionClass="NSMutableArray" id="8Rn-EI-nhO"/>
                 <outletCollection property="actionButtons" destination="uxV-xY-umP" collectionClass="NSMutableArray" id="iGZ-LO-kRx"/>
             </connections>
         </placeholder>
@@ -61,15 +59,6 @@
                             <connections>
                                 <action selector="playButtonAction:" destination="-1" eventType="touchUpInside" id="Vz0-JS-Jx3"/>
                             </connections>
-                        </button>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diV-mb-7sE" customClass="StandardButton" customModule="Splashy" customModuleProvider="target">
-                            <rect key="frame" x="44" y="0.0" width="40" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="diV-mb-7sE" secondAttribute="height" multiplier="1:1" id="yWW-w7-fdz"/>
-                            </constraints>
-                            <state key="normal" image="btn-record">
-                                <color key="titleColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                            </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxV-xY-umP" customClass="StandardButton" customModule="Splashy" customModuleProvider="target">
                             <rect key="frame" x="48" y="0.0" width="40" height="40"/>
@@ -111,7 +100,6 @@
     <resources>
         <image name="background-home" width="2048" height="1536"/>
         <image name="btn-play" width="598" height="598"/>
-        <image name="btn-record" width="598" height="598"/>
         <image name="btn-tutorial" width="598" height="598"/>
         <image name="logo-splashy" width="5048" height="2435"/>
     </resources>

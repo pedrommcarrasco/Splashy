@@ -12,25 +12,18 @@ class RecordsCoordinator: Coordinator {
 
     // MARK: - PROPERTIES
     var coordinators: [Coordinator] = []
-
     weak var coordinatorDelegate: CoordinatorDelegate?
-
-    private let navigationController: UINavigationController
+    private let navigator: NavigatorRepresentable
 
     // MARK: - INIT
-    init(with navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    init(with navigator: NavigatorRepresentable) {
+        self.navigator = navigator
     }
 
     // MARK: - START
     func start() {
         coordinatorDelegate?.coordinatorDidStart(self)
-
-        let recordsViewController = viewController()
-        recordsViewController.modalTransitionStyle = .coverVertical
-        recordsViewController.modalPresentationStyle = .overCurrentContext
-
-        navigationController.present(recordsViewController, animated: true, completion: nil)
+        navigator.transition(to: viewController(), as: .modal)
     }
 
     // MARK: - FUNCTIONS
@@ -39,8 +32,6 @@ class RecordsCoordinator: Coordinator {
         let viewController = RecordsViewController(with: viewModel)
         
         viewController.navigationDelegate = self
-        viewController.modalTransitionStyle = .coverVertical
-        viewController.modalPresentationStyle = .overCurrentContext
 
         return viewController
     }
@@ -48,9 +39,8 @@ class RecordsCoordinator: Coordinator {
 
 extension RecordsCoordinator: RecordsViewControllerNavigationDelegate {
 
-    func didPressClose(in recordsViewController: RecordsViewController) {
+    func didPressDismiss(in recordsViewController: RecordsViewController) {
         coordinatorDelegate?.coordinatorDidEnd(self)
-
-        navigationController.dismiss(animated: true, completion: nil)
+        navigator.dismiss()
     }
 }

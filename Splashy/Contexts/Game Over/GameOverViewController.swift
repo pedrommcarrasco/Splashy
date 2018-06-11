@@ -11,8 +11,6 @@ import Constrictor
 
 protocol GameoverViewControllerNavigationDelegate: class {
     func didPressRetry(in gameoverViewController: GameOverViewController)
-    func didPressRecords(in gameoverViewController: GameOverViewController)
-    func didPressTutorial(in gameoverViewController: GameOverViewController)
 }
 
 class GameOverViewController: UIViewController {
@@ -53,13 +51,5 @@ class GameOverViewController: UIViewController {
 extension GameOverViewController: GameOverViewDelegate {
     func didPressRetry(in gameoverView: GameOverView) {
         navigationDelegate?.didPressRetry(in: self)
-    }
-
-    func didPressRecords(in gameoverView: GameOverView) {
-        navigationDelegate?.didPressRecords(in: self)
-    }
-
-    func didPressTutorial(in gameoverView: GameOverView) {
-        navigationDelegate?.didPressTutorial(in: self)
     }
 }

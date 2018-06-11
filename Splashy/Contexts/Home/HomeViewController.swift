@@ -16,7 +16,6 @@ class HomeViewController: UIViewController {
     
     // MARK: - OUTLETS
     @IBOutlet private weak var playButton: StandardButton!
-    @IBOutlet private weak var tutorialButton: StandardButton!
     @IBOutlet private weak var recordsButton: StandardButton!
     @IBOutlet private var actionButtons: [StandardButton]!
     
@@ -63,7 +62,6 @@ class HomeViewController: UIViewController {
     
     private func setupButtons() {
 		playButton.configureImage(with: viewModel.playImage)
-		tutorialButton.configureImage(with: viewModel.tutorialImage)
 		recordsButton.configureImage(with: viewModel.recordImage)
 		
         actionButtons.forEach { [weak self] button in

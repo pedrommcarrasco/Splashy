@@ -55,11 +55,6 @@ class GameOverViewControllerTests: XCTestCase {
     func testDidPressRecords() {
         runAndTest(viewController.didPressRecords)
     }
-
-    // MARK: - TEST: didPressTutorial(in gameoverView: GameOverView)
-    func testDidPressTutorial() {
-        runAndTest(viewController.didPressTutorial)
-    }
 }
 
 // MARK: - PRIVATE

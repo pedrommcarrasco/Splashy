@@ -44,6 +44,8 @@
 		5392702E20889083001E21A8 /* RecordsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5392702C20889083001E21A8 /* RecordsViewController.xib */; };
 		539270412088EB9B001E21A8 /* SpriteFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539270402088EB9B001E21A8 /* SpriteFactoryTests.swift */; };
 		539B56912084B9EF00EBFACC /* BoostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B56902084B9EF00EBFACC /* BoostType.swift */; };
+		53D6C67820CE899A009A9C01 /* RecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6C67720CE899A009A9C01 /* RecordsView.swift */; };
+		53D6C67A20CE89A8009A9C01 /* RecordsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53D6C67920CE89A8009A9C01 /* RecordsView.xib */; };
 		53E1B09D2089E6B30086BCB7 /* RecordsManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E1B09C2089E6B30086BCB7 /* RecordsManagerMock.swift */; };
 		53E1B0A02089F2FB0086BCB7 /* GameOverViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E1B09F2089F2FB0086BCB7 /* GameOverViewModelTests.swift */; };
 		53E1B0A42089FF500086BCB7 /* BoostTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E1B0A32089FF500086BCB7 /* BoostTypeTests.swift */; };
@@ -154,6 +156,8 @@
 		539270372088EACA001E21A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		539270402088EB9B001E21A8 /* SpriteFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteFactoryTests.swift; sourceTree = "<group>"; };
 		539B56902084B9EF00EBFACC /* BoostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostType.swift; sourceTree = "<group>"; };
+		53D6C67720CE899A009A9C01 /* RecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsView.swift; sourceTree = "<group>"; };
+		53D6C67920CE89A8009A9C01 /* RecordsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordsView.xib; sourceTree = "<group>"; };
 		53E1B09C2089E6B30086BCB7 /* RecordsManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsManagerMock.swift; sourceTree = "<group>"; };
 		53E1B09F2089F2FB0086BCB7 /* GameOverViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewModelTests.swift; sourceTree = "<group>"; };
 		53E1B0A32089FF500086BCB7 /* BoostTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostTypeTests.swift; sourceTree = "<group>"; };
@@ -372,6 +376,8 @@
 				539270292088906E001E21A8 /* RecordsViewModel.swift */,
 				5392702B20889083001E21A8 /* RecordsViewController.swift */,
 				5392702C20889083001E21A8 /* RecordsViewController.xib */,
+				53D6C67720CE899A009A9C01 /* RecordsView.swift */,
+				53D6C67920CE89A8009A9C01 /* RecordsView.xib */,
 			);
 			path = Records;
 			sourceTree = "<group>";
@@ -778,6 +784,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF8C5927201684990022F2CF /* Assets.xcassets in Resources */,
+				53D6C67A20CE89A8009A9C01 /* RecordsView.xib in Resources */,
 				5392702E20889083001E21A8 /* RecordsViewController.xib in Resources */,
 				535CC2AB2084AA59007D7FD6 /* ScoreView.xib in Resources */,
 				DF2D4685201FCA0F00F87D49 /* YIKES!__.TTF in Resources */,
@@ -918,6 +925,7 @@
 				DF0FC48C2017EEDC00165600 /* GameViewController.swift in Sources */,
 				5366C3822080B61900299A4C /* NodeColliding.swift in Sources */,
 				DF2D4687201FCC6400F87D49 /* UIView.swift in Sources */,
+				53D6C67820CE899A009A9C01 /* RecordsView.swift in Sources */,
 				DFBA9AAB202259F200021F19 /* Loader.swift in Sources */,
 				DF3DE3BE2044C2A600825680 /* GameOverViewController.swift in Sources */,
 				DF8C591A201684990022F2CF /* AppDelegate.swift in Sources */,

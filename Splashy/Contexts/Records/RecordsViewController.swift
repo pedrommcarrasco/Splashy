@@ -9,14 +9,16 @@
 import UIKit
 
 protocol RecordsViewControllerNavigationDelegate: class {
-    func didPressClose(in recordsViewController: RecordsViewController)
+    func didPressDismiss(in recordsViewController: RecordsViewController)
 }
 
 class RecordsViewController: UIViewController {
 
+    // NARK: - OUTLETS
+    @IBOutlet weak var recordsViewContainer: UIView!
+
     // MARK: - PROPERTIES
     private let viewModel: RecordsViewModelRepresentable
-
     weak var navigationDelegate: RecordsViewControllerNavigationDelegate?
 
     // MARK: - INIT
@@ -32,5 +34,16 @@ class RecordsViewController: UIViewController {
     // MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let r = RecordsView(with: viewModel)
+        recordsViewContainer.addSubview(r)
+        r.constrictEdgesToSuperview()
+        r.delegate = self
+    }
+}
+
+extension RecordsViewController: RecordsViewDelegate {
+    func didPressDismiss(in gameoverView: RecordsView) {
+        navigationDelegate?.didPressDismiss(in: self)
     }
 }

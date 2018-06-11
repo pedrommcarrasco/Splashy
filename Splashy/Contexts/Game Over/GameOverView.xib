@@ -19,12 +19,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameOverView" customModule="Splashy" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="lxo-iJ-LYq" id="y5G-gg-CXZ"/>
-                <outlet property="recordButton" destination="5ui-rK-irh" id="pmZ-vy-Ui5"/>
                 <outlet property="retryButton" destination="ruT-aq-u89" id="rvH-7u-ld1"/>
                 <outlet property="scoreDescriptionLabel" destination="eVD-oQ-Czh" id="gVA-Xc-9WH"/>
                 <outlet property="scoreLabel" destination="mD3-Lx-goy" id="fRW-hk-drJ"/>
                 <outlet property="scoreStateImageView" destination="IyY-F8-jPJ" id="V9S-MW-btt"/>
-                <outlet property="tutorialButton" destination="Wf3-Cl-J3k" id="e4y-GX-QRx"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -85,7 +83,7 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5IT-H9-hSj">
-                    <rect key="frame" x="119" y="279.5" width="136" height="40"/>
+                    <rect key="frame" x="167" y="279.5" width="40" height="40"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruT-aq-u89" customClass="StandardButton" customModule="Splashy" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -97,31 +95,9 @@
                                 <action selector="retryButtonAction:" destination="-1" eventType="touchUpInside" id="8de-wd-e9e"/>
                             </connections>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ui-rK-irh" customClass="StandardButton" customModule="Splashy" customModuleProvider="target">
-                            <rect key="frame" x="48" y="0.0" width="40" height="40"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.75" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="5ui-rK-irh" secondAttribute="height" multiplier="1:1" id="7bl-m4-du9"/>
-                            </constraints>
-                            <connections>
-                                <action selector="recordsButtonAction:" destination="-1" eventType="touchUpInside" id="qOY-bm-YZT"/>
-                            </connections>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wf3-Cl-J3k" customClass="StandardButton" customModule="Splashy" customModuleProvider="target">
-                            <rect key="frame" x="96" y="0.0" width="40" height="40"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.75" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="Wf3-Cl-J3k" secondAttribute="height" multiplier="1:1" id="G3T-yI-PkD"/>
-                            </constraints>
-                            <connections>
-                                <action selector="tutorialButtonAction:" destination="-1" eventType="touchUpInside" id="N44-Wp-7u5"/>
-                            </connections>
-                        </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="Wf3-Cl-J3k" firstAttribute="width" secondItem="Wf3-Cl-J3k" secondAttribute="height" multiplier="1:1" id="YAW-Rq-8Ua"/>
                         <constraint firstAttribute="height" constant="40" id="h3P-YX-9cb"/>
-                        <constraint firstItem="5ui-rK-irh" firstAttribute="width" secondItem="5ui-rK-irh" secondAttribute="height" multiplier="1:1" id="lvh-VT-nYl"/>
                     </constraints>
                 </stackView>
             </subviews>

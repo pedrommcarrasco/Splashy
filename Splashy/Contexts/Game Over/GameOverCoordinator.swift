@@ -56,7 +56,4 @@ extension GameOverCoordinator: GameoverViewControllerNavigationDelegate {
 
         navigator.dismiss()
     }
-
-    func didPressRecords(in gameoverViewController: GameOverViewController) {}
-    func didPressTutorial(in gameoverViewController: GameOverViewController) {}
 }
