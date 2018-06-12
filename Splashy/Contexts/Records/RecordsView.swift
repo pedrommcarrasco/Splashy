@@ -45,6 +45,7 @@ class RecordsView: UIView {
 
         setupScoreLabels()
         setupRetryButton()
+        setupTitleImageView()
     }
 
     // MARK: - SETUP
@@ -55,6 +56,12 @@ class RecordsView: UIView {
 
     private func setupRetryButton() {
         dismissButton.configureImage(with: viewModel.dismissIcon)
+    }
+
+    private func setupTitleImageView() {
+        guard let image = UIImage(named: viewModel.titleAsset) else { return }
+        titleImageView.image = image
+        titleImageView.contentMode = .scaleAspectFit
     }
 
     // MARK: - ACTIONS

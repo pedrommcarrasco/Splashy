@@ -10,6 +10,7 @@ import Foundation
 
 protocol RecordsViewModelRepresentable {
     var dismissIcon: String { get }
+    var titleAsset: String { get }
     var record: Int { get }
     var recordDescription: String { get }
 }
@@ -29,6 +30,7 @@ struct RecordsViewModel: RecordsViewModelRepresentable {
 
     // MARK: - PROPERTIES
     let dismissIcon = Assets.iconClose
+    let titleAsset = Assets.yourRecordImage
     var record: Int { return recordsManager.currentRecord }
     var recordDescription: String { return recordsManager.currentRecord == 1 ? Strings.scorePoint : Strings.scorePoints}
 
