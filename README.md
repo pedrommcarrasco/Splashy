@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/pedrommcarrasco/Splashy.svg?branch=master)](https://travis-ci.org/pedrommcarrasco/Splashy) 
 [![codecov](https://codecov.io/gh/pedrommcarrasco/Splashy/branch/master/graph/badge.svg)](https://codecov.io/gh/pedrommcarrasco/Splashy)
 
+![screenshots](https://github.com/pedrommcarrasco/ARbusters/blob/master/screenshots.png)
+
 ## What's Splashy?
 
 Splashy's a 2D game inspired by FlappyBird. The more rubys you pick in a row, the more momentum you gain and with momentum the points by ruby grows.
