@@ -11,9 +11,7 @@ Splashy's a 2D game inspired by FlappyBird. The more rubies you pick in a row, t
 
 ## Gameplay
 
-```
 [![Splashy Gameplay](https://github.com/pedrommcarrasco/Splashy/blob/master/thumbnail.png)](https://youtu.be/lszLEUmDhlY "Click to watch Splashy's Gameplay")
-```
 
 ## Technologies
 
