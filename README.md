@@ -7,16 +7,18 @@
 
 ## What's Splashy?
 
-Splashy's a 2D game inspired by FlappyBird. The more rubys you pick in a row, the more momentum you gain and with momentum the points by ruby grows.
+Splashy's a 2D game inspired by FlappyBird. The more rubies you pick in a row, the more momentum you gain and with momentum you'll be able to achieve higher scores.
 
 ## Gameplay
 
-N/A
+```
+[![Splashy Gameplay](https://github.com/pedrommcarrasco/Splashy/blob/master/thumbnail.png)](https://youtu.be/lszLEUmDhlY "Click to watch Splashy's Gameplay")
+```
 
 ## Technologies
 
 - MVVM-C - Model, ViewModel, ViewController, Coordinator
-- SpriteKit - SKScene, SKSpriteNode, SKAction, SKNode
+- SpriteKit - SKScene, SKSpriteNode, SKAction, SKPhysicsBody, SKPhysicsContact, SKTexture
 - XCTest - Unit testing, Mock, Delegate Spying
 - UserDefaults  - Highest Score
 
