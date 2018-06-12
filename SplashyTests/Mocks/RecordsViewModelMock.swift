@@ -10,6 +10,7 @@ import Foundation
 @testable import Splashy
 
 struct RecordsViewModelMock: RecordsViewModelRepresentable {
+    var titleAsset = ""
     var dismissIcon = ""
     var record = 1
     var recordDescription = "point"

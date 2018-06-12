@@ -11,10 +11,10 @@ import Foundation
 
 struct GameOverViewModelMock: GameOverViewModelRepresentable {
 
+
     // MARK: - PROPERTIES
     let retryIcon = ""
-    let recordsIcon = ""
-    let tutorialIcon = ""
+    let closeIcon = ""
     let scoreDescription = ""
     let scoreAsset = ""
 
