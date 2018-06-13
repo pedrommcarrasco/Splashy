@@ -10,6 +10,11 @@ import SpriteKit
 
 struct Splashy {
 
+    // MARK: - CONSTANTS
+    enum Constants {
+        static let timePerFrame = 0.05
+    }
+
     // MARK: - PROPERTIES
     let node: SKSpriteNode
     private let jumpActionTextures: [SKTexture]
@@ -27,6 +32,6 @@ struct Splashy {
             CGVector(dx: SplashyConstants.dxVelocity, dy: SplashyConstants.dyVelocity)
         )
 
-        node.run(SKAction.animate(with: jumpActionTextures, timePerFrame: 0.05))
+        node.run(SKAction.animate(with: jumpActionTextures, timePerFrame: Constants.timePerFrame))
     }
 }

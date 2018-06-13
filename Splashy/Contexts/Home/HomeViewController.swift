@@ -25,9 +25,11 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var buttonsStackView: UIStackView!
     
     // MARK: - PROPERTIES
-    private var viewModel: HomeViewModelRepresentable
     weak var navigationDelegate: HomeViewNavigationDelegate?
-    
+
+	// MARK: - PRIVATE PROPERTIES
+	private var viewModel: HomeViewModelRepresentable
+
     // MARK: - INIT
     init(with viewModel: HomeViewModelRepresentable) {
         self.viewModel = viewModel

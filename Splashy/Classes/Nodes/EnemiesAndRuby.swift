@@ -24,7 +24,8 @@ struct EnemiesAndRuby {
         node.addChild(topEnemy.node)
         node.addChild(bottomEnemy.node)
 
-        let randomVariation = CGFloat.randomBetween(min: EnemyConstants.bottomVariation, and: EnemyConstants.topVariation)
+        let randomVariation = CGFloat.randomBetween(min: EnemyConstants.bottomVariation,
+                                                    and: EnemyConstants.topVariation)
         node.position.y = node.position.y + randomVariation
     }
 }

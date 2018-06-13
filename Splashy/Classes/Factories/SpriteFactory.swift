@@ -8,8 +8,9 @@
 
 import SpriteKit
 
-struct SpriteFactory {
+enum SpriteFactory {
 
+    // MARK: - FUNCTIONS
     static func sprite(of type: SpriteType, in frame: CGRect) -> SKSpriteNode {
         let sprite = type.node
 

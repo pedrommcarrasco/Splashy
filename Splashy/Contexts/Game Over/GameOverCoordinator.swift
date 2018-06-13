@@ -16,13 +16,13 @@ protocol GameOverCoordinatorDelegate: class {
 class GameOverCoordinator: Coordinator {
 
     // MARK: - PROPERTIES
-    private let navigator: NavigatorRepresentable
-    private let score: Int
-
     weak var coordinatorDelegate: CoordinatorDelegate?
     weak var delegate: GameOverCoordinatorDelegate?
-
     var coordinators: [Coordinator] = []
+
+    // MARK: - PRIVATE PROPERTIES
+    private let navigator: NavigatorRepresentable
+    private let score: Int
 
     // MARK: - INIT
     init(with navigator: NavigatorRepresentable, score: Int) {

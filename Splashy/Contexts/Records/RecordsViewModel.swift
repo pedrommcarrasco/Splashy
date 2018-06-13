@@ -32,7 +32,9 @@ struct RecordsViewModel: RecordsViewModelRepresentable {
     let dismissIcon = Assets.iconClose
     let titleAsset = Assets.yourRecordImage
     var record: Int { return recordsManager.currentRecord }
-    var recordDescription: String { return recordsManager.currentRecord == 1 ? Strings.scorePoint : Strings.scorePoints}
+    var recordDescription: String {
+        return recordsManager.currentRecord == Constants.singularScore ? Strings.scorePoint : Strings.scorePoints
+    }
 
     private let recordsManager: RecordsManagerRepresentable
 

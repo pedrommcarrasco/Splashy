@@ -20,8 +20,10 @@ class GameOverViewController: UIViewController {
     @IBOutlet private weak var gameoverViewContainer: UIView!
 
     // MARK: - PROPERTIES
-    private var viewModel: GameOverViewModelRepresentable
     weak var navigationDelegate: GameoverViewControllerNavigationDelegate?
+
+    // MARK: - PRIVATE PROPERTIES
+    private var viewModel: GameOverViewModelRepresentable
 
     // MARK: - INIT
     init(with viewModel: GameOverViewModelRepresentable) {

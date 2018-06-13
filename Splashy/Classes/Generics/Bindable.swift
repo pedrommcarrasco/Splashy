@@ -11,7 +11,7 @@ import Foundation
 class Bindable<T> {
     typealias Observer = (T) -> ()
 
-    // MARK: - Public Properties
+    // MARK: - PROPERTIES
     var observer: Observer?
     var value: T {
         didSet {
@@ -19,12 +19,12 @@ class Bindable<T> {
         }
     }
 
-    // MARK: - Inits
+    // MARK: - INITIALIZATION
     init(_ value: T) {
         self.value = value
     }
 
-    // MARK: - Public Functions
+    // MARK: - FUNCTIONS
     func bind(observer: Observer?) {
         self.observer = observer
         observer?(value)

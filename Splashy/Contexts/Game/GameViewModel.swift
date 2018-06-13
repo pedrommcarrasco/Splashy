@@ -32,6 +32,7 @@ class GameViewModel: GameViewModelRepresentable {
     var hasStarted = false
     var isDead = false
 
+    // MARK: - PRIVATE PROPERTIES
     private var timer: Timer?
 
     init() {
