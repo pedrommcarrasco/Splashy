@@ -1,11 +1,11 @@
 language: swift
-osx_image: xcode9.3
+osx_image: xcode10.0
 
 env:
   global:
   - PROJECT=Splashy.xcworkspace
   - SCHEME=Splashy
-  - DESTINATION_PLATFORM='platform=iOS Simulator,name=iPhone 8,OS=11.3'
+  - DESTINATION_PLATFORM='platform=iOS Simulator,name=iPhone 8,OS=12.0'
   - CODECOV_ENDPOINT=https://codecov.io/bash
 
 before_install:
