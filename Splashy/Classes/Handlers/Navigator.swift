@@ -17,15 +17,15 @@ protocol NavigatorRepresentable {
 
 struct Navigator: NavigatorRepresentable {
 
-    // MARK: - Private Properties
+    // MARK: - PRIVATE PROPERTIES
     private var navigationController: UINavigationController
 
-    // MARK: - Init
+    // MARK: - INITIALIZATION
     init(with navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
 
-    // MARK: - Public Navigation Functions
+    // MARK: - PUBLIC NAVIGATION FUNCTIONS
     func root() -> UINavigationController {
         return navigationController
     }

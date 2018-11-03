@@ -30,7 +30,8 @@ class GameViewController: UIViewController {
     
     // MARK: - PROPERTIES
     weak var navigationDelegate: GameViewControllerNavigation?
-    
+
+    // MARK: - PRIVATE PROPERTIES
     private var viewModel: GameViewModelRepresentable? {
         didSet {
             viewModel?.score.bind(observer: { [weak self] in

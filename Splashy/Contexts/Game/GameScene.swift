@@ -28,10 +28,11 @@ class GameScene: SKScene {
 	private var background = SKSpriteNode()
 
 	// MARK: - PROPERTIES
+	weak var sceneDelegate: GameSceneDelegate?
+
+	// MARK: - PRIVATE PROPERTIES
 	private var moveRemoveAction = SKAction()
 	private var viewModel: GameViewModelRepresentable
-
-	weak var sceneDelegate: GameSceneDelegate?
 	
 	// MARK: - PROPERTIES
 	init(with size: CGSize, and viewModel: GameViewModelRepresentable) {

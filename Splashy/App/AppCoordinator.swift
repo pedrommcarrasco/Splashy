@@ -12,9 +12,9 @@ class AppCoordinator: Coordinator {
 
     // MARK: - PROPERTIES
     var coordinators: [Coordinator] = []
-
     weak var coordinatorDelegate: CoordinatorDelegate?
 
+    // MARK: - PRIVATE PROPERTIES
     private let navigator: NavigatorRepresentable
 
     // MARK: - INITIALIZATION

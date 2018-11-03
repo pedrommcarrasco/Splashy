@@ -12,14 +12,13 @@ class HomeCoordinator: Coordinator {
 
    // MARK: - PROPERTIES
    var coordinators: [Coordinator] = []
-
    weak var coordinatorDelegate: CoordinatorDelegate?
 
+   // MARK: - PRIVATE PROPERTIES
    private let navigator: NavigatorRepresentable
 
    // MARK: - INIT
    init(with navigator: NavigatorRepresentable) {
-
       self.navigator = navigator
    }
 
@@ -39,6 +38,7 @@ class HomeCoordinator: Coordinator {
    }
 }
 
+// MARK: - HomeViewNavigationDelegate
 extension HomeCoordinator: HomeViewNavigationDelegate {
    func didPressRecords(in homeViewController: HomeViewController) {
       let recordsCoordinator = RecordsCoordinator(with: navigator)

@@ -34,11 +34,9 @@ struct GameOverViewModel: GameOverViewModelRepresentable {
     let closeIcon = Assets.iconClose
     let score: Int
     let scoreDescription: String
-    
-    var scoreAsset: String {
-        return isNewRecord ? Assets.newRecordImage : Assets.gameoverImage
-    }
-    
+    var scoreAsset: String { return isNewRecord ? Assets.newRecordImage : Assets.gameoverImage }
+
+    // MARK: - PRIVATE PROPERTIES
     private let isNewRecord: Bool
     
     // MARK: - INIT

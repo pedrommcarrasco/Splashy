@@ -18,8 +18,10 @@ class RecordsViewController: UIViewController {
     @IBOutlet weak var recordsViewContainer: UIView!
 
     // MARK: - PROPERTIES
-    private let viewModel: RecordsViewModelRepresentable
     weak var navigationDelegate: RecordsViewControllerNavigationDelegate?
+    
+    // MARK: - PRIVATE PROPERTIES
+    private let viewModel: RecordsViewModelRepresentable
 
     // MARK: - INIT
     init(with viewModel: RecordsViewModelRepresentable) {

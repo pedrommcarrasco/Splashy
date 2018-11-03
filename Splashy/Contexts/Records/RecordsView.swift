@@ -23,7 +23,6 @@ class RecordsView: UIView {
     @IBOutlet private weak var dismissButton: StandardButton!
 
     // MARK: - PROPERTIES
-    
     let viewModel: RecordsViewModelRepresentable
     weak var delegate: RecordsViewDelegate?
 
