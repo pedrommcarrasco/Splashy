@@ -45,7 +45,7 @@ class GameOverViewController: UIViewController {
         gameoverView.delegate = self
         gameoverViewContainer.addSubview(gameoverView)
         
-        gameoverView.constrictEdgesToSuperview()
+        gameoverView.constrictEdges(to: self)
     }
 }
 

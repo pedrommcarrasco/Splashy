@@ -7,7 +7,7 @@
 [![apm](https://img.shields.io/apm/l/vim-mode.svg)](https://github.com/pedrommcarrasco/Constrictor/blob/master/LICENSE)
 
 
-***(Boe)*** Constrictor's AutoLayout µFramework with the goal of simplying your constraints by reducing the amount of code you have to write.
+***(Boe)*** Constrictor's AutoLayout µFramework with the goal of simplifying your constraints by reducing the amount of code you have to write.
 
 ## Installation 📦 
 ### CocoaPods
@@ -44,7 +44,7 @@ import Constrictor
 
 Once imported you can start using Constrictor to apply constraints to your views programmatically.
 
-Bellow you'll be able to see a working example. First we start by configuring three simple UIViews.
+Bellow, you'll be able to see a working example. First, we start by configuring three simple UIViews (assuming we're in a UIViewController)
 
 ```swift
 let redView = UIView()
@@ -60,7 +60,7 @@ greenView.backgroundColor = .green
 redView.addSubview(greenView)
 ```
 
-Down bellow you'll see how you apply constraints with and without Constrictor.
+Bellow, there's a comparison on how to apply constraints with and without Constrictor. There's also a documentation dedicated page available [here](https://github.com/pedrommcarrasco/Constrictor/blob/master/DOCUMENTATION.md).
 
 ### How you're *probably* doing it without Constrictor 😰
 
@@ -71,9 +71,6 @@ if #available(iOS 11.0, *) {
     let safeArea = view.safeAreaLayoutGuide
     
     NSLayoutConstraint.activate([
-   	redView.topAnchor.constraint(equalTo: safeArea.topAnchor),
-	redView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
-        
         blueView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 	blueView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
     ]) 
@@ -110,14 +107,14 @@ NSLayoutConstraint.activate([
 
 ### How you can do it with Constrictor 😍
 ```swift
-redView.constrictEdgesToViewController(self, withinGuides: false)
+redView.constrictEdges(to: self, withinGuides: false)
         
-blueView.constrict(attributes: .width, .height, constant: 75.0)
-     .constrictCenterInViewController(self)
+blueView.constrictSize(to: 75.0)
+     .constrictCenter(in: self)
 
 greenView.constrict(to: blueView, attributes: .width, .centerYGuide)
-     .constrictToSuperview(attributes: .height)
-     .constrict(.trailing, to: blueView, attribute: .leading, constant: 50.0)
+     .constrictToParent(attributes: .height)
+     .constrict(.trailing, to: blueView, attribute: .leading, with: 50.0)
 ```
 
 ##  Sample Project 📲
@@ -129,10 +126,11 @@ There's a sample project in this repository called [Example](https://github.com/
 - [x] CodeCoverage.io integration
 - [x] Unit Testing
 - [x] SafeAreas & LayoutGuides
-- [ ] More "short-syntax" methods (like edges & center)
+- [x] UILayoutPriority + and - operators
+- [ ] Save/return constraints so it's easier to support animations
 
 ## Contributing 🙌 
 Feel free to contribute to this project by [reporting bugs](https://github.com/pedrommcarrasco/Constrictor/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) or open [pull requests](https://github.com/pedrommcarrasco/Constrictor/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc).
 
 ## License ⛔
-Constrictor's available under the MIT license. See the [LICENSE](https://github.com/pedrommcarrasco/Constrictor/blob/master/LICENSE) file for more informations.
+Constrictor's available under the MIT license. See the [LICENSE](https://github.com/pedrommcarrasco/Constrictor/blob/master/LICENSE) file for more information.

@@ -40,7 +40,7 @@ class RecordsViewController: UIViewController {
     private func setupRecordsView() {
         let recordsView = RecordsView(with: viewModel)
         recordsViewContainer.addSubview(recordsView)
-        recordsView.constrictEdgesToSuperview()
+        recordsView.constrictEdges(to: self)
         recordsView.delegate = self
     }
 }

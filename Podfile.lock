@@ -1,5 +1,5 @@
 PODS:
-  - Constrictor (1.0.0)
+  - Constrictor (4.0.1)
 
 DEPENDENCIES:
   - Constrictor
@@ -9,8 +9,8 @@ SPEC REPOS:
     - Constrictor
 
 SPEC CHECKSUMS:
-  Constrictor: 005a90141d933170d4b75a4726212dc35accf947
+  Constrictor: 494168680099a5fef7ab094a4d5259daa3750c3f
 
 PODFILE CHECKSUM: 5cfa36beff91153bc56a9cd0f9e943325ac58039
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.1
