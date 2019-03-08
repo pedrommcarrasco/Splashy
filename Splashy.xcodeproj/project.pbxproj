@@ -39,7 +39,6 @@
 		5368780C209CB92C00720556 /* NibLoadableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368780B209CB92C00720556 /* NibLoadableTests.swift */; };
 		5368780E209CBDC500720556 /* GameOverViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368780D209CBDC500720556 /* GameOverViewModelMock.swift */; };
 		53845F56208A128800C35DFA /* PhysicsComparableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53845F55208A128800C35DFA /* PhysicsComparableTests.swift */; };
-		53845F5A208A22E400C35DFA /* LocalizableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53845F59208A22E400C35DFA /* LocalizableTests.swift */; };
 		538B811D20AF166A0081E268 /* GameCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538B811C20AF166A0081E268 /* GameCoordinatorTests.swift */; };
 		5392702820889066001E21A8 /* RecordsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392702720889066001E21A8 /* RecordsCoordinator.swift */; };
 		5392702A2088906E001E21A8 /* RecordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539270292088906E001E21A8 /* RecordsViewModel.swift */; };
@@ -149,7 +148,6 @@
 		5368780B209CB92C00720556 /* NibLoadableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableTests.swift; sourceTree = "<group>"; };
 		5368780D209CBDC500720556 /* GameOverViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewModelMock.swift; sourceTree = "<group>"; };
 		53845F55208A128800C35DFA /* PhysicsComparableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsComparableTests.swift; sourceTree = "<group>"; };
-		53845F59208A22E400C35DFA /* LocalizableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableTests.swift; sourceTree = "<group>"; };
 		538B811C20AF166A0081E268 /* GameCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinatorTests.swift; sourceTree = "<group>"; };
 		5392702720889066001E21A8 /* RecordsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCoordinator.swift; sourceTree = "<group>"; };
 		539270292088906E001E21A8 /* RecordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewModel.swift; sourceTree = "<group>"; };
@@ -448,7 +446,6 @@
 				53E1B0A6208A01250086BCB7 /* CoordinatorTests.swift */,
 				53E1B0B1208A0D330086BCB7 /* NodeCollidingTests.swift */,
 				53845F55208A128800C35DFA /* PhysicsComparableTests.swift */,
-				53845F59208A22E400C35DFA /* LocalizableTests.swift */,
 				5368780B209CB92C00720556 /* NibLoadableTests.swift */,
 			);
 			path = Protocols;
@@ -857,7 +854,6 @@
 				5365D47820AC317000EBD319 /* NavigatorTests.swift in Sources */,
 				53F2D02C20CEDF3800E6B818 /* RecordsViewModelTests.swift in Sources */,
 				53E1B0A7208A01250086BCB7 /* CoordinatorTests.swift in Sources */,
-				53845F5A208A22E400C35DFA /* LocalizableTests.swift in Sources */,
 				206D712220CF2F640074560A /* RecordsViewControllerNavigationDelegateSpy.swift in Sources */,
 				53687808209CB2A300720556 /* SplashyTests.swift in Sources */,
 				53338B7D20976BB600D96681 /* EnemyTests.swift in Sources */,

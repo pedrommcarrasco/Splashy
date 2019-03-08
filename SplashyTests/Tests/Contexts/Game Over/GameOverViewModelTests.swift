@@ -13,8 +13,8 @@ final class GameOverViewModelTests: XCTestCase {
 
     // MARK: - CONSTANTS
     private enum Constants {
-        static let pointInSingular = "score-point".localizedString
-        static let pointInPlural = "score-points".localizedString
+        static let pointInSingular = "score-point".localized
+        static let pointInPlural = "score-points".localized
         static let lowerScore = 1
         static let higherScore = 10
         static let initialScore = 0
