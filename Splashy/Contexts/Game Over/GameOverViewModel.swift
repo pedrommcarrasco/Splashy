@@ -20,8 +20,8 @@ struct GameOverViewModel: GameOverViewModelRepresentable {
     
     // MARK: - STRINGS
     private enum Strings {
-        static let scorePoint = "score-point".localizedString
-        static let scorePoints = "score-points".localizedString
+        static let scorePoint = "score-point".localized
+        static let scorePoints = "score-points".localized
     }
     
     // MARK: - CONSTANTS

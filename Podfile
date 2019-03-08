@@ -1,7 +1,8 @@
 target 'Splashy' do
 
   # Pods for Splashy
-  pod 'Constrictor'
+  pod 'Constrictor', '~> 5.0.1'
+  pod 'Sucrose', '~> 2.3.0'
 
   target 'SplashyTests' do
     inherit! :search_paths

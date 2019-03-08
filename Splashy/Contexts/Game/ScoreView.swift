@@ -12,9 +12,9 @@ class ScoreView: UIView {
     
     // MARK: - STRINGS
     private enum Strings {
-        static let scorePoint = "score-point".localizedString
-        static let scorePoints = "score-points".localizedString
-        static let scoreBoost = "score-boost".localizedString
+        static let scorePoint = "score-point".localized
+        static let scorePoints = "score-points".localized
+        static let scoreBoost = "score-boost".localized
     }
     
     // MARK: - CONSTANTS

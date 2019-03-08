@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Sucrose
 
 protocol HomeViewNavigationDelegate: class {
     func didPressPlay(in homeViewController: HomeViewController)
@@ -73,8 +74,8 @@ class HomeViewController: UIViewController {
     }
     
     private func animate(button: StandardButton) {
-        guard let index = actionButtons.index(of: button)?.hashValue else { return }
-		
+		guard let index = actionButtons.index(of: button) else { return }
+
 		button.alpha = 0
 		button.isHidden = false
 		
@@ -88,6 +89,7 @@ class HomeViewController: UIViewController {
 						button.alpha = 1
 						button.transform = CGAffineTransform.identity
                         button.layoutIfNeeded()
+
         }, completion: nil)
     }
     

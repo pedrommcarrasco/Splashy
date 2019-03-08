@@ -10,7 +10,6 @@
 #endif
 #endif
 
-#import "Constrictor.h"
 
 FOUNDATION_EXPORT double ConstrictorVersionNumber;
 FOUNDATION_EXPORT const unsigned char ConstrictorVersionString[];

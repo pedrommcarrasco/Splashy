@@ -1,0 +1,6 @@
+module Sucrose {
+  umbrella header "Sucrose-umbrella.h"
+
+  export *
+  module * { export * }
+}

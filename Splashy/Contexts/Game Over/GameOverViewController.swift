@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Sucrose
 import Constrictor
 
 protocol GameoverViewControllerNavigationDelegate: class {
@@ -47,7 +48,7 @@ class GameOverViewController: UIViewController {
         gameoverView.delegate = self
         gameoverViewContainer.addSubview(gameoverView)
         
-        gameoverView.constrictEdges(to: self)
+        gameoverView.constrictor.edge(to: gameoverViewContainer)
     }
 }
 

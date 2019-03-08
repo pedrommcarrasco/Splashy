@@ -1,16 +1,20 @@
 PODS:
-  - Constrictor (4.0.1)
+  - Constrictor (5.0.1)
+  - Sucrose (2.3.0)
 
 DEPENDENCIES:
-  - Constrictor
+  - Constrictor (~> 5.0.1)
+  - Sucrose (~> 2.3.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Constrictor
+    - Sucrose
 
 SPEC CHECKSUMS:
-  Constrictor: 494168680099a5fef7ab094a4d5259daa3750c3f
+  Constrictor: 62e5136f5e5ee82530a868d06fadd26af2dc51c0
+  Sucrose: 04ee1b0b7380b8df665f8c66dba15d8602465a7a
 
-PODFILE CHECKSUM: 5cfa36beff91153bc56a9cd0f9e943325ac58039
+PODFILE CHECKSUM: cebcf41ffc90fc9c73af75b1692bfb3b7a31bc51
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.6.1
