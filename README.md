@@ -25,7 +25,7 @@ Splashy's a 2D game inspired by FlappyBird. The more rubies you pick in a row, t
 This project was created as a first steps into Spritekit. It follows the MVVM-C pattern, so it can help people learning both MVVM-C and SpriteKit.
 
 
-## Support CocoaHub ❤️
+## Support Splashy ❤️
 
 Hello there 👋
 
@@ -37,4 +37,4 @@ I'm also a conference and meetup organizer, being part of **[SwiftAveiro](https:
 
 If you enjoy my work and would like to help me continue it, please consider:
 * https://www.buymeacoffee.com/pedrommcarrasco
-* https://www.paypal.com/paypalme2/pedrommcarrasco
+* https://www.paypal.me/pedrommcarrasco
